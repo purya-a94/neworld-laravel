@@ -1,0 +1,21 @@
+/*----------------------------------------*\
+	#INPUT
+\*----------------------------------------*/
+
+@use '../1-settings/global' as GLOBAL;
+@use '../1-settings/typography' as TYPOGRAPHY;
+
+.c-input {
+	padding: 0.5rem;
+	border-radius: 10px;
+	border: 1px solid var(--theme-border-white);
+
+	background: var(--theme-bg-main-light);
+}
+
+.c-input--withError {
+	border: 1px solid var(--theme-text-red);
+}
+.c-input--withError:focus-visible {
+	outline: 1px solid var(--theme-text-red);
+}

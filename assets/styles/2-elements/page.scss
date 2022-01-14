@@ -1,0 +1,41 @@
+/*----------------------------------------*\
+	#HTML
+\*----------------------------------------*/
+
+@use '../1-settings/global' as GLOBAL;
+@use '../1-settings/typography' as TYPOGRAPHY;
+
+/*
+ *	NOTE:
+ *  1.	Overflowing content is handled inside 'App' component.
+ */
+html,
+body {
+	min-height: 100vh;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+
+	overflow: hidden; /* [1] */
+
+	font-family: TYPOGRAPHY.$base-font;
+	font-size: TYPOGRAPHY.$base-font-size;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	background-color: var(--theme-bg-main);
+	color: var(--theme-text-main);
+
+	scroll-behavior: smooth;
+}
+
+/* *
+  * The root <div> element inside 'index.html' which is the starting
+  * point for the React app.
+  */
+// #root {
+// 	height: 100%;
+
+// 	display: flex;
+// 	flex-direction: column;
+// }

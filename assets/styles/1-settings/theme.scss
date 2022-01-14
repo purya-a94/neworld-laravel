@@ -1,0 +1,201 @@
+/*----------------------------------------*\
+	#THEMES
+\*----------------------------------------*/
+
+@use 'colors' as COLORS;
+@use 'elevation' as ELEVATION;
+
+/* *
+ * Theme changes happen with adding or removing classes to the 'html' element.
+ * Add or removal of these classes is handled inside the top 'index.html' file,
+ * using either 'prefers-color-scheme' media query or browser's localstorage 'theme' value.
+ * To change the theme at run-time, add the corresponding theme class to 'html' element
+ * and also modify the localstorage 'theme' value to ensure consistency on future visits.
+ * 
+ * LIST OF CURRENTLY SUPPORTED THEMES:
+ * 
+ * [THEME NAME]				[CLASS NAME]
+ * 01. Light		=>		'theme-light' (default theme)
+ * 02. Dark			=>		'theme-dark'
+ */
+
+/* *
+ * Shared variables
+ */
+:root {
+	/*	#COLOR
+		====================================================================== */
+
+	--theme-color-primary: #{COLORS.$primary};
+	--theme-color-primary-light: #{COLORS.$primary-light};
+	--theme-color-primary-dark: #{COLORS.$primary-dark};
+
+	// These variables are temporarily commented out.
+	// **! DO NOT REMOVE !**
+	// --theme-color-black: #{COLORS.$black-1};
+	// --theme-color-black-light: #{COLORS.$black-2};
+	// --theme-color-black-dark: #{COLORS.$black-0};
+
+	// --theme-color-white: #{COLORS.$white-3};
+	// --theme-color-white-light: #{COLORS.$white-4};
+	// --theme-color-white-dark: #{COLORS.$white-2};
+
+	// --theme-color-red: #{COLORS.$red-1};
+	// --theme-color-red-light: #{COLORS.$red-2};
+	// --theme-color-red-dark: #{COLORS.$red-0};
+
+	// --theme-color-green: #{COLORS.$green-1};
+	// --theme-color-green-light: #{COLORS.$green-2};
+	// --theme-color-green-dark: #{COLORS.$green-0};
+
+	// --theme-color-blue: #{COLORS.$blue-1};
+	// --theme-color-blue-light: #{COLORS.$blue-2};
+	// --theme-color-blue-dark: #{COLORS.$blue-0};
+
+	// --theme-color-yellow: #{COLORS.$yellow-1};
+	// --theme-color-yellow-light: #{COLORS.$yellow-2};
+	// --theme-color-yellow-dark: #{COLORS.$yellow-0};
+
+	// --theme-color-orange: #{COLORS.$orange-1};
+	// --theme-color-orange-light: #{COLORS.$orange-2};
+	// --theme-color-orange-dark: #{COLORS.$orange-0};
+
+	// --theme-color-teal: #{COLORS.$teal-1};
+	// --theme-color-teal-light: #{COLORS.$teal-2};
+	// --theme-color-teal-dark: #{COLORS.$teal-0};
+
+	// --theme-color-purple: #{COLORS.$purple-1};
+	// --theme-color-purple-light: #{COLORS.$purple-2};
+	// --theme-color-purple-dark: #{COLORS.$purple-0};
+
+	/*	#BACKGROUND
+		====================================================================== */
+
+	--theme-bg-primary: #{COLORS.$primary};
+	--theme-bg-primary-light: #{COLORS.$primary-light};
+	--theme-bg-primary-dark: #{COLORS.$primary-dark};
+
+	--theme-bg-red: #{COLORS.$red-1};
+	--theme-bg-red-light: #{COLORS.$red-2};
+	--theme-bg-red-dark: #{COLORS.$red-0};
+
+	--theme-bg-green: #{COLORS.$green-1};
+	--theme-bg-green-light: #{COLORS.$green-2};
+	--theme-bg-green-dark: #{COLORS.$green-0};
+
+	--theme-bg-blue: #{COLORS.$blue-1};
+	--theme-bg-blue-light: #{COLORS.$blue-2};
+	--theme-bg-blue-dark: #{COLORS.$blue-0};
+
+	--theme-bg-yellow: #{COLORS.$yellow-1};
+	--theme-bg-yellow-light: #{COLORS.$yellow-2};
+	--theme-bg-yellow-dark: #{COLORS.$yellow-0};
+
+	--theme-bg-orange: #{COLORS.$orange-1};
+	--theme-bg-orange-light: #{COLORS.$orange-2};
+	--theme-bg-orange-dark: #{COLORS.$orange-0};
+
+	--theme-bg-teal: #{COLORS.$teal-1};
+	--theme-bg-teal-light: #{COLORS.$teal-2};
+	--theme-bg-teal-dark: #{COLORS.$teal-0};
+
+	--theme-bg-purple: #{COLORS.$purple-1};
+	--theme-bg-purple-light: #{COLORS.$purple-2};
+	--theme-bg-purple-dark: #{COLORS.$purple-0};
+
+	/*	#TEXT
+		====================================================================== */
+
+	--theme-text-primary: #{COLORS.$primary};
+	--theme-text-primary-light: #{COLORS.$primary-light};
+	--theme-text-primary-dark: #{COLORS.$primary-dark};
+
+	--theme-text-red: #{COLORS.$red-1};
+	--theme-text-green: #{COLORS.$green-1};
+	--theme-text-blue: #{COLORS.$blue-1};
+	--theme-text-yellow: #{COLORS.$yellow-1};
+	--theme-text-orange: #{COLORS.$orange-1};
+	--theme-text-teal: #{COLORS.$teal-1};
+	--theme-text-purple: #{COLORS.$purple-1};
+
+	/*	#BORDER
+		====================================================================== */
+
+	--theme-border-primary: #{COLORS.$primary};
+
+	--theme-border-black: #{COLORS.$black-3};
+	--theme-border-white: #{COLORS.$white-0};
+	--theme-border-red: #{COLORS.$red-1};
+	--theme-border-green: #{COLORS.$green-1};
+	--theme-border-blue: #{COLORS.$blue-1};
+	--theme-border-yellow: #{COLORS.$yellow-1};
+	--theme-border-orange: #{COLORS.$orange-1};
+	--theme-border-teal: #{COLORS.$teal-1};
+	--theme-border-purple: #{COLORS.$purple-1};
+}
+
+/* *
+ * 01. Light
+ */
+:root.theme-light {
+	/*	#BACKGROUND
+		====================================================================== */
+
+	--theme-bg-main: #{COLORS.$white-3};
+	--theme-bg-main-light: #{COLORS.$white-4};
+	--theme-bg-main-dark: #{COLORS.$white-2};
+
+	/*	#TEXT
+		====================================================================== */
+
+	--theme-text-main: #{COLORS.$black-1};
+	--theme-text-main-light: #{COLORS.$black-2};
+	--theme-text-main-dark: #{COLORS.$black-0};
+
+	/*	#BORDER
+		====================================================================== */
+
+	/*	#BOX SHADOW
+		====================================================================== */
+
+	--theme-shadow-inset: #{ELEVATION.$light-inset};
+	--theme-shadow-lvl-1: #{ELEVATION.$light-lvl-1};
+	--theme-shadow-lvl-2: #{ELEVATION.$light-lvl-2};
+	--theme-shadow-lvl-3: #{ELEVATION.$light-lvl-3};
+	--theme-shadow-lvl-4: #{ELEVATION.$light-lvl-4};
+	--theme-shadow-lvl-5: #{ELEVATION.$light-lvl-5};
+	--theme-shadow-lvl-6: #{ELEVATION.$light-lvl-6};
+}
+
+/* *
+ * 02. Dark
+ */
+:root.theme-dark {
+	/*	#BACKGROUND
+		====================================================================== */
+
+	--theme-bg-main: #{COLORS.$black-1};
+	--theme-bg-main-light: #{COLORS.$black-2};
+	--theme-bg-main-dark: #{COLORS.$black-0};
+
+	/*	#TEXT
+		====================================================================== */
+
+	--theme-text-main: #{COLORS.$white-3};
+	--theme-text-main-light: #{COLORS.$white-4};
+	--theme-text-main-dark: #{COLORS.$white-2};
+
+	/*	#BORDER
+		====================================================================== */
+
+	/*	#BOX SHADOW
+		====================================================================== */
+
+	--theme-shadow-inset: #{ELEVATION.$dark-inset};
+	--theme-shadow-lvl-1: #{ELEVATION.$dark-lvl-1};
+	--theme-shadow-lvl-2: #{ELEVATION.$dark-lvl-2};
+	--theme-shadow-lvl-3: #{ELEVATION.$dark-lvl-3};
+	--theme-shadow-lvl-4: #{ELEVATION.$dark-lvl-4};
+	--theme-shadow-lvl-5: #{ELEVATION.$dark-lvl-5};
+	--theme-shadow-lvl-6: #{ELEVATION.$dark-lvl-6};
+}

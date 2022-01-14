@@ -1,0 +1,40 @@
+/*----------------------------------------*\
+	#BUTTON
+\*----------------------------------------*/
+
+@use '../1-settings/global' as GLOBAL;
+@use '../1-settings/typography' as TYPOGRAPHY;
+
+/* *
+ * Primary
+ */
+.c-btn-primary {
+	border-radius: 10px;
+
+	background-color: rebeccapurple;
+	color: var(--theme-text-main);
+}
+
+.c-btn-primary:hover,
+.c-btn-primary:focus {
+	background-color: teal;
+	color: var(--theme-text-main);
+}
+
+/* *
+ * Primary outline
+ */
+.c-btn-outline-primary {
+	border: 1px solid var(--theme-border-primary);
+	border-radius: 10px;
+
+	background-color: goldenrod;
+	color: var(--theme-text-primary);
+}
+
+.c-btn-outline-primary:hover,
+.c-btn-outline-primary:focus {
+	border: 1px solid var(--theme-border-primary);
+
+	color: var(--theme-text-primary-dark);
+}

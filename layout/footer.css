@@ -1,0 +1,32 @@
+/*----------------------------------------*\
+	#COLORS
+/*----------------------------------------*\
+
+/* Brand */
+/* https://maketintsandshades.com/#43b5f6 */
+/* Tokens */
+/* Material - Green 500 */
+/* Background */
+/* Text */
+/* Borders */
+/*----------------------------------------*\
+	#GLOBAL
+\*----------------------------------------*/
+/*
+ *	NOTE:
+ *  1.	Base font-size calculation is roughly based on a 1366px viewport.
+ */
+/* #FONT
+	====================================================================== */
+/* [1] */
+/* #BREAKPOINTS (for reference only)
+	====================================================================== */
+.EXAMPLE_OF_USAGE {
+  width: 100px;
+  aspect-ratio: 1;
+  text-align: center;
+  background-color: #4caf50;
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=footer.css.map */

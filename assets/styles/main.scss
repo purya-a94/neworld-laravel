@@ -1,0 +1,67 @@
+/*------------------------------------*\
+	#MAIN
+\*------------------------------------*/
+
+/* *
+ * TABLE OF CONTENTS
+ * 
+ * 00. FONT-FACES
+ * Fonts..................Locally-hosted fonts definition.
+ * 
+ * 01. SETTINGS
+ * Global.................Project-specific, globally available settings.
+ * Typography.............Font sizes, weights and related variables.
+ * Colors.................The color palette.
+ * Elevations.............Elevation definitions.
+ * Themes.................Themes and their color definitions.
+ *
+ * 02. ELEMENTS
+ * Page...................The defaults of the document.
+ * Links..................Link's defaults.
+ *
+ * 03. COMPONENTS
+ * Button.................Custom button styles.
+ * Link...................Custom link (anchors) styles.
+ * Input..................Custom input styles.
+ * 
+ * 04. UTILITIES
+ * Mixed..................Mixed utility classes.
+ */
+
+/* 00. FONT-FACES
+   ====================================================================== */
+
+@use '../fonts/fonts.css';
+
+/* 01. SETTINGS
+   ====================================================================== */
+
+@forward './1-settings/global' as GLOBAL-*;
+@use './1-settings/global';
+
+@forward './1-settings/typography' as TYPOGRAPHY-*;
+@use './1-settings/typography';
+
+@use './1-settings/colors';
+
+@use './1-settings/elevation';
+
+@use './1-settings/theme.scss';
+
+/* 02. ELEMENTS
+   ====================================================================== */
+
+@use './2-elements/page.scss';
+@use './2-elements/links.scss';
+
+/* 03. COMPONENTS
+   ====================================================================== */
+
+@use './3-components/button.scss';
+@use './3-components/link.scss';
+@use './3-components/input.scss';
+
+/* 04. UTILITIES
+   ====================================================================== */
+
+@use './utilities.scss';

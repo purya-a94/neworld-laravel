@@ -1,0 +1,11 @@
+@use '../assets/styles/1-settings/global' as GLOBAL;
+@use '../assets/styles/1-settings/typography' as TYPOGRAPHY;
+
+.EXAMPLE_OF_USAGE {
+	width: 100px;
+	aspect-ratio: 1;
+	text-align: center;
+
+	background-color: var(--theme-bg-orange);
+	color: var(--theme-text-main);
+}

@@ -1,0 +1,42 @@
+/*------------------------------------*\
+	#UTILITIES
+\*------------------------------------*/
+
+@use './1-settings/global' as GLOBAL;
+@use './1-settings/typography' as TYPOGRAPHY;
+
+/**	Text color
+	====================================================================== */
+
+.u-textColor-main {
+	color: var(--theme-text-main);
+}
+
+.u-textColor-primary {
+	color: var(--theme-text-primary);
+}
+
+.u-textColor-sub {
+	color: var(--theme-text-main-light);
+}
+
+.u-textColor-green {
+	color: var(--theme-text-green);
+}
+
+.u-textColor-red {
+	color: var(--theme-text-red);
+}
+
+/**	Misc
+	====================================================================== */
+
+.u-remove-btn-focus-shadow:focus {
+	box-shadow: none;
+}
+
+.u-overflow-ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

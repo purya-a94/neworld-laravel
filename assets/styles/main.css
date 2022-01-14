@@ -1,0 +1,419 @@
+/*------------------------------------*\
+	#FONTS
+\*------------------------------------*/
+/* *
+   * NOTE:
+   * 1.	'EOT' formats are not included in order to reduce loading times,
+   * 	though as a result, we don't support IE8 and older browsers.
+   * 2.	Out of 5 different weights of "IRANSansWeb" we only use 3;
+   * 	"Light" and "Black" are removed.
+ */
+/* #IRANSansWeb
+====================================================================== */
+/* Normal */
+@font-face {
+  font-family: IRANSansWeb;
+  font-style: normal;
+  font-weight: normal;
+  src: url("./IranSans/woff2/IRANSansWeb.woff2") format("woff2"), url("./IranSans/woff/IRANSansWeb.woff") format("woff"), url("./IranSans/ttf/IRANSansWeb.ttf") format("truetype");
+  font-display: swap;
+}
+/* Medium */
+@font-face {
+  font-family: IRANSansWeb;
+  font-style: normal;
+  font-weight: 500;
+  src: url("./IranSans/woff2/IRANSansWeb_Medium.woff2") format("woff2"), url("./IranSans/woff/IRANSansWeb_Medium.woff") format("woff"), url("./IranSans/ttf/IRANSansWeb_Medium.ttf") format("truetype");
+  font-display: swap;
+}
+/* Bold */
+@font-face {
+  font-family: IRANSansWeb;
+  font-style: normal;
+  font-weight: bold;
+  src: url("./IranSans/woff2/IRANSansWeb_Bold.woff2") format("woff2"), url("./IranSans/woff/IRANSansWeb_Bold.woff") format("woff"), url("./IranSans/ttf/IRANSansWeb_Bold.ttf") format("truetype");
+  font-display: swap;
+}
+/*----------------------------------------*\
+	#GLOBAL
+\*----------------------------------------*/
+/*
+ *	NOTE:
+ *  1.	
+ */
+/* #BREAKPOINTS
+	====================================================================== */
+/* #SPACING
+	====================================================================== */
+/* 8px / 16px */
+/* 16px */
+/* 24px / 16px */
+/* 32px / 16px */
+/* 40px / 16px */
+/* 72px / 16px */
+/* #RADIUS
+	====================================================================== */
+/*----------------------------------------*\
+	#TYPOGRAPHY
+\*----------------------------------------*/
+/*	#BASE
+	====================================================================== */
+/*----------------------------------------*\
+	#COLORS
+\*----------------------------------------*/
+/*	#BRAND
+	====================================================================== */
+/*	#TOKENS
+	====================================================================== */
+/*----------------------------------------*\
+	#ELEVATIONS
+\*----------------------------------------*/
+/*	#LIGHT
+	====================================================================== */
+/*	#DARK
+	====================================================================== */
+/*----------------------------------------*\
+	#THEMES
+\*----------------------------------------*/
+/* *
+ * Theme changes happen with adding or removing classes to the 'html' element.
+ * Add or removal of these classes is handled inside the top 'index.html' file,
+ * using either 'prefers-color-scheme' media query or browser's localstorage 'theme' value.
+ * To change the theme at run-time, add the corresponding theme class to 'html' element
+ * and also modify the localstorage 'theme' value to ensure consistency on future visits.
+ * 
+ * LIST OF CURRENTLY SUPPORTED THEMES:
+ * 
+ * [THEME NAME]				[CLASS NAME]
+ * 01. Light		=>		'theme-light' (default theme)
+ * 02. Dark			=>		'theme-dark'
+ */
+/* *
+ * Shared variables
+ */
+:root {
+  /*	#COLOR
+  	====================================================================== */
+  --theme-color-primary: #654ce6;
+  --theme-color-primary-light: #8672ec;
+  --theme-color-primary-dark: #5828e1;
+  /*	#BACKGROUND
+  	====================================================================== */
+  --theme-bg-primary: #654ce6;
+  --theme-bg-primary-light: #8672ec;
+  --theme-bg-primary-dark: #5828e1;
+  --theme-bg-red: #ff3b3b;
+  --theme-bg-red-light: #ff5c5c;
+  --theme-bg-red-dark: #e53535;
+  --theme-bg-green: #06c270;
+  --theme-bg-green-light: #39d98a;
+  --theme-bg-green-dark: #05a660;
+  --theme-bg-blue: #1265ff;
+  --theme-bg-blue-light: #3d80fc;
+  --theme-bg-blue-dark: #014bd3;
+  --theme-bg-yellow: #fdb800;
+  --theme-bg-yellow-light: #ffcb40;
+  --theme-bg-yellow-dark: #e2a502;
+  --theme-bg-orange: #fd8f43;
+  --theme-bg-orange-light: #ffa76a;
+  --theme-bg-orange-dark: #f6741a;
+  --theme-bg-teal: #00cfde;
+  --theme-bg-teal-light: #73dfe7;
+  --theme-bg-teal-dark: #00b7c4;
+  --theme-bg-purple: #654ce6;
+  --theme-bg-purple-light: #8672ec;
+  --theme-bg-purple-dark: #5828e1;
+  /*	#TEXT
+  	====================================================================== */
+  --theme-text-primary: #654ce6;
+  --theme-text-primary-light: #8672ec;
+  --theme-text-primary-dark: #5828e1;
+  --theme-text-red: #ff3b3b;
+  --theme-text-green: #06c270;
+  --theme-text-blue: #1265ff;
+  --theme-text-yellow: #fdb800;
+  --theme-text-orange: #fd8f43;
+  --theme-text-teal: #00cfde;
+  --theme-text-purple: #654ce6;
+  /*	#BORDER
+  	====================================================================== */
+  --theme-border-primary: #654ce6;
+  --theme-border-black: #8f90a6;
+  --theme-border-white: #e4e4eb;
+  --theme-border-red: #ff3b3b;
+  --theme-border-green: #06c270;
+  --theme-border-blue: #1265ff;
+  --theme-border-yellow: #fdb800;
+  --theme-border-orange: #fd8f43;
+  --theme-border-teal: #00cfde;
+  --theme-border-purple: #654ce6;
+}
+
+/* *
+ * 01. Light
+ */
+:root.theme-light {
+  /*	#BACKGROUND
+  	====================================================================== */
+  --theme-bg-main: #fafafc;
+  --theme-bg-main-light: #ffffff;
+  --theme-bg-main-dark: #f2f2f5;
+  /*	#TEXT
+  	====================================================================== */
+  --theme-text-main: #28293d;
+  --theme-text-main-light: #555770;
+  --theme-text-main-dark: #1c1c28;
+  /*	#BORDER
+  	====================================================================== */
+  /*	#BOX SHADOW
+  	====================================================================== */
+  --theme-shadow-inset: inset 0px 0.5px 4px rgba(96, 97, 112, 0.32);
+  --theme-shadow-lvl-1: 0px 0px 1px rgba(40, 41, 61, 0.08), 0px 0.5px 2px rgba(96, 97, 112, 0.16);
+  --theme-shadow-lvl-2: 0px 0px 1px rgba(40, 41, 61, 0.04), 0px 2px 4px rgba(96, 97, 112, 0.16);
+  --theme-shadow-lvl-3: 0px 0px 2px rgba(40, 41, 61, 0.04), 0px 4px 8px rgba(96, 97, 112, 0.16);
+  --theme-shadow-lvl-4: 0px 2px 4px rgba(40, 41, 61, 0.04), 0px 8px 16px rgba(96, 97, 112, 0.16);
+  --theme-shadow-lvl-5: 0px 2px 8px rgba(40, 41, 61, 0.04), 0px 16px 24px rgba(96, 97, 112, 0.16);
+  --theme-shadow-lvl-6: 0px 2px 8px rgba(40, 41, 61, 0.08), 0px 20px 32px rgba(96, 97, 112, 0.24);
+}
+
+/* *
+ * 02. Dark
+ */
+:root.theme-dark {
+  /*	#BACKGROUND
+  	====================================================================== */
+  --theme-bg-main: #28293d;
+  --theme-bg-main-light: #555770;
+  --theme-bg-main-dark: #1c1c28;
+  /*	#TEXT
+  	====================================================================== */
+  --theme-text-main: #fafafc;
+  --theme-text-main-light: #ffffff;
+  --theme-text-main-dark: #f2f2f5;
+  /*	#BORDER
+  	====================================================================== */
+  /*	#BOX SHADOW
+  	====================================================================== */
+  --theme-shadow-inset: inset 0px 0.5px 4px rgba(0, 0, 0, 0.32);
+  --theme-shadow-lvl-1: 0px 0px 1px rgba(40, 41, 61, 0.08), 0px 1px 2px rgba(0, 0, 0, 0.32);
+  --theme-shadow-lvl-2: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.32);
+  --theme-shadow-lvl-3: 0px 0px 2px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.32);
+  --theme-shadow-lvl-4: 0px 2px 4px rgba(0, 0, 0, 0.04), 0px 8px 16px rgba(0, 0, 0, 0.32);
+  --theme-shadow-lvl-5: 0px 2px 8px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.32);
+  --theme-shadow-lvl-6: 0px 2px 8px rgba(0, 0, 0, 0.08), 0px 20px 32px rgba(0, 0, 0, 0.32);
+}
+
+/*----------------------------------------*\
+	#HTML
+\*----------------------------------------*/
+/*
+ *	NOTE:
+ *  1.	Overflowing content is handled inside 'App' component.
+ */
+html,
+body {
+  min-height: 100vh;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  /* [1] */
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Ubuntu", "Droid Sans", "Helvetica Neue", arial, sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--theme-bg-main);
+  color: var(--theme-text-main);
+  scroll-behavior: smooth;
+}
+
+/* *
+  * The root <div> element inside 'index.html' which is the starting
+  * point for the React app.
+  */
+/*----------------------------------------*\
+	#LINKS
+\*----------------------------------------*/
+a {
+  display: inline-block;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.1s, box-shadow 0.1s, transform 0.1s;
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+}
+
+a:visited,
+a:active {
+  text-decoration: initial;
+}
+
+/*----------------------------------------*\
+	#BUTTON
+\*----------------------------------------*/
+/* *
+ * Primary
+ */
+.c-btn-primary {
+  border-radius: 10px;
+  background-color: rebeccapurple;
+  color: var(--theme-text-main);
+}
+
+.c-btn-primary:hover,
+.c-btn-primary:focus {
+  background-color: teal;
+  color: var(--theme-text-main);
+}
+
+/* *
+ * Primary outline
+ */
+.c-btn-outline-primary {
+  border: 1px solid var(--theme-border-primary);
+  border-radius: 10px;
+  background-color: goldenrod;
+  color: var(--theme-text-primary);
+}
+
+.c-btn-outline-primary:hover,
+.c-btn-outline-primary:focus {
+  border: 1px solid var(--theme-border-primary);
+  color: var(--theme-text-primary-dark);
+}
+
+/*----------------------------------------*\
+	#LINK
+\*----------------------------------------*/
+/* *
+ * Primary
+ */
+.c-link-primary {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  color: var(--theme-text-primary);
+}
+
+.c-link-primary:hover,
+.c-link-primary:focus {
+  color: var(--theme-text-primary);
+}
+
+/* *
+ * Secondary
+ */
+.c-link-secondary {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  color: var(--theme-text-blue);
+}
+
+.c-link-secondary:hover,
+.c-link-secondary:focus {
+  color: var(--theme-text-blue);
+}
+
+/*----------------------------------------*\
+	#INPUT
+\*----------------------------------------*/
+.c-input {
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid var(--theme-border-white);
+  background: var(--theme-bg-main-light);
+}
+
+.c-input--withError {
+  border: 1px solid var(--theme-text-red);
+}
+
+.c-input--withError:focus-visible {
+  outline: 1px solid var(--theme-text-red);
+}
+
+/*------------------------------------*\
+	#UTILITIES
+\*------------------------------------*/
+/**	Text color
+	====================================================================== */
+.u-textColor-main {
+  color: var(--theme-text-main);
+}
+
+.u-textColor-primary {
+  color: var(--theme-text-primary);
+}
+
+.u-textColor-sub {
+  color: var(--theme-text-main-light);
+}
+
+.u-textColor-green {
+  color: var(--theme-text-green);
+}
+
+.u-textColor-red {
+  color: var(--theme-text-red);
+}
+
+/**	Misc
+	====================================================================== */
+.u-remove-btn-focus-shadow:focus {
+  box-shadow: none;
+}
+
+.u-overflow-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*------------------------------------*\
+	#MAIN
+\*------------------------------------*/
+/* *
+ * TABLE OF CONTENTS
+ * 
+ * 00. FONT-FACES
+ * Fonts..................Locally-hosted fonts definition.
+ * 
+ * 01. SETTINGS
+ * Global.................Project-specific, globally available settings.
+ * Typography.............Font sizes, weights and related variables.
+ * Colors.................The color palette.
+ * Elevations.............Elevation definitions.
+ * Themes.................Themes and their color definitions.
+ *
+ * 02. ELEMENTS
+ * Page...................The defaults of the document.
+ * Links..................Link's defaults.
+ *
+ * 03. COMPONENTS
+ * Button.................Custom button styles.
+ * Link...................Custom link (anchors) styles.
+ * Input..................Custom input styles.
+ * 
+ * 04. UTILITIES
+ * Mixed..................Mixed utility classes.
+ */
+/* 00. FONT-FACES
+   ====================================================================== */
+/* 01. SETTINGS
+   ====================================================================== */
+/* 02. ELEMENTS
+   ====================================================================== */
+/* 03. COMPONENTS
+   ====================================================================== */
+/* 04. UTILITIES
+   ====================================================================== */
+
+/*# sourceMappingURL=main.css.map */

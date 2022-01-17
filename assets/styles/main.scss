@@ -18,6 +18,7 @@
  * 02. ELEMENTS
  * Page...................The defaults of the document.
  * Links..................Link's defaults.
+ * Headings...............Heading's default font size and line heights.
  *
  * 03. COMPONENTS
  * Button.................Custom button styles.
@@ -53,6 +54,7 @@
 
 @use './2-elements/page.scss';
 @use './2-elements/links.scss';
+@use './2-elements/headings.scss';
 
 /* 03. COMPONENTS
    ====================================================================== */

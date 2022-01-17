@@ -12,12 +12,16 @@
 	color: var(--theme-text-main);
 }
 
-.u-textColor-primary {
-	color: var(--theme-text-primary);
+.u-textColor-main--light {
+	color: var(--theme-text-main-light);
 }
 
-.u-textColor-sub {
-	color: var(--theme-text-main-light);
+.u-textColor-main--dark {
+	color: var(--theme-text-main-dark);
+}
+
+.u-textColor-primary {
+	color: var(--theme-text-primary);
 }
 
 .u-textColor-green {

@@ -5,9 +5,9 @@
  *	NOTE:
  *  1.	
  */
-/* #BREAKPOINTS
+/*	#BREAKPOINTS
 	====================================================================== */
-/* #SPACING
+/*	#SPACING
 	====================================================================== */
 /* 8px / 16px */
 /* 16px */
@@ -15,19 +15,124 @@
 /* 32px / 16px */
 /* 40px / 16px */
 /* 72px / 16px */
-/* #RADIUS
+/*	#RADIUS
 	====================================================================== */
 /*----------------------------------------*\
 	#TYPOGRAPHY
 \*----------------------------------------*/
 /*	#BASE
 	====================================================================== */
-.EXAMPLE_OF_USAGE {
-  width: 100px;
-  aspect-ratio: 1;
-  text-align: center;
-  background-color: var(--theme-bg-orange);
-  color: var(--theme-text-main);
+/*	#SIZE
+	====================================================================== */
+/* 10px */
+/* 12px */
+/* 14px */
+/* 16px */
+/* 18px */
+/* 20px */
+/* 22px */
+/* 24px */
+/* 26px */
+/* 28px */
+/* 32px */
+/* 48px */
+/* 56px */
+/* 64px */
+/*	#SIZE_HEADING
+	====================================================================== */
+/* 40px */
+/* 32px */
+/* 28px */
+/* 24px */
+/* 20px */
+/* 16px */
+/*	#WEIGHT
+	====================================================================== */
+/*	#PLACEHOLDERS
+	====================================================================== */
+.gamesCard__title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--theme-text-main-dark);
+}
+
+.games {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  padding: 3rem 2.5rem;
+}
+
+.games__showcase-grid-title {
+  margin-bottom: 1.5rem;
+  padding-left: 0.25rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.games__showcase-grid-title span {
+  font-weight: 700;
+  color: var(--theme-text-red);
+}
+
+.games__showcase-grid {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  overflow-x: auto;
+  margin-bottom: 3rem;
+}
+
+.gamesCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-width: 288px;
+  height: 330px;
+  padding: 0.5rem;
+  border-radius: 16px;
+  background-image: url("/assets/images/games-card-temp.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.gamesCard__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 16px;
+  background-color: var(--theme-bg-main-light);
+}
+
+.gamesCard__title {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  text-align: left;
+}
+
+.gamesCard__rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.gamesCard__rating p {
+  font-size: 0.75rem;
+}
+
+.gamesCard__rating-stars {
+  display: flex;
+  align-items: center;
+  gap: 0.125rem;
+}
+.gamesCard__rating-stars svg {
+  color: var(--theme-text-yellow);
+}
+.gamesCard__rating-stars svg:last-of-type {
+  color: #c7c9d9;
 }
 
 /*# sourceMappingURL=games.css.map */

@@ -1,11 +1,118 @@
 @use '../assets/styles/1-settings/global' as GLOBAL;
 @use '../assets/styles/1-settings/typography' as TYPOGRAPHY;
 
-.EXAMPLE_OF_USAGE {
-	width: 100px;
-	aspect-ratio: 1;
-	text-align: center;
+.home {
+	min-height: 100%;
 
-	background-color: var(--theme-bg-orange);
-	color: var(--theme-text-main);
+	display: flex;
+	flex-direction: column;
+
+	overflow: auto;
+	padding: 3rem GLOBAL.$spacing-large;
+}
+
+.home__news-grid-title {
+	margin-bottom: 1.5rem;
+	padding-left: 0.25rem;
+	font-size: TYPOGRAPHY.$size-lvl-4;
+	font-weight: TYPOGRAPHY.$weight-medium;
+
+	span {
+		font-weight: TYPOGRAPHY.$weight-bold;
+	}
+
+	&.home__news-grid-title--red {
+		span {
+			color: var(--theme-text-red);
+		}
+	}
+
+	&.home__news-grid-title--blue {
+		span {
+			color: var(--theme-text-blue);
+		}
+	}
+}
+
+.home__news-grid {
+	display: grid;
+	grid-auto-flow: row;
+	grid-template-columns: repeat(3, 1fr);
+	gap: GLOBAL.$spacing-medium;
+
+	overflow-x: auto;
+	margin-bottom: 3rem;
+}
+
+.newsCard {
+	display: flex;
+	align-items: stretch;
+	gap: GLOBAL.$spacing-small;
+
+	min-width: 380px;
+	padding: 0.375rem;
+
+	border-radius: GLOBAL.$radius-medium;
+	box-shadow: var(--theme-shadow-lvl-1);
+	background-color: var(--theme-bg-main-light);
+}
+
+.newsCard__img {
+	flex-basis: 200px;
+	flex-grow: 0;
+
+	object-fit: cover;
+
+	border-radius: GLOBAL.$radius-medium;
+}
+
+.newsCard__content {
+	flex-grow: 1;
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+	padding-top: 1rem;
+	padding-bottom: 0.375rem;
+}
+
+.newsCard__title {
+	@extend %content-lead;
+
+	margin-bottom: 0.5rem;
+	font-size: TYPOGRAPHY.$size-normal;
+}
+
+.newsCard__text {
+	margin-bottom: 1rem;
+	font-size: TYPOGRAPHY.$size-extra-small;
+
+	color: var(--theme-text-main-light);
+}
+
+.newsCard__link {
+	margin-top: auto;
+	align-self: flex-end;
+
+	display: flex;
+	align-items: center;
+	gap: 0.125rem;
+
+	font-size: TYPOGRAPHY.$size-small;
+	font-weight: TYPOGRAPHY.$weight-medium;
+	text-transform: uppercase;
+
+	&.newsCard__link--red {
+		color: var(--theme-text-red);
+	}
+
+	&.newsCard__link--blue {
+		color: var(--theme-text-blue);
+	}
+
+	svg {
+		width: 1.25rem;
+		height: 1.25rem;
+	}
 }

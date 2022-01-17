@@ -7,7 +7,8 @@
 
 /*
  *	NOTE:
- *  1.	Overflowing content is handled inside 'App' component.
+ *  1.	Overflowing content should be handled inside the desired,
+ *		content-wrapping component.
  */
 html,
 body {
@@ -18,7 +19,7 @@ body {
 
 	overflow: hidden; /* [1] */
 
-	font-family: TYPOGRAPHY.$base-font;
+	font-family: TYPOGRAPHY.$base-font-stack;
 	font-size: TYPOGRAPHY.$base-font-size;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -28,14 +29,3 @@ body {
 
 	scroll-behavior: smooth;
 }
-
-/* *
-  * The root <div> element inside 'index.html' which is the starting
-  * point for the React app.
-  */
-// #root {
-// 	height: 100%;
-
-// 	display: flex;
-// 	flex-direction: column;
-// }

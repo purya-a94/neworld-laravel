@@ -1,11 +1,98 @@
 @use '../assets/styles/1-settings/global' as GLOBAL;
 @use '../assets/styles/1-settings/typography' as TYPOGRAPHY;
 
-.EXAMPLE_OF_USAGE {
-	width: 100px;
-	aspect-ratio: 1;
-	text-align: center;
+.games {
+	min-height: 100%;
 
-	background-color: var(--theme-bg-orange);
-	color: var(--theme-text-main);
+	display: flex;
+	flex-direction: column;
+
+	overflow: auto;
+	padding: 3rem GLOBAL.$spacing-large;
+}
+
+.games__showcase-grid-title {
+	margin-bottom: 1.5rem;
+	padding-left: 0.25rem;
+	font-size: TYPOGRAPHY.$size-lvl-4;
+	font-weight: TYPOGRAPHY.$weight-medium;
+
+	span {
+		font-weight: TYPOGRAPHY.$weight-bold;
+
+		color: var(--theme-text-red);
+	}
+}
+
+.games__showcase-grid {
+	display: grid;
+	grid-auto-flow: row;
+	grid-template-columns: repeat(4, 1fr);
+	gap: GLOBAL.$spacing-small;
+
+	overflow-x: auto;
+	margin-bottom: 3rem;
+}
+
+.gamesCard {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+
+	min-width: 288px;
+	height: 330px;
+	padding: 0.5rem;
+
+	border-radius: GLOBAL.$radius-medium;
+	background-image: url('/assets/images/games-card-temp.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.gamesCard__content {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 0.5rem;
+
+	padding: 0.5rem 1rem;
+
+	border-radius: GLOBAL.$radius-medium;
+	background-color: var(--theme-bg-main-light);
+}
+
+.gamesCard__title {
+	@extend %content-lead;
+
+	font-size: TYPOGRAPHY.$size-lvl-4;
+	line-height: 1.5rem;
+	text-align: left;
+}
+
+// .gamesCard__category {}
+
+.gamesCard__rating {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+
+	p {
+		font-size: TYPOGRAPHY.$size-extra-small;
+	}
+}
+
+.gamesCard__rating-stars {
+	display: flex;
+	align-items: center;
+	gap: 0.125rem;
+
+	svg {
+		color: var(--theme-text-yellow);
+
+		&:last-of-type {
+			// This color is actually "black-4" from the color tokens.
+			color: #c7c9d9;
+		}
+	}
 }

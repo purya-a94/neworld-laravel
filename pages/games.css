@@ -56,21 +56,18 @@
   color: var(--theme-text-main-dark);
 }
 
-.games {
-  min-height: 100%;
+.games__wrapper {
+  flex-grow: 1;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: auto;
+  justify-content: center;
 }
 
-.games__wrapper {
+.games {
   display: flex;
   flex-direction: column;
-  height: 100%;
   width: 100%;
   max-width: 1400px;
-  padding: 3rem 2rem;
+  padding: 2rem 2rem;
 }
 
 .games__showcase-grid-title {

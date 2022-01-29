@@ -309,9 +309,7 @@
 \*----------------------------------------*/
 /*
  *	NOTE:
- *  1.	Overflowing content should be handled inside the desired,
- *		content-wrapping component.
- *	2.	Relative position and top padding is here to allow for a fixed
+ *	1.	Relative position and top padding is here to allow for a fixed
  *		header inside pages. The padding value is the same as the header's
  *		height, defined inside header component.
  */
@@ -321,8 +319,6 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  overflow: hidden;
-  /* [1] */
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Ubuntu", "Droid Sans", "Helvetica Neue", arial, sans-serif;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
@@ -332,14 +328,13 @@ body {
   scroll-behavior: smooth;
 }
 
-/* [2] */
+/* [1] */
 .main-wrapper {
   position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
   padding-top: 110px;
-  overflow: auto;
 }
 
 /*----------------------------------------*\

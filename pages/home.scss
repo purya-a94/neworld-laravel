@@ -1,24 +1,20 @@
 @use '../assets/styles/1-settings/global' as GLOBAL;
 @use '../assets/styles/1-settings/typography' as TYPOGRAPHY;
 
-.home {
-	min-height: 100%;
+.home__wrapper {
+	flex-grow: 1;
 
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-
-	overflow: auto;
+	justify-content: center;
 }
 
-.home__wrapper {
+.home {
 	display: flex;
 	flex-direction: column;
 
-	height: 100%;
 	width: 100%;
 	max-width: GLOBAL.$bp-x-large;
-	padding: 3rem GLOBAL.$spacing-medium-large;
+	padding: 2rem GLOBAL.$spacing-medium-large;
 }
 
 .home__news-grid-title {

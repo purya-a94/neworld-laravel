@@ -75,6 +75,18 @@
 	--theme-bg-primary-light: #{COLORS.$primary-light};
 	--theme-bg-primary-dark: #{COLORS.$primary-dark};
 
+	--theme-bg-black: #{COLORS.$black-1};
+	--theme-bg-black-light: #{COLORS.$black-2};
+	--theme-bg-black-dark: #{COLORS.$black-0};
+	--theme-bg-black-soft: #{COLORS.$black-3};
+	--theme-bg-black-softer: #{COLORS.$black-4};
+
+	--theme-bg-white: #{COLORS.$white-3};
+	--theme-bg-white-light: #{COLORS.$white-4};
+	--theme-bg-white-dark: #{COLORS.$white-2};
+	--theme-bg-white-soft: #{COLORS.$white-1};
+	--theme-bg-white-softer: #{COLORS.$white-0};
+
 	--theme-bg-red: #{COLORS.$red-1};
 	--theme-bg-red-light: #{COLORS.$red-2};
 	--theme-bg-red-dark: #{COLORS.$red-0};
@@ -82,10 +94,14 @@
 	--theme-bg-green: #{COLORS.$green-1};
 	--theme-bg-green-light: #{COLORS.$green-2};
 	--theme-bg-green-dark: #{COLORS.$green-0};
+	--theme-bg-green-soft: #{COLORS.$green-3};
+	--theme-bg-green-softer: #{COLORS.$green-4};
 
 	--theme-bg-blue: #{COLORS.$blue-1};
 	--theme-bg-blue-light: #{COLORS.$blue-2};
 	--theme-bg-blue-dark: #{COLORS.$blue-0};
+	--theme-bg-blue-soft: #{COLORS.$blue-3};
+	--theme-bg-blue-softer: #{COLORS.$blue-4};
 
 	--theme-bg-yellow: #{COLORS.$yellow-1};
 	--theme-bg-yellow-light: #{COLORS.$yellow-2};
@@ -98,6 +114,8 @@
 	--theme-bg-teal: #{COLORS.$teal-1};
 	--theme-bg-teal-light: #{COLORS.$teal-2};
 	--theme-bg-teal-dark: #{COLORS.$teal-0};
+	--theme-bg-teal-soft: #{COLORS.$teal-3};
+	--theme-bg-teal-softer: #{COLORS.$teal-4};
 
 	--theme-bg-purple: #{COLORS.$purple-1};
 	--theme-bg-purple-light: #{COLORS.$purple-2};
@@ -110,6 +128,8 @@
 	--theme-text-primary-light: #{COLORS.$primary-light};
 	--theme-text-primary-dark: #{COLORS.$primary-dark};
 
+	--theme-text-black: #{COLORS.$black-0};
+	--theme-text-white: #{COLORS.$white-4};
 	--theme-text-red: #{COLORS.$red-1};
 	--theme-text-green: #{COLORS.$green-1};
 	--theme-text-blue: #{COLORS.$blue-1};
@@ -190,6 +210,8 @@
 	--theme-invertible-main: #{COLORS.$black-1};
 	--theme-invertible-main-light: #{COLORS.$black-2};
 	--theme-invertible-main-dark: #{COLORS.$black-0};
+	--theme-invertible-main-soft: #{COLORS.$black-3};
+	--theme-invertible-main-softer: #{COLORS.$black-4};
 }
 
 /* *
@@ -240,4 +262,6 @@
 	--theme-invertible-main: #{COLORS.$white-3};
 	--theme-invertible-main-light: #{COLORS.$white-4};
 	--theme-invertible-main-dark: #{COLORS.$white-2};
+	--theme-invertible-main-soft: #{COLORS.$white-1};
+	--theme-invertible-main-softer: #{COLORS.$white-0};
 }

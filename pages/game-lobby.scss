@@ -1,11 +1,367 @@
 @use '../assets/styles/1-settings/global' as GLOBAL;
 @use '../assets/styles/1-settings/typography' as TYPOGRAPHY;
+@use '../assets/styles/1-settings/placeholders';
 
-.EXAMPLE_OF_USAGE {
-	width: 100px;
-	aspect-ratio: 1;
-	text-align: center;
+.lobby__wrapper {
+	flex-grow: 1;
 
-	background-color: var(--theme-bg-orange);
-	color: var(--theme-text-main);
+	display: flex;
+	justify-content: center;
+}
+
+.lobby {
+	display: flex;
+	flex-direction: column;
+
+	width: 100%;
+	max-width: GLOBAL.$bp-x-large;
+	padding: 2rem GLOBAL.$spacing-medium-large;
+}
+
+.lobby__columns-wrapper {
+	display: flex;
+	justify-content: center;
+	gap: GLOBAL.$spacing-small;
+}
+
+.lobby__main {
+	display: flex;
+	flex-direction: column;
+	gap: GLOBAL.$spacing-small;
+
+	width: 668px;
+}
+
+.lobby__sidebar {
+	display: flex;
+	flex-direction: column;
+
+	width: 364px;
+}
+
+/*
+ *	Game level and rank
+ *	====================================================================== */
+
+.lobby__game-lvl {
+	display: flex;
+	gap: 1rem;
+
+	img {
+		flex-shrink: 0;
+
+		width: 204px;
+		max-height: 160px;
+
+		border-radius: GLOBAL.$radius-medium;
+		object-fit: cover;
+		object-position: center;
+	}
+}
+
+.lobby__game-lvl-details {
+	flex-grow: 1;
+
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+
+	padding: 0.5rem 0;
+	padding-right: 0.75rem;
+}
+
+.lobby__game-lvl-title {
+	font-size: TYPOGRAPHY.$size-lvl-4;
+	font-weight: TYPOGRAPHY.$weight-medium;
+
+	color: var(--theme-text-main-dark);
+}
+
+.lobby__game-lvl-rating {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+
+	p {
+		font-size: TYPOGRAPHY.$size-extra-small;
+	}
+}
+
+.lobby__game-lvl-rating-stars {
+	display: flex;
+	align-items: center;
+	gap: 0.25rem;
+
+	svg {
+		color: var(--theme-text-yellow);
+
+		&:last-of-type {
+			// This color is actually "black-4" from the color tokens.
+			color: #c7c9d9;
+		}
+	}
+}
+
+.lobby__game-lvl-divider {
+	height: 1px;
+	width: 100%;
+	margin-top: 0.5rem;
+	margin-bottom: 1rem;
+
+	background-color: var(--theme-bg-main-softer);
+}
+
+.lobby__game-lvl-progress {
+	height: 8px;
+	margin-bottom: 0.5rem;
+
+	background-color: var(--theme-invertible-main-softer);
+
+	.progress-bar {
+		width: 55%;
+
+		background-color: var(--theme-bg-orange);
+	}
+}
+
+.lobby__game-lvl-stats {
+	display: flex;
+	justify-content: space-between;
+	gap: 0.25rem;
+}
+
+/*
+ *	Matchmaking Card
+ *	====================================================================== */
+
+.matchmakingCard {
+	display: flex;
+	gap: 1rem;
+
+	padding-bottom: 1rem;
+
+	border-bottom: 1px solid var(--theme-border-white);
+
+	&:not(:last-of-type) {
+		margin-bottom: 1rem;
+	}
+
+	> img {
+		width: 88px;
+		max-height: 92px;
+		object-fit: cover;
+		object-position: center;
+
+		border-radius: GLOBAL.$radius-small;
+	}
+}
+
+.matchmakingCard__body {
+	flex-grow: 1;
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+
+.matchmakingCard__title {
+	display: flex;
+	flex-direction: column;
+
+	p:nth-of-type(1) {
+		font-weight: TYPOGRAPHY.$weight-medium;
+	}
+
+	p:nth-of-type(2) {
+		color: var(--theme-text-main-light);
+	}
+}
+
+.matchmakingCard__players {
+	margin-left: auto;
+	align-self: flex-start;
+
+	display: flex;
+	align-items: center;
+
+	img {
+		width: 32px;
+		height: 32px;
+		object-fit: contain;
+		object-position: center;
+
+		border-radius: 50%;
+	}
+
+	svg {
+		color: var(--theme-invertible-main-softer);
+	}
+
+	// This element is swappable with the above img and svg.
+	span {
+		color: var(--theme-text-main-soft);
+	}
+}
+
+.matchmakingCard__controls {
+	flex-basis: 100%;
+
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+/*
+ *	Matchmaking
+ *	====================================================================== */
+
+.lobby__matchmaking-header-btn {
+	width: 182px;
+}
+
+.lobby__matchmaking-games-wrapper {
+	padding: 0.75rem 0 0.5rem;
+	padding-right: 0.75rem;
+}
+
+.lobby__matchmaking-games {
+	@extend %scrollbar-dark;
+
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+
+	max-height: 360px;
+	overflow-y: auto;
+}
+
+.lobby__matchmaking-list-wrapper {
+	position: relative;
+
+	display: flex;
+	align-items: center;
+
+	padding-right: 1rem;
+}
+
+.lobby__matchmaking-tag {
+	display: block;
+	position: absolute;
+	top: 36px;
+
+	padding: 0 0.875rem;
+	font-size: TYPOGRAPHY.$size-extra-small;
+
+	transform: rotate(-90deg);
+	border-radius: 0 0 16px 16px;
+	background-color: var(--theme-bg-black-soft);
+	color: var(--theme-text-white);
+
+	&.lobby__matchmaking-tag--live {
+		left: -2.25rem;
+
+		background-color: var(--theme-bg-green-soft);
+	}
+
+	&.lobby__matchmaking-tag--others {
+		top: 94px;
+		left: -6rem;
+
+		width: 208px;
+		text-align: center;
+	}
+}
+
+.lobby__matchmaking-list {
+	flex-grow: 1;
+
+	padding-left: 2.5rem;
+}
+
+.lobby__matchmaking-item-control-btn {
+	padding: 0.125rem 1rem;
+}
+
+.lobby__matchmaking-others-card {
+	&:last-of-type {
+		border-bottom: 0;
+	}
+}
+
+/*
+ *	Rank
+ *	====================================================================== */
+
+.lobby__rank-header-btn {
+	width: 182px;
+}
+
+.lobby__rank-games-wrapper {
+	padding: 0.75rem 0 0.5rem;
+	padding-right: 0.75rem;
+}
+
+.lobby__rank-games {
+	@extend %scrollbar-dark;
+
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+
+	max-height: 248px;
+	overflow-y: auto;
+}
+
+.lobby__rank-list-wrapper {
+	position: relative;
+
+	display: flex;
+	align-items: center;
+
+	padding-right: 1rem;
+}
+
+.lobby__rank-tag {
+	display: block;
+	position: absolute;
+	top: 36px;
+
+	padding: 0 0.875rem;
+	font-size: TYPOGRAPHY.$size-extra-small;
+
+	transform: rotate(-90deg);
+	border-radius: 0 0 16px 16px;
+	background-color: var(--theme-bg-black-soft);
+	color: var(--theme-text-white);
+
+	&.lobby__rank-tag--live {
+		left: -2.25rem;
+
+		background-color: var(--theme-bg-green-soft);
+	}
+
+	&.lobby__rank-tag--others {
+		top: 42px;
+		left: -2.75rem;
+
+		width: 104px;
+		text-align: center;
+	}
+}
+
+.lobby__rank-list {
+	flex-grow: 1;
+
+	padding-left: 2.5rem;
+}
+
+.lobby__rank-item-control-btn {
+	padding: 0.125rem 1rem;
+}
+
+.lobby__rank-others-card {
+	&:last-of-type {
+		border-bottom: 0;
+	}
 }

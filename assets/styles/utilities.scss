@@ -32,6 +32,15 @@
 	color: var(--theme-text-red);
 }
 
+/**	Divider
+	====================================================================== */
+.u-divider-light {
+	height: 1px;
+	width: 100%;
+
+	background-color: var(--theme-border-white);
+}
+
 /**	Misc
 	====================================================================== */
 

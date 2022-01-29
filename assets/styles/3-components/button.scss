@@ -5,43 +5,133 @@
 @use '../1-settings/global' as GLOBAL;
 @use '../1-settings/typography' as TYPOGRAPHY;
 
-/* *
- * Primary
- */
-.c-btn-primary {
-	border-radius: 10px;
-
-	background-color: rebeccapurple;
-	color: var(--theme-text-main);
-}
-
-.c-btn-primary:hover,
-.c-btn-primary:focus {
-	background-color: teal;
-	color: var(--theme-text-main);
-}
+/*	#BASE
+	====================================================================== */
 
 /* *
- * Primary outline
+ * Base - Primary
  */
-.c-btn-outline-primary {
+.c-btn--primary {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.5rem;
+	font-size: TYPOGRAPHY.$size-lvl-1;
+	font-weight: TYPOGRAPHY.$weight-medium;
+
+	border-radius: GLOBAL.$radius-medium;
+	border-color: transparent;
+	box-shadow: var(--theme-shadow-lvl-2);
+	background-color: var(--theme-bg-primary);
+	color: var(--theme-text-white);
+
+	&:hover,
+	&:focus {
+		box-shadow: var(--theme-shadow-lvl-1);
+		color: var(--theme-text-white);
+	}
+}
+
+/* *
+ * Base - Blue
+ */
+.c-btn--blue {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.5rem;
+	font-size: TYPOGRAPHY.$size-lvl-1;
+	font-weight: TYPOGRAPHY.$weight-normal;
+
+	border-radius: GLOBAL.$radius-medium;
+	border-color: transparent;
+	background-color: var(--theme-bg-blue-softer);
+	color: var(--theme-text-blue);
+
+	&:hover,
+	&:focus {
+		box-shadow: none;
+		color: var(--theme-text-blue);
+	}
+}
+
+/* *
+ * Base - Green
+ */
+.c-btn--green {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.5rem;
+	font-size: TYPOGRAPHY.$size-lvl-1;
+	font-weight: TYPOGRAPHY.$weight-normal;
+
+	border-radius: GLOBAL.$radius-medium;
+	border-color: transparent;
+	background-color: var(--theme-bg-green-softer);
+	color: var(--theme-text-green);
+
+	&:hover,
+	&:focus {
+		box-shadow: none;
+		color: var(--theme-text-green);
+	}
+}
+
+/* *
+ * Base - Teal
+ */
+.c-btn--teal {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.5rem;
+	font-size: TYPOGRAPHY.$size-lvl-1;
+	font-weight: TYPOGRAPHY.$weight-normal;
+
+	border-radius: GLOBAL.$radius-medium;
+	border-color: transparent;
+	background-color: var(--theme-bg-teal-softer);
+	color: var(--theme-text-teal);
+
+	&:hover,
+	&:focus {
+		box-shadow: none;
+		color: var(--theme-text-teal);
+	}
+}
+
+/*	#OUTLINE
+	====================================================================== */
+
+/* *
+ * Outline - Primary
+ */
+.c-btn-outline--primary {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.5rem;
+	font-size: TYPOGRAPHY.$size-lvl-1;
+	font-weight: TYPOGRAPHY.$weight-medium;
+
+	border-radius: GLOBAL.$radius-medium;
 	border: 1px solid var(--theme-border-primary);
-	border-radius: 10px;
-
-	background-color: goldenrod;
+	box-shadow: var(--theme-shadow-lvl-2);
+	background-color: var(--theme-bg-white-light);
 	color: var(--theme-text-primary);
+
+	&:hover,
+	&:focus {
+		border-color: var(--theme-border-primary);
+		box-shadow: var(--theme-shadow-lvl-1);
+		color: var(--theme-text-primary);
+	}
 }
 
-.c-btn-outline-primary:hover,
-.c-btn-outline-primary:focus {
-	border: 1px solid var(--theme-border-primary);
+/*	#NEUTRAL
+	====================================================================== */
 
-	color: var(--theme-text-primary-dark);
-}
-
-/* *
- * Neutral
- */
 .c-btn-neutral {
 	display: flex;
 	justify-content: center;
@@ -61,9 +151,9 @@
 	}
 }
 
-/* *
- * Icon
- */
+/*	#ICON
+	====================================================================== */
+
 .c-btn-icon {
 	display: flex;
 	justify-content: center;
@@ -89,7 +179,7 @@
 }
 
 /* *
- * Icon neutral
+ * Icon - Neutral
  */
 .c-btn-icon--neutral {
 	background-color: var(--theme-bg-main-softer);

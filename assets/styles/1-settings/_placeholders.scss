@@ -1,0 +1,21 @@
+/*------------------------------------*\
+	#PLACEHOLDERS
+\*------------------------------------*/
+
+/*	#SCROLLBAR
+	====================================================================== */
+
+%scrollbar-dark {
+	&::-webkit-scrollbar {
+		width: 6px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background-color: transparent;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border-radius: 100rem;
+		background-color: var(--theme-invertible-main-soft);
+	}
+}

@@ -13,6 +13,7 @@
  * Typography.............Font sizes, weights and related variables.
  * Colors.................The color palette.
  * Elevations.............Elevation definitions.
+ * Placeholders...........SASS placeholder helpers.
  * Themes.................Themes and their color definitions.
  *
  * 02. ELEMENTS
@@ -24,6 +25,8 @@
  * Button.................Custom button styles.
  * Link...................Custom link (anchors) styles.
  * Input..................Custom input styles.
+ * Card...................Card styles.
+ * Pill...................Different pill styles.
  * 
  * 04. UTILITIES
  * Mixed..................Mixed utility classes.
@@ -47,6 +50,8 @@
 
 @use './1-settings/elevation';
 
+@use './1-settings/placeholders';
+
 @use './1-settings/theme.scss';
 
 /* 02. ELEMENTS
@@ -62,6 +67,8 @@
 @use './3-components/button.scss';
 @use './3-components/link.scss';
 @use './3-components/input.scss';
+@use './3-components/card.scss';
+@use './3-components/pill.scss';
 
 /* 04. UTILITIES
    ====================================================================== */

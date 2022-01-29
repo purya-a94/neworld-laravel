@@ -1,0 +1,30 @@
+/*----------------------------------------*\
+	#PILL
+\*----------------------------------------*/
+
+@use '../1-settings/global' as GLOBAL;
+@use '../1-settings/typography' as TYPOGRAPHY;
+
+/*	#Base
+	====================================================================== */
+
+.c-pill {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding: 0.25rem 1.25rem;
+	font-size: TYPOGRAPHY.$size-lvl-1;
+	line-height: 22px;
+
+	border-radius: 100rem;
+}
+
+/* *
+ * Base - Primary
+ */
+
+.c-pill--primary {
+	background-color: var(--theme-bg-primary);
+	color: var(--theme-text-white);
+}

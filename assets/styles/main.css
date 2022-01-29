@@ -137,6 +137,11 @@
 	====================================================================== */
 /*	#DARK
 	====================================================================== */
+/*------------------------------------*\
+	#PLACEHOLDERS
+\*------------------------------------*/
+/*	#SCROLLBAR
+	====================================================================== */
 /*----------------------------------------*\
 	#THEMES
 \*----------------------------------------*/
@@ -173,15 +178,29 @@
   --theme-bg-primary: #654ce6;
   --theme-bg-primary-light: #8672ec;
   --theme-bg-primary-dark: #5828e1;
+  --theme-bg-black: #28293d;
+  --theme-bg-black-light: #555770;
+  --theme-bg-black-dark: #1c1c28;
+  --theme-bg-black-soft: #8f90a6;
+  --theme-bg-black-softer: #c7c9d9;
+  --theme-bg-white: #fafafc;
+  --theme-bg-white-light: #ffffff;
+  --theme-bg-white-dark: #f2f2f5;
+  --theme-bg-white-soft: #ebebf0;
+  --theme-bg-white-softer: #e4e4eb;
   --theme-bg-red: #ff3b3b;
   --theme-bg-red-light: #ff5c5c;
   --theme-bg-red-dark: #e53535;
   --theme-bg-green: #06c270;
   --theme-bg-green-light: #39d98a;
   --theme-bg-green-dark: #05a660;
+  --theme-bg-green-soft: #57eba1;
+  --theme-bg-green-softer: #e3fff1;
   --theme-bg-blue: #1265ff;
   --theme-bg-blue-light: #3d80fc;
   --theme-bg-blue-dark: #014bd3;
+  --theme-bg-blue-soft: #76a6ff;
+  --theme-bg-blue-softer: #c9dcff;
   --theme-bg-yellow: #fdb800;
   --theme-bg-yellow-light: #ffcb40;
   --theme-bg-yellow-dark: #e2a502;
@@ -191,6 +210,8 @@
   --theme-bg-teal: #00cfde;
   --theme-bg-teal-light: #73dfe7;
   --theme-bg-teal-dark: #00b7c4;
+  --theme-bg-teal-soft: #a9eff2;
+  --theme-bg-teal-softer: #e5ffff;
   --theme-bg-purple: #654ce6;
   --theme-bg-purple-light: #8672ec;
   --theme-bg-purple-dark: #5828e1;
@@ -199,6 +220,8 @@
   --theme-text-primary: #654ce6;
   --theme-text-primary-light: #8672ec;
   --theme-text-primary-dark: #5828e1;
+  --theme-text-black: #1c1c28;
+  --theme-text-white: #ffffff;
   --theme-text-red: #ff3b3b;
   --theme-text-green: #06c270;
   --theme-text-blue: #1265ff;
@@ -263,6 +286,8 @@
   --theme-invertible-main: #28293d;
   --theme-invertible-main-light: #555770;
   --theme-invertible-main-dark: #1c1c28;
+  --theme-invertible-main-soft: #8f90a6;
+  --theme-invertible-main-softer: #c7c9d9;
 }
 
 /* *
@@ -302,6 +327,8 @@
   --theme-invertible-main: #fafafc;
   --theme-invertible-main-light: #ffffff;
   --theme-invertible-main-dark: #f2f2f5;
+  --theme-invertible-main-soft: #ebebf0;
+  --theme-invertible-main-softer: #e4e4eb;
 }
 
 /*----------------------------------------*\
@@ -434,40 +461,115 @@ p {
 /*----------------------------------------*\
 	#BUTTON
 \*----------------------------------------*/
+/*	#BASE
+	====================================================================== */
 /* *
- * Primary
+ * Base - Primary
  */
-.c-btn-primary {
-  border-radius: 10px;
-  background-color: rebeccapurple;
-  color: var(--theme-text-main);
+.c-btn--primary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  border-radius: 16px;
+  border-color: transparent;
+  box-shadow: var(--theme-shadow-lvl-2);
+  background-color: var(--theme-bg-primary);
+  color: var(--theme-text-white);
+}
+.c-btn--primary:hover, .c-btn--primary:focus {
+  box-shadow: var(--theme-shadow-lvl-1);
+  color: var(--theme-text-white);
 }
 
-.c-btn-primary:hover,
-.c-btn-primary:focus {
-  background-color: teal;
-  color: var(--theme-text-main);
+/* *
+ * Base - Blue
+ */
+.c-btn--blue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 400;
+  border-radius: 16px;
+  border-color: transparent;
+  background-color: var(--theme-bg-blue-softer);
+  color: var(--theme-text-blue);
+}
+.c-btn--blue:hover, .c-btn--blue:focus {
+  box-shadow: none;
+  color: var(--theme-text-blue);
 }
 
 /* *
- * Primary outline
+ * Base - Green
  */
-.c-btn-outline-primary {
+.c-btn--green {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 400;
+  border-radius: 16px;
+  border-color: transparent;
+  background-color: var(--theme-bg-green-softer);
+  color: var(--theme-text-green);
+}
+.c-btn--green:hover, .c-btn--green:focus {
+  box-shadow: none;
+  color: var(--theme-text-green);
+}
+
+/* *
+ * Base - Teal
+ */
+.c-btn--teal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 400;
+  border-radius: 16px;
+  border-color: transparent;
+  background-color: var(--theme-bg-teal-softer);
+  color: var(--theme-text-teal);
+}
+.c-btn--teal:hover, .c-btn--teal:focus {
+  box-shadow: none;
+  color: var(--theme-text-teal);
+}
+
+/*	#OUTLINE
+	====================================================================== */
+/* *
+ * Outline - Primary
+ */
+.c-btn-outline--primary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  border-radius: 16px;
   border: 1px solid var(--theme-border-primary);
-  border-radius: 10px;
-  background-color: goldenrod;
+  box-shadow: var(--theme-shadow-lvl-2);
+  background-color: var(--theme-bg-white-light);
+  color: var(--theme-text-primary);
+}
+.c-btn-outline--primary:hover, .c-btn-outline--primary:focus {
+  border-color: var(--theme-border-primary);
+  box-shadow: var(--theme-shadow-lvl-1);
   color: var(--theme-text-primary);
 }
 
-.c-btn-outline-primary:hover,
-.c-btn-outline-primary:focus {
-  border: 1px solid var(--theme-border-primary);
-  color: var(--theme-text-primary-dark);
-}
-
-/* *
- * Neutral
- */
+/*	#NEUTRAL
+	====================================================================== */
 .c-btn-neutral {
   display: flex;
   justify-content: center;
@@ -484,9 +586,8 @@ p {
   box-shadow: none;
 }
 
-/* *
- * Icon
- */
+/*	#ICON
+	====================================================================== */
 .c-btn-icon {
   display: flex;
   justify-content: center;
@@ -507,7 +608,7 @@ p {
 }
 
 /* *
- * Icon neutral
+ * Icon - Neutral
  */
 .c-btn-icon--neutral {
   background-color: var(--theme-bg-main-softer);
@@ -562,6 +663,80 @@ p {
   outline: 1px solid var(--theme-text-red);
 }
 
+/*----------------------------------------*\
+	#CARD
+\*----------------------------------------*/
+/*	#BASE
+	====================================================================== */
+.c-card {
+  padding: 0.5rem;
+  border-radius: 16px;
+  box-shadow: var(--theme-shadow-lvl-1);
+  background-color: var(--theme-bg-main-light);
+}
+
+/*	#MATCHMAKING
+	====================================================================== */
+.c-card-games {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0;
+  border-radius: 16px;
+  box-shadow: var(--theme-shadow-lvl-1);
+  background-color: var(--theme-bg-main-light);
+}
+.c-card-games .c-card-games__header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 1.25rem;
+}
+.c-card-games .c-card-games__header > p {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--theme-text-main-light);
+}
+.c-card-games .c-card-games__header .c-card-games__header-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.c-card-games .c-card-games__header .c-card-games__header-divider {
+  height: 1px;
+  width: 100%;
+  margin-top: 0.25rem;
+  background-color: var(--theme-border-white);
+}
+.c-card-games .c-card-games__body {
+  display: flex;
+  flex-direction: column;
+}
+
+/*----------------------------------------*\
+	#PILL
+\*----------------------------------------*/
+/*	#Base
+	====================================================================== */
+.c-pill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem 1.25rem;
+  font-size: 1.125rem;
+  line-height: 22px;
+  border-radius: 100rem;
+}
+
+/* *
+ * Base - Primary
+ */
+.c-pill--primary {
+  background-color: var(--theme-bg-primary);
+  color: var(--theme-text-white);
+}
+
 /*------------------------------------*\
 	#UTILITIES
 \*------------------------------------*/
@@ -591,6 +766,14 @@ p {
   color: var(--theme-text-red);
 }
 
+/**	Divider
+	====================================================================== */
+.u-divider-light {
+  height: 1px;
+  width: 100%;
+  background-color: var(--theme-border-white);
+}
+
 /**	Misc
 	====================================================================== */
 .u-remove-btn-focus-shadow:focus {
@@ -617,6 +800,7 @@ p {
  * Typography.............Font sizes, weights and related variables.
  * Colors.................The color palette.
  * Elevations.............Elevation definitions.
+ * Placeholders...........SASS placeholder helpers.
  * Themes.................Themes and their color definitions.
  *
  * 02. ELEMENTS
@@ -628,6 +812,8 @@ p {
  * Button.................Custom button styles.
  * Link...................Custom link (anchors) styles.
  * Input..................Custom input styles.
+ * Card...................Card styles.
+ * Pill...................Different pill styles.
  * 
  * 04. UTILITIES
  * Mixed..................Mixed utility classes.

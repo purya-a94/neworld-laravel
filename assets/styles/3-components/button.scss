@@ -38,3 +38,59 @@
 
 	color: var(--theme-text-primary-dark);
 }
+
+/* *
+ * Neutral
+ */
+.c-btn-neutral {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding: 0.75rem;
+	font-size: TYPOGRAPHY.$size-small;
+	font-weight: TYPOGRAPHY.$weight-medium;
+
+	border-radius: GLOBAL.$radius-large;
+	border-color: transparent;
+	background-color: var(--theme-bg-main-softer);
+	color: var(--theme-text-main);
+
+	&:focus {
+		box-shadow: none;
+	}
+}
+
+/* *
+ * Icon
+ */
+.c-btn-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding: 0.75rem;
+
+	border-radius: 50%;
+	border-color: transparent;
+	background-color: transparent;
+	color: var(--theme-fill-main-dark);
+
+	&:focus {
+		box-shadow: none;
+	}
+
+	svg {
+		flex-shrink: 0;
+
+		height: 100%;
+		width: 100%;
+	}
+}
+
+/* *
+ * Icon neutral
+ */
+.c-btn-icon--neutral {
+	background-color: var(--theme-bg-main-softer);
+}

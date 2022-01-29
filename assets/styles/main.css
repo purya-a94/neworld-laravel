@@ -5,34 +5,71 @@
    * NOTE:
    * 1.	'EOT' formats are not included in order to reduce loading times,
    * 	though as a result, we don't support IE8 and older browsers.
-   * 2.	Out of 5 different weights of "IRANSansWeb" we only use 3;
-   * 	"Light" and "Black" are removed.
+   * 2.	Out of all the different weights of "Inter", we only use 4:
+   * 	Normal (400), medium (500), semibold (600), and bold (700)
+   * 3.	All weights also include an italic version.
  */
-/* #IRANSansWeb
+/* #INTER
 ====================================================================== */
 /* Normal */
 @font-face {
-  font-family: IRANSansWeb;
+  font-family: "Inter";
   font-style: normal;
-  font-weight: normal;
-  src: url("./IranSans/woff2/IRANSansWeb.woff2") format("woff2"), url("./IranSans/woff/IRANSansWeb.woff") format("woff"), url("./IranSans/ttf/IRANSansWeb.ttf") format("truetype");
+  font-weight: 400;
   font-display: swap;
+  src: url("/assets/fonts/Inter/Inter-Regular.woff2") format("woff2"), url("/assets/fonts/Inter/Inter-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Inter/Inter-Italic.woff2") format("woff2"), url("/assets/fonts/Inter/Inter-Italic.woff") format("woff");
 }
 /* Medium */
 @font-face {
-  font-family: IRANSansWeb;
+  font-family: "Inter";
   font-style: normal;
   font-weight: 500;
-  src: url("./IranSans/woff2/IRANSansWeb_Medium.woff2") format("woff2"), url("./IranSans/woff/IRANSansWeb_Medium.woff") format("woff"), url("./IranSans/ttf/IRANSansWeb_Medium.ttf") format("truetype");
   font-display: swap;
+  src: url("/assets/fonts/Inter/Inter-Medium.woff2") format("woff2"), url("/assets/fonts/Inter/Inter-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/assets/fonts/Inter/Inter-MediumItalic.woff2") format("woff2"), url("/assets/fonts/Inter/Inter-MediumItalic.woff") format("woff");
+}
+/* Semibold */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/fonts/Inter/Inter-SemiBold.woff2") format("woff2"), url("/assets/fonts/Inter/Inter-SemiBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/fonts/Inter/Inter-SemiBoldItalic.woff2") format("woff2"), url("/assets/fonts/Inter/Inter-SemiBoldItalic.woff") format("woff");
 }
 /* Bold */
 @font-face {
-  font-family: IRANSansWeb;
+  font-family: "Inter";
   font-style: normal;
-  font-weight: bold;
-  src: url("./IranSans/woff2/IRANSansWeb_Bold.woff2") format("woff2"), url("./IranSans/woff/IRANSansWeb_Bold.woff") format("woff"), url("./IranSans/ttf/IRANSansWeb_Bold.ttf") format("truetype");
+  font-weight: 700;
   font-display: swap;
+  src: url("/assets/fonts/Inter/Inter-Bold.woff2") format("woff2"), url("/assets/fonts/Inter/Inter-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/assets/fonts/Inter/Inter-BoldItalic.woff2") format("woff2"), url("/assets/fonts/Inter/Inter-BoldItalic.woff") format("woff");
 }
 /*----------------------------------------*\
 	#GLOBAL
@@ -173,6 +210,7 @@
   	====================================================================== */
   --theme-border-primary: #654ce6;
   --theme-border-black: #8f90a6;
+  --theme-border-black-light: #c7c9d9;
   --theme-border-white: #e4e4eb;
   --theme-border-red: #ff3b3b;
   --theme-border-green: #06c270;
@@ -181,6 +219,11 @@
   --theme-border-orange: #fd8f43;
   --theme-border-teal: #00cfde;
   --theme-border-purple: #654ce6;
+  /*	#FILL
+  	====================================================================== */
+  --theme-fill-primary: #654ce6;
+  --theme-fill-primary-light: #8672ec;
+  --theme-fill-primary-dark: #5828e1;
 }
 
 /* *
@@ -192,13 +235,20 @@
   --theme-bg-main: #fafafc;
   --theme-bg-main-light: #ffffff;
   --theme-bg-main-dark: #f2f2f5;
+  --theme-bg-main-soft: #ebebf0;
+  --theme-bg-main-softer: #e4e4eb;
   /*	#TEXT
   	====================================================================== */
   --theme-text-main: #28293d;
   --theme-text-main-light: #555770;
   --theme-text-main-dark: #1c1c28;
-  /*	#BORDER
+  --theme-text-main-soft: #8f90a6;
+  --theme-text-main-softer: #c7c9d9;
+  /*	#FILL
   	====================================================================== */
+  --theme-fill-main: #555770;
+  --theme-fill-main-light: #8f90a6;
+  --theme-fill-main-dark: #28293d;
   /*	#BOX SHADOW
   	====================================================================== */
   --theme-shadow-inset: inset 0px 0.5px 4px rgba(96, 97, 112, 0.32);
@@ -208,6 +258,11 @@
   --theme-shadow-lvl-4: 0px 2px 4px rgba(40, 41, 61, 0.04), 0px 8px 16px rgba(96, 97, 112, 0.16);
   --theme-shadow-lvl-5: 0px 2px 8px rgba(40, 41, 61, 0.04), 0px 16px 24px rgba(96, 97, 112, 0.16);
   --theme-shadow-lvl-6: 0px 2px 8px rgba(40, 41, 61, 0.08), 0px 20px 32px rgba(96, 97, 112, 0.24);
+  /*	#INVERTIBLE
+  	====================================================================== */
+  --theme-invertible-main: #28293d;
+  --theme-invertible-main-light: #555770;
+  --theme-invertible-main-dark: #1c1c28;
 }
 
 /* *
@@ -219,13 +274,20 @@
   --theme-bg-main: #28293d;
   --theme-bg-main-light: #555770;
   --theme-bg-main-dark: #1c1c28;
+  --theme-bg-main-soft: #8f90a6;
+  --theme-bg-main-softer: #c7c9d9;
   /*	#TEXT
   	====================================================================== */
   --theme-text-main: #fafafc;
   --theme-text-main-light: #ffffff;
   --theme-text-main-dark: #f2f2f5;
-  /*	#BORDER
+  --theme-text-main-soft: #ebebf0;
+  --theme-text-main-softer: #e4e4eb;
+  /*	#FILL
   	====================================================================== */
+  --theme-fill-main: #fafafc;
+  --theme-fill-main-light: #ffffff;
+  --theme-fill-main-dark: #f2f2f5;
   /*	#BOX SHADOW
   	====================================================================== */
   --theme-shadow-inset: inset 0px 0.5px 4px rgba(0, 0, 0, 0.32);
@@ -235,6 +297,11 @@
   --theme-shadow-lvl-4: 0px 2px 4px rgba(0, 0, 0, 0.04), 0px 8px 16px rgba(0, 0, 0, 0.32);
   --theme-shadow-lvl-5: 0px 2px 8px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.32);
   --theme-shadow-lvl-6: 0px 2px 8px rgba(0, 0, 0, 0.08), 0px 20px 32px rgba(0, 0, 0, 0.32);
+  /*	#INVERTIBLE
+  	====================================================================== */
+  --theme-invertible-main: #fafafc;
+  --theme-invertible-main-light: #ffffff;
+  --theme-invertible-main-dark: #f2f2f5;
 }
 
 /*----------------------------------------*\
@@ -244,6 +311,9 @@
  *	NOTE:
  *  1.	Overflowing content should be handled inside the desired,
  *		content-wrapping component.
+ *	2.	Relative position and top padding is here to allow for a fixed
+ *		header inside pages. The padding value is the same as the header's
+ *		height, defined inside header component.
  */
 html,
 body {
@@ -253,13 +323,23 @@ body {
   margin: 0;
   overflow: hidden;
   /* [1] */
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Ubuntu", "Droid Sans", "Helvetica Neue", arial, sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Ubuntu", "Droid Sans", "Helvetica Neue", arial, sans-serif;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--theme-bg-main);
+  background-color: var(--theme-bg-main-dark);
   color: var(--theme-text-main);
   scroll-behavior: smooth;
+}
+
+/* [2] */
+.main-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 110px;
+  overflow: auto;
 }
 
 /*----------------------------------------*\
@@ -388,6 +468,54 @@ p {
 .c-btn-outline-primary:focus {
   border: 1px solid var(--theme-border-primary);
   color: var(--theme-text-primary-dark);
+}
+
+/* *
+ * Neutral
+ */
+.c-btn-neutral {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 24px;
+  border-color: transparent;
+  background-color: var(--theme-bg-main-softer);
+  color: var(--theme-text-main);
+}
+.c-btn-neutral:focus {
+  box-shadow: none;
+}
+
+/* *
+ * Icon
+ */
+.c-btn-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: transparent;
+  color: var(--theme-fill-main-dark);
+}
+.c-btn-icon:focus {
+  box-shadow: none;
+}
+.c-btn-icon svg {
+  flex-shrink: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* *
+ * Icon neutral
+ */
+.c-btn-icon--neutral {
+  background-color: var(--theme-bg-main-softer);
 }
 
 /*----------------------------------------*\

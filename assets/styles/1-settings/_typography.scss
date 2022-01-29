@@ -5,7 +5,7 @@
 /*	#BASE
 	====================================================================== */
 
-$font-primary: 'Roboto';
+$font-primary: 'Inter';
 
 $base-font-stack: $font-primary, -apple-system, BlinkMacSystemFont, 'Segoe UI',
 	'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', arial, sans-serif;
@@ -47,7 +47,6 @@ $weight-normal: 400;
 $weight-medium: 500;
 $weight-semiBold: 600;
 $weight-bold: 700;
-
 
 /*	#PLACEHOLDERS
 	====================================================================== */
@@ -100,4 +99,10 @@ $weight-bold: 700;
 	font-weight: $weight-semiBold;
 
 	color: var(--theme-text-main-dark);
+}
+
+%overflow-ellipsis {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
 }

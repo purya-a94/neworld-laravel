@@ -6,9 +6,19 @@
 
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 
 	overflow: auto;
-	padding: 3rem GLOBAL.$spacing-large;
+}
+
+.home__wrapper {
+	display: flex;
+	flex-direction: column;
+
+	height: 100%;
+	width: 100%;
+	max-width: GLOBAL.$bp-x-large;
+	padding: 3rem GLOBAL.$spacing-medium-large;
 }
 
 .home__news-grid-title {

@@ -124,6 +124,7 @@
 	--theme-border-primary: #{COLORS.$primary};
 
 	--theme-border-black: #{COLORS.$black-3};
+	--theme-border-black-light: #{COLORS.$black-4};
 	--theme-border-white: #{COLORS.$white-0};
 	--theme-border-red: #{COLORS.$red-1};
 	--theme-border-green: #{COLORS.$green-1};
@@ -132,6 +133,13 @@
 	--theme-border-orange: #{COLORS.$orange-1};
 	--theme-border-teal: #{COLORS.$teal-1};
 	--theme-border-purple: #{COLORS.$purple-1};
+
+	/*	#FILL
+		====================================================================== */
+
+	--theme-fill-primary: #{COLORS.$primary};
+	--theme-fill-primary-light: #{COLORS.$primary-light};
+	--theme-fill-primary-dark: #{COLORS.$primary-dark};
 }
 
 /* *
@@ -145,6 +153,9 @@
 	--theme-bg-main-light: #{COLORS.$white-4};
 	--theme-bg-main-dark: #{COLORS.$white-2};
 
+	--theme-bg-main-soft: #{COLORS.$white-1};
+	--theme-bg-main-softer: #{COLORS.$white-0};
+
 	/*	#TEXT
 		====================================================================== */
 
@@ -152,8 +163,15 @@
 	--theme-text-main-light: #{COLORS.$black-2};
 	--theme-text-main-dark: #{COLORS.$black-0};
 
-	/*	#BORDER
+	--theme-text-main-soft: #{COLORS.$black-3};
+	--theme-text-main-softer: #{COLORS.$black-4};
+
+	/*	#FILL
 		====================================================================== */
+
+	--theme-fill-main: #{COLORS.$black-2};
+	--theme-fill-main-light: #{COLORS.$black-3};
+	--theme-fill-main-dark: #{COLORS.$black-1};
 
 	/*	#BOX SHADOW
 		====================================================================== */
@@ -165,6 +183,13 @@
 	--theme-shadow-lvl-4: #{ELEVATION.$light-lvl-4};
 	--theme-shadow-lvl-5: #{ELEVATION.$light-lvl-5};
 	--theme-shadow-lvl-6: #{ELEVATION.$light-lvl-6};
+
+	/*	#INVERTIBLE
+		====================================================================== */
+
+	--theme-invertible-main: #{COLORS.$black-1};
+	--theme-invertible-main-light: #{COLORS.$black-2};
+	--theme-invertible-main-dark: #{COLORS.$black-0};
 }
 
 /* *
@@ -178,6 +203,9 @@
 	--theme-bg-main-light: #{COLORS.$black-2};
 	--theme-bg-main-dark: #{COLORS.$black-0};
 
+	--theme-bg-main-soft: #{COLORS.$black-3};
+	--theme-bg-main-softer: #{COLORS.$black-4};
+
 	/*	#TEXT
 		====================================================================== */
 
@@ -185,8 +213,15 @@
 	--theme-text-main-light: #{COLORS.$white-4};
 	--theme-text-main-dark: #{COLORS.$white-2};
 
-	/*	#BORDER
+	--theme-text-main-soft: #{COLORS.$white-1};
+	--theme-text-main-softer: #{COLORS.$white-0};
+
+	/*	#FILL
 		====================================================================== */
+
+	--theme-fill-main: #{COLORS.$white-3};
+	--theme-fill-main-light: #{COLORS.$white-4};
+	--theme-fill-main-dark: #{COLORS.$white-2};
 
 	/*	#BOX SHADOW
 		====================================================================== */
@@ -198,4 +233,11 @@
 	--theme-shadow-lvl-4: #{ELEVATION.$dark-lvl-4};
 	--theme-shadow-lvl-5: #{ELEVATION.$dark-lvl-5};
 	--theme-shadow-lvl-6: #{ELEVATION.$dark-lvl-6};
+
+	/*	#INVERTIBLE
+		====================================================================== */
+
+	--theme-invertible-main: #{COLORS.$white-3};
+	--theme-invertible-main-light: #{COLORS.$white-4};
+	--theme-invertible-main-dark: #{COLORS.$white-2};
 }

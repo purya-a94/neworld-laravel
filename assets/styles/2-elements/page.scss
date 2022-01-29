@@ -9,6 +9,9 @@
  *	NOTE:
  *  1.	Overflowing content should be handled inside the desired,
  *		content-wrapping component.
+ *	2.	Relative position and top padding is here to allow for a fixed
+ *		header inside pages. The padding value is the same as the header's
+ *		height, defined inside header component.
  */
 html,
 body {
@@ -24,8 +27,20 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 
-	background-color: var(--theme-bg-main);
+	background-color: var(--theme-bg-main-dark);
 	color: var(--theme-text-main);
 
 	scroll-behavior: smooth;
+}
+
+/* [2] */
+.main-wrapper {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+
+	height: 100%;
+	padding-top: 110px;
+	overflow: auto;
 }

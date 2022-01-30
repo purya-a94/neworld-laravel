@@ -16,52 +16,38 @@
 	background-color: var(--theme-bg-main-light);
 }
 
-/*	#MATCHMAKING
-	====================================================================== */
+.c-card__header {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0.5rem;
 
-.c-card-games {
+	width: 100%;
+	padding: 0.25rem 1rem;
+
+	> p {
+		font-size: TYPOGRAPHY.$size-lvl-2;
+		font-weight: TYPOGRAPHY.$weight-medium;
+
+		color: var(--theme-text-main-light);
+	}
+}
+
+.c-card__header-controls {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.c-card__header-divider {
+	height: 1px;
+	width: 100%;
+	margin-top: 0.25rem;
+
+	background-color: var(--theme-border-white);
+}
+.c-card__body {
 	display: flex;
 	flex-direction: column;
-
-	padding: 0.5rem 0;
-
-	border-radius: GLOBAL.$radius-medium;
-	box-shadow: var(--theme-shadow-lvl-1);
-	background-color: var(--theme-bg-main-light);
-
-	.c-card-games__header {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		align-items: center;
-		gap: 0.5rem;
-
-		padding: 0.25rem 1.25rem;
-
-		> p {
-			font-size: TYPOGRAPHY.$size-lvl-2;
-			font-weight: TYPOGRAPHY.$weight-medium;
-
-			color: var(--theme-text-main-light);
-		}
-
-		.c-card-games__header-controls {
-			display: flex;
-			align-items: center;
-			gap: 0.5rem;
-		}
-
-		.c-card-games__header-divider {
-			height: 1px;
-			width: 100%;
-			margin-top: 0.25rem;
-
-			background-color: var(--theme-border-white);
-		}
-	}
-
-	.c-card-games__body {
-		display: flex;
-		flex-direction: column;
-	}
 }

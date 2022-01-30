@@ -142,6 +142,8 @@
 \*------------------------------------*/
 /*	#SCROLLBAR
 	====================================================================== */
+/*	#IMAGE
+	====================================================================== */
 /*----------------------------------------*\
 	#THEMES
 \*----------------------------------------*/
@@ -178,6 +180,8 @@
   --theme-bg-primary: #654ce6;
   --theme-bg-primary-light: #8672ec;
   --theme-bg-primary-dark: #5828e1;
+  --theme-bg-primary-soft: #baaef8;
+  --theme-bg-primary-softer: #f0eefc;
   --theme-bg-black: #28293d;
   --theme-bg-black-light: #555770;
   --theme-bg-black-dark: #1c1c28;
@@ -380,13 +384,10 @@ a {
   transition: background-color 0.1s, box-shadow 0.1s, transform 0.1s;
   color: inherit;
 }
-
 a:hover {
   color: inherit;
 }
-
-a:visited,
-a:active {
+a:visited, a:active {
   text-decoration: initial;
 }
 
@@ -568,6 +569,38 @@ p {
   color: var(--theme-text-primary);
 }
 
+/*	#TRANSPARENT
+	====================================================================== */
+.c-btn-transparent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.375rem;
+  font-size: 1rem;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  border-color: transparent;
+  box-shadow: none;
+  background-color: rgba(199, 201, 217, 0.4);
+  color: var(--theme-text-black);
+}
+.c-btn-transparent:hover, .c-btn-transparent:focus {
+  box-shadow: none;
+  color: var(--theme-text-black);
+}
+
+/* *
+ * Transparent - Primary
+ */
+.c-btn-transparent--primary {
+  background-color: rgba(240, 238, 252, 0.7);
+  color: var(--theme-text-primary);
+}
+.c-btn-transparent--primary:hover, .c-btn-transparent--primary:focus {
+  color: var(--theme-text-primary);
+}
+
 /*	#NEUTRAL
 	====================================================================== */
 .c-btn-neutral {
@@ -582,6 +615,9 @@ p {
   background-color: var(--theme-bg-main-softer);
   color: var(--theme-text-main);
 }
+.c-btn-neutral:hover {
+  color: var(--theme-text-main);
+}
 .c-btn-neutral:focus {
   box-shadow: none;
 }
@@ -592,10 +628,13 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.75rem;
+  padding: 0.125rem;
   border-radius: 50%;
   border-color: transparent;
   background-color: transparent;
+  color: var(--theme-fill-main-dark);
+}
+.c-btn-icon:hover {
   color: var(--theme-fill-main-dark);
 }
 .c-btn-icon:focus {
@@ -617,32 +656,30 @@ p {
 /*----------------------------------------*\
 	#LINK
 \*----------------------------------------*/
+/*	#BASE
+	====================================================================== */
+.c-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem;
+  text-decoration: none;
+  background-color: transparent;
+  color: inherit;
+}
+.c-link:hover, .c-link:focus {
+  color: inherit;
+}
+
 /* *
- * Primary
+ * Base - Primary
  */
-.c-link-primary {
-  text-decoration: underline;
-  text-underline-offset: 6px;
+.c-link--primary {
+  letter-spacing: 2px;
   color: var(--theme-text-primary);
 }
-
-.c-link-primary:hover,
-.c-link-primary:focus {
-  color: var(--theme-text-primary);
-}
-
-/* *
- * Secondary
- */
-.c-link-secondary {
-  text-decoration: underline;
-  text-underline-offset: 6px;
-  color: var(--theme-text-blue);
-}
-
-.c-link-secondary:hover,
-.c-link-secondary:focus {
-  color: var(--theme-text-blue);
+.c-link--primary:hover, .c-link--primary:focus {
+  color: var(--theme-text-primary-dark);
 }
 
 /*----------------------------------------*\
@@ -675,41 +712,35 @@ p {
   background-color: var(--theme-bg-main-light);
 }
 
-/*	#MATCHMAKING
-	====================================================================== */
-.c-card-games {
-  display: flex;
-  flex-direction: column;
-  padding: 0.5rem 0;
-  border-radius: 16px;
-  box-shadow: var(--theme-shadow-lvl-1);
-  background-color: var(--theme-bg-main-light);
-}
-.c-card-games .c-card-games__header {
+.c-card__header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.25rem 1.25rem;
+  width: 100%;
+  padding: 0.25rem 1rem;
 }
-.c-card-games .c-card-games__header > p {
+.c-card__header > p {
   font-size: 1.25rem;
   font-weight: 500;
   color: var(--theme-text-main-light);
 }
-.c-card-games .c-card-games__header .c-card-games__header-controls {
+
+.c-card__header-controls {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
-.c-card-games .c-card-games__header .c-card-games__header-divider {
+
+.c-card__header-divider {
   height: 1px;
   width: 100%;
   margin-top: 0.25rem;
   background-color: var(--theme-border-white);
 }
-.c-card-games .c-card-games__body {
+
+.c-card__body {
   display: flex;
   flex-direction: column;
 }
@@ -774,9 +805,19 @@ p {
   background-color: var(--theme-border-white);
 }
 
+/**	Rotate
+	====================================================================== */
+.u-rotate-90 {
+  transform: rotate(90deg);
+}
+
+.u-rotate-180 {
+  transform: rotate(180deg);
+}
+
 /**	Misc
 	====================================================================== */
-.u-remove-btn-focus-shadow:focus {
+.u-boxShadow-focus-none:focus {
   box-shadow: none;
 }
 

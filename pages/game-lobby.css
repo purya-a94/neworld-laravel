@@ -50,6 +50,12 @@
 	====================================================================== */
 /*	#PLACEHOLDERS
 	====================================================================== */
+.lobby__shop-featured-item-title {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 /*------------------------------------*\
 	#PLACEHOLDERS
 \*------------------------------------*/
@@ -64,6 +70,26 @@
 .lobby__matchmaking-games::-webkit-scrollbar-thumb, .lobby__rank-games::-webkit-scrollbar-thumb {
   border-radius: 100rem;
   background-color: var(--theme-invertible-main-soft);
+}
+
+.lobby__shop-packs-list::-webkit-scrollbar {
+  height: 6px;
+}
+.lobby__shop-packs-list::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.lobby__shop-packs-list::-webkit-scrollbar-thumb {
+  border-radius: 100rem;
+  background-color: var(--theme-invertible-main-soft);
+}
+
+/*	#IMAGE
+	====================================================================== */
+.lobby__shop-packs-list button img, .lobby__shop-featured-item-content img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .lobby__wrapper {
@@ -363,6 +389,129 @@
 
 .lobby__rank-others-card:last-of-type {
   border-bottom: 0;
+}
+
+/*
+ *	Shop
+ *	====================================================================== */
+.lobby__shop-header-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.lobby__shop-body {
+  padding: 1rem;
+  padding-bottom: 2rem;
+}
+
+.lobby__shop-avatar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 1.375rem;
+}
+.lobby__shop-avatar button {
+  color: var(--theme-fill-main);
+}
+.lobby__shop-avatar img {
+  max-height: 160px;
+  max-width: 135px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.lobby__shop-packs {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.lobby__shop-packs p {
+  color: var(--theme-text-main-light);
+}
+
+.lobby__shop-packs-list {
+  display: grid;
+  grid-template-columns: repeat(4, 38px);
+  grid-auto-flow: column;
+  column-gap: 1.5rem;
+  padding-bottom: 0.375rem;
+  overflow-x: auto;
+}
+.lobby__shop-packs-list button {
+  aspect-ratio: 1;
+  width: 100%;
+  padding: 0.125rem;
+}
+.lobby__shop-packs-list button img {
+  border-radius: 8px;
+}
+
+.lobby__shop-featured {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 1rem;
+}
+
+.lobby__shop-featured-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.lobby__shop-featured-item-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 152px;
+  width: 100%;
+  padding: 0.25rem;
+  font-size: 1rem;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid var(--theme-border-black-light);
+}
+.lobby__shop-featured-item-content-price {
+  position: absolute;
+  bottom: 0.25rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: calc(100% - 0.5rem);
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  border: 1px solid var(--theme-border-black-light);
+  background-color: var(--theme-bg-main-light);
+  color: var(--theme-text-main);
+}
+.lobby__shop-featured-item-content-price svg {
+  align-self: center;
+  height: 24px;
+  width: 24px;
+  color: var(--theme-bg-yellow-light);
+}
+.lobby__shop-featured-item-content-price span {
+  place-self: center;
+}
+
+.lobby__shop-featured-item-content-btn {
+  position: absolute;
+  bottom: 0.25rem;
+  width: calc(100% - 0.5rem);
+}
+
+.lobby__shop-featured-item-title {
+  max-width: 100%;
+  padding: 0 0.375rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
 }
 
 /*# sourceMappingURL=game-lobby.css.map */

@@ -19,13 +19,13 @@ a {
 	transition: background-color 0.1s, box-shadow 0.1s, transform 0.1s;
 
 	color: inherit;
-}
 
-a:hover {
-	color: inherit;
-}
+	&:hover {
+		color: inherit;
+	}
 
-a:visited,
-a:active {
-	text-decoration: initial;
+	&:visited,
+	&:active {
+		text-decoration: initial;
+	}
 }

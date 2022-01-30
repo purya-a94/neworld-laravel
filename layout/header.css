@@ -138,6 +138,7 @@
 
 .header__notifications {
   flex-shrink: 0;
+  padding: 0.75rem;
 }
 .header__notifications.header__notifications--active {
   position: relative;

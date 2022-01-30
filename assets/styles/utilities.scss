@@ -34,6 +34,7 @@
 
 /**	Divider
 	====================================================================== */
+
 .u-divider-light {
 	height: 1px;
 	width: 100%;
@@ -41,10 +42,21 @@
 	background-color: var(--theme-border-white);
 }
 
+/**	Rotate
+	====================================================================== */
+
+.u-rotate-90 {
+	transform: rotate(90deg);
+}
+
+.u-rotate-180 {
+	transform: rotate(180deg);
+}
+
 /**	Misc
 	====================================================================== */
 
-.u-remove-btn-focus-shadow:focus {
+.u-boxShadow-focus-none:focus {
 	box-shadow: none;
 }
 

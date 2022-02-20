@@ -529,1242 +529,582 @@
 							</div>
 
 							<!--	=========================================
-									Slots menu
+									Slots
 							-->
-							<ul class="nav gameShop__slots-menu" id="slotsTab" role="tablist">
+							<div class="gameShop__slots-wrapper">
 								<!--	=========================================
+										Slots menu
+								-->
+								<ul
+									class="nav gameShop__slots-menu"
+									id="slotsTab"
+									role="tablist"
+								>
+									<!--	=========================================
 										Weapon tab
 								-->
-								<li
-									class="nav-item gameShop__slot-menu-item"
-									role="presentation"
-								>
-									<button
-										class="nav-link active gameShop__slot-menu-btn"
-										id="weapon-tab"
-										data-bs-toggle="tab"
-										data-bs-target="#weapon"
-										type="button"
-										role="tab"
-										aria-controls="weapon"
-										aria-selected="true"
+									<li
+										class="nav-item gameShop__slot-menu-item"
+										role="presentation"
 									>
-										Weapon
-									</button>
-								</li>
-								<!--	=========================================
+										<button
+											class="nav-link active gameShop__slot-menu-btn"
+											id="weapon-tab"
+											data-bs-toggle="tab"
+											data-bs-target="#weapon"
+											type="button"
+											role="tab"
+											aria-controls="weapon"
+											aria-selected="true"
+										>
+											Weapon
+										</button>
+									</li>
+									<!--	=========================================
 										Head tab
 								-->
-								<li
-									class="nav-item gameShop__slot-menu-item"
-									role="presentation"
-								>
-									<button
-										class="nav-link gameShop__slot-menu-btn"
-										id="head-tab"
-										data-bs-toggle="tab"
-										data-bs-target="#head"
-										type="button"
-										role="tab"
-										aria-controls="head"
-										aria-selected="false"
+									<li
+										class="nav-item gameShop__slot-menu-item"
+										role="presentation"
 									>
-										Head
-									</button>
-								</li>
-								<!--	=========================================
+										<button
+											class="nav-link gameShop__slot-menu-btn"
+											id="head-tab"
+											data-bs-toggle="tab"
+											data-bs-target="#head"
+											type="button"
+											role="tab"
+											aria-controls="head"
+											aria-selected="false"
+										>
+											Head
+										</button>
+									</li>
+									<!--	=========================================
 										Belt tab
 								-->
-								<li
-									class="nav-item gameShop__slot-menu-item"
-									role="presentation"
-								>
-									<button
-										class="nav-link gameShop__slot-menu-btn"
-										id="belt-tab"
-										data-bs-toggle="tab"
-										data-bs-target="#belt"
-										type="button"
-										role="tab"
-										aria-controls="belt"
-										aria-selected="false"
+									<li
+										class="nav-item gameShop__slot-menu-item"
+										role="presentation"
 									>
-										Belt
-									</button>
-								</li>
-								<!--	=========================================
+										<button
+											class="nav-link gameShop__slot-menu-btn"
+											id="belt-tab"
+											data-bs-toggle="tab"
+											data-bs-target="#belt"
+											type="button"
+											role="tab"
+											aria-controls="belt"
+											aria-selected="false"
+										>
+											Belt
+										</button>
+									</li>
+									<!--	=========================================
 										Costume tab
 								-->
-								<li
-									class="nav-item gameShop__slot-menu-item"
-									role="presentation"
-								>
-									<button
-										class="nav-link gameShop__slot-menu-btn"
-										id="costume-tab"
-										data-bs-toggle="tab"
-										data-bs-target="#costume"
-										type="button"
-										role="tab"
-										aria-controls="costume"
-										aria-selected="false"
+									<li
+										class="nav-item gameShop__slot-menu-item"
+										role="presentation"
 									>
-										Costume
-									</button>
-								</li>
-							</ul>
+										<button
+											class="nav-link gameShop__slot-menu-btn"
+											id="costume-tab"
+											data-bs-toggle="tab"
+											data-bs-target="#costume"
+											type="button"
+											role="tab"
+											aria-controls="costume"
+											aria-selected="false"
+										>
+											Costume
+										</button>
+									</li>
+								</ul>
 
-							<!--	=========================================
-									Slots tab content
-							-->
-							<div
-								class="tab-content gameShop__slots-content"
-								id="slotsTabContent"
-							>
 								<!--	=========================================
-										Weapon tab content
+										Slots tab content
 								-->
 								<div
-									class="tab-pane fade show active"
-									id="weapon"
-									role="tabpanel"
-									aria-labelledby="weapon-tab"
+									class="tab-content gameShop__slots-content"
+									id="slotsTabContent"
 								>
-									<div class="gameShop__slots-tab">
-										<!--	=========================================
-												Featured item
-										-->
-										<div class="gameShop__slots-item">
+									<!--	=========================================
+											Weapon tab content
+									-->
+									<div
+										class="tab-pane fade show active"
+										id="weapon"
+										role="tabpanel"
+										aria-labelledby="weapon-tab"
+									>
+										<div class="gameShop__slots-tab">
 											<!--	=========================================
-													Item content
+													Featured item
 											-->
-											<div class="gameShop__slots-item-content">
-												<img
-													src="/assets/images/shop-item-temp.png"
-													alt="Sword"
-												/>
+											<div class="gameShop__slots-item">
+												<!--	=========================================
+														Item content
+												-->
+												<div class="gameShop__slots-item-content">
+													<img
+														src="/assets/images/shop-item-temp.png"
+														alt="Sword"
+													/>
+
+													<!--	=========================================
+															Item price
+													-->
+													<label class="gameShop__slots-item-content-price">
+														<svg
+															width="24"
+															height="24"
+															viewBox="0 0 24 24"
+															fill="currentColor"
+															xmlns="http://www.w3.org/2000/svg"
+														>
+															<path
+																d="M14.9693 12.75H14.1993H9.5293V15.58H10.8393H14.9693C15.9193 15.58 16.6993 14.94 16.6993 14.16C16.6993 13.38 15.9193 12.75 14.9693 12.75Z"
+															/>
+															<path
+																d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.97 17.08H13.32V18.5C13.32 18.91 12.98 19.25 12.57 19.25C12.16 19.25 11.82 18.91 11.82 18.5V17.08H10.84H10.61V18.5C10.61 18.91 10.27 19.25 9.86 19.25C9.45 19.25 9.11 18.91 9.11 18.5V17.08H8.78H7.05C6.64 17.08 6.3 16.74 6.3 16.33C6.3 15.92 6.64 15.58 7.05 15.58H8.03V12V8.42H7.05C6.64 8.42 6.3 8.08 6.3 7.67C6.3 7.26 6.64 6.92 7.05 6.92H8.78H9.11V5.5C9.11 5.09 9.45 4.75 9.86 4.75C10.27 4.75 10.61 5.09 10.61 5.5V6.92H10.84H11.82V5.5C11.82 5.09 12.16 4.75 12.57 4.75C12.98 4.75 13.32 5.09 13.32 5.5V6.92H14.2C15.75 6.92 17.12 8.28 17.12 9.84C17.12 10.51 16.88 11.12 16.5 11.62C17.51 12.11 18.2 13.07 18.2 14.18C18.2 15.77 16.75 17.08 14.97 17.08Z"
+															/>
+															<path
+																d="M15.6193 9.82997C15.6193 9.16997 14.9993 8.40997 14.1993 8.40997H10.8393H9.5293V11.24H14.1993C14.9793 11.25 15.6193 10.61 15.6193 9.82997Z"
+															/>
+														</svg>
+
+														<span>300</span>
+													</label>
+
+													<!--	=========================================
+															Item button
+													-->
+													<!-- <button
+															class="btn c-btn-transparent c-btn-transparent--primary gameShop__slots-item-content-btn"
+														>
+															Options
+														</button> -->
+												</div>
 
 												<!--	=========================================
-														Item price
+														Item title
 												-->
-												<label class="gameShop__slots-item-content-price">
-													<svg
-														width="24"
-														height="24"
-														viewBox="0 0 24 24"
-														fill="currentColor"
-														xmlns="http://www.w3.org/2000/svg"
-													>
-														<path
-															d="M14.9693 12.75H14.1993H9.5293V15.58H10.8393H14.9693C15.9193 15.58 16.6993 14.94 16.6993 14.16C16.6993 13.38 15.9193 12.75 14.9693 12.75Z"
-														/>
-														<path
-															d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.97 17.08H13.32V18.5C13.32 18.91 12.98 19.25 12.57 19.25C12.16 19.25 11.82 18.91 11.82 18.5V17.08H10.84H10.61V18.5C10.61 18.91 10.27 19.25 9.86 19.25C9.45 19.25 9.11 18.91 9.11 18.5V17.08H8.78H7.05C6.64 17.08 6.3 16.74 6.3 16.33C6.3 15.92 6.64 15.58 7.05 15.58H8.03V12V8.42H7.05C6.64 8.42 6.3 8.08 6.3 7.67C6.3 7.26 6.64 6.92 7.05 6.92H8.78H9.11V5.5C9.11 5.09 9.45 4.75 9.86 4.75C10.27 4.75 10.61 5.09 10.61 5.5V6.92H10.84H11.82V5.5C11.82 5.09 12.16 4.75 12.57 4.75C12.98 4.75 13.32 5.09 13.32 5.5V6.92H14.2C15.75 6.92 17.12 8.28 17.12 9.84C17.12 10.51 16.88 11.12 16.5 11.62C17.51 12.11 18.2 13.07 18.2 14.18C18.2 15.77 16.75 17.08 14.97 17.08Z"
-														/>
-														<path
-															d="M15.6193 9.82997C15.6193 9.16997 14.9993 8.40997 14.1993 8.40997H10.8393H9.5293V11.24H14.1993C14.9793 11.25 15.6193 10.61 15.6193 9.82997Z"
-														/>
-													</svg>
-
-													<span>300</span>
-												</label>
-
-												<!--	=========================================
-														Item button
-												-->
-												<!-- <button
-													class="btn c-btn-transparent c-btn-transparent--primary gameShop__slots-item-content-btn"
-												>
-													Options
-												</button> -->
+												<p class="gameShop__slots-item-title">Diamond Sword</p>
 											</div>
 
 											<!--	=========================================
-													Item title
+													Featured item
 											-->
-											<p class="gameShop__slots-item-title">Diamond Sword</p>
-										</div>
-										<!--	=========================================
-												Featured item
-										-->
-										<div class="gameShop__slots-item">
-											<!--	=========================================
-													Item content
-											-->
-											<div class="gameShop__slots-item-content">
-												<img
-													src="/assets/images/shop-item-temp.png"
-													alt="Sword"
-												/>
-
+											<div class="gameShop__slots-item">
 												<!--	=========================================
-														Item price
+														Item content
 												-->
-												<!-- <label class="gameShop__slots-item-content-price">
-													<svg
-														width="24"
-														height="24"
-														viewBox="0 0 24 24"
-														fill="currentColor"
-														xmlns="http://www.w3.org/2000/svg"
+												<div class="gameShop__slots-item-content">
+													<img
+														src="/assets/images/shop-item-temp.png"
+														alt="Sword"
+													/>
+
+													<!--	=========================================
+															Item price
+													-->
+													<!-- <label class="gameShop__slots-item-content-price">
+														<svg
+															width="24"
+															height="24"
+															viewBox="0 0 24 24"
+															fill="currentColor"
+															xmlns="http://www.w3.org/2000/svg"
+														>
+															<path
+																d="M14.9693 12.75H14.1993H9.5293V15.58H10.8393H14.9693C15.9193 15.58 16.6993 14.94 16.6993 14.16C16.6993 13.38 15.9193 12.75 14.9693 12.75Z"
+															/>
+															<path
+																d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.97 17.08H13.32V18.5C13.32 18.91 12.98 19.25 12.57 19.25C12.16 19.25 11.82 18.91 11.82 18.5V17.08H10.84H10.61V18.5C10.61 18.91 10.27 19.25 9.86 19.25C9.45 19.25 9.11 18.91 9.11 18.5V17.08H8.78H7.05C6.64 17.08 6.3 16.74 6.3 16.33C6.3 15.92 6.64 15.58 7.05 15.58H8.03V12V8.42H7.05C6.64 8.42 6.3 8.08 6.3 7.67C6.3 7.26 6.64 6.92 7.05 6.92H8.78H9.11V5.5C9.11 5.09 9.45 4.75 9.86 4.75C10.27 4.75 10.61 5.09 10.61 5.5V6.92H10.84H11.82V5.5C11.82 5.09 12.16 4.75 12.57 4.75C12.98 4.75 13.32 5.09 13.32 5.5V6.92H14.2C15.75 6.92 17.12 8.28 17.12 9.84C17.12 10.51 16.88 11.12 16.5 11.62C17.51 12.11 18.2 13.07 18.2 14.18C18.2 15.77 16.75 17.08 14.97 17.08Z"
+															/>
+															<path
+																d="M15.6193 9.82997C15.6193 9.16997 14.9993 8.40997 14.1993 8.40997H10.8393H9.5293V11.24H14.1993C14.9793 11.25 15.6193 10.61 15.6193 9.82997Z"
+															/>
+														</svg>
+
+														<span>300</span>
+													</label> -->
+
+													<!--	=========================================
+															Item button
+													-->
+													<button
+														class="btn c-btn-transparent c-btn-transparent--primary gameShop__slots-item-content-btn"
 													>
-														<path
-															d="M14.9693 12.75H14.1993H9.5293V15.58H10.8393H14.9693C15.9193 15.58 16.6993 14.94 16.6993 14.16C16.6993 13.38 15.9193 12.75 14.9693 12.75Z"
-														/>
-														<path
-															d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.97 17.08H13.32V18.5C13.32 18.91 12.98 19.25 12.57 19.25C12.16 19.25 11.82 18.91 11.82 18.5V17.08H10.84H10.61V18.5C10.61 18.91 10.27 19.25 9.86 19.25C9.45 19.25 9.11 18.91 9.11 18.5V17.08H8.78H7.05C6.64 17.08 6.3 16.74 6.3 16.33C6.3 15.92 6.64 15.58 7.05 15.58H8.03V12V8.42H7.05C6.64 8.42 6.3 8.08 6.3 7.67C6.3 7.26 6.64 6.92 7.05 6.92H8.78H9.11V5.5C9.11 5.09 9.45 4.75 9.86 4.75C10.27 4.75 10.61 5.09 10.61 5.5V6.92H10.84H11.82V5.5C11.82 5.09 12.16 4.75 12.57 4.75C12.98 4.75 13.32 5.09 13.32 5.5V6.92H14.2C15.75 6.92 17.12 8.28 17.12 9.84C17.12 10.51 16.88 11.12 16.5 11.62C17.51 12.11 18.2 13.07 18.2 14.18C18.2 15.77 16.75 17.08 14.97 17.08Z"
-														/>
-														<path
-															d="M15.6193 9.82997C15.6193 9.16997 14.9993 8.40997 14.1993 8.40997H10.8393H9.5293V11.24H14.1993C14.9793 11.25 15.6193 10.61 15.6193 9.82997Z"
-														/>
-													</svg>
-
-													<span>300</span>
-												</label> -->
+														Options
+													</button>
+												</div>
 
 												<!--	=========================================
-														Item button
+														Item title
 												-->
-												<button
-													class="btn c-btn-transparent c-btn-transparent--primary gameShop__slots-item-content-btn"
-												>
-													Options
-												</button>
+												<p class="gameShop__slots-item-title">Diamond Sword</p>
 											</div>
-
-											<!--	=========================================
-													Item title
-											-->
-											<p class="gameShop__slots-item-title">Diamond Sword</p>
 										</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-										<!--	=========================================
-												Featured item
-										-->
-										<div class="gameShop__slots-item">
-											<!--	=========================================
-													Item content
-											-->
-											<div class="gameShop__slots-item-content">
-												<img
-													src="/assets/images/shop-item-temp.png"
-													alt="Sword"
-												/>
-
-												<!--	=========================================
-														Item price
-												-->
-												<label class="gameShop__slots-item-content-price">
-													<svg
-														width="24"
-														height="24"
-														viewBox="0 0 24 24"
-														fill="currentColor"
-														xmlns="http://www.w3.org/2000/svg"
-													>
-														<path
-															d="M14.9693 12.75H14.1993H9.5293V15.58H10.8393H14.9693C15.9193 15.58 16.6993 14.94 16.6993 14.16C16.6993 13.38 15.9193 12.75 14.9693 12.75Z"
-														/>
-														<path
-															d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.97 17.08H13.32V18.5C13.32 18.91 12.98 19.25 12.57 19.25C12.16 19.25 11.82 18.91 11.82 18.5V17.08H10.84H10.61V18.5C10.61 18.91 10.27 19.25 9.86 19.25C9.45 19.25 9.11 18.91 9.11 18.5V17.08H8.78H7.05C6.64 17.08 6.3 16.74 6.3 16.33C6.3 15.92 6.64 15.58 7.05 15.58H8.03V12V8.42H7.05C6.64 8.42 6.3 8.08 6.3 7.67C6.3 7.26 6.64 6.92 7.05 6.92H8.78H9.11V5.5C9.11 5.09 9.45 4.75 9.86 4.75C10.27 4.75 10.61 5.09 10.61 5.5V6.92H10.84H11.82V5.5C11.82 5.09 12.16 4.75 12.57 4.75C12.98 4.75 13.32 5.09 13.32 5.5V6.92H14.2C15.75 6.92 17.12 8.28 17.12 9.84C17.12 10.51 16.88 11.12 16.5 11.62C17.51 12.11 18.2 13.07 18.2 14.18C18.2 15.77 16.75 17.08 14.97 17.08Z"
-														/>
-														<path
-															d="M15.6193 9.82997C15.6193 9.16997 14.9993 8.40997 14.1993 8.40997H10.8393H9.5293V11.24H14.1993C14.9793 11.25 15.6193 10.61 15.6193 9.82997Z"
-														/>
-													</svg>
-
-													<span>300</span>
-												</label>
-
-												<!--	=========================================
-														Item button
-												-->
-												<!-- <button
-													class="btn c-btn-transparent c-btn-transparent--primary gameShop__slots-item-content-btn"
-												>
-													Options
-												</button> -->
-											</div>
-
-											<!--	=========================================
-													Item title
-											-->
-											<p class="gameShop__slots-item-title">Diamond Sword</p>
-										</div>
-										<!--	=========================================
-												Featured item
-										-->
-										<div class="gameShop__slots-item">
-											<!--	=========================================
-													Item content
-											-->
-											<div class="gameShop__slots-item-content">
-												<img
-													src="/assets/images/shop-item-temp.png"
-													alt="Sword"
-												/>
-
-												<!--	=========================================
-														Item price
-												-->
-												<!-- <label class="gameShop__slots-item-content-price">
-													<svg
-														width="24"
-														height="24"
-														viewBox="0 0 24 24"
-														fill="currentColor"
-														xmlns="http://www.w3.org/2000/svg"
-													>
-														<path
-															d="M14.9693 12.75H14.1993H9.5293V15.58H10.8393H14.9693C15.9193 15.58 16.6993 14.94 16.6993 14.16C16.6993 13.38 15.9193 12.75 14.9693 12.75Z"
-														/>
-														<path
-															d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.97 17.08H13.32V18.5C13.32 18.91 12.98 19.25 12.57 19.25C12.16 19.25 11.82 18.91 11.82 18.5V17.08H10.84H10.61V18.5C10.61 18.91 10.27 19.25 9.86 19.25C9.45 19.25 9.11 18.91 9.11 18.5V17.08H8.78H7.05C6.64 17.08 6.3 16.74 6.3 16.33C6.3 15.92 6.64 15.58 7.05 15.58H8.03V12V8.42H7.05C6.64 8.42 6.3 8.08 6.3 7.67C6.3 7.26 6.64 6.92 7.05 6.92H8.78H9.11V5.5C9.11 5.09 9.45 4.75 9.86 4.75C10.27 4.75 10.61 5.09 10.61 5.5V6.92H10.84H11.82V5.5C11.82 5.09 12.16 4.75 12.57 4.75C12.98 4.75 13.32 5.09 13.32 5.5V6.92H14.2C15.75 6.92 17.12 8.28 17.12 9.84C17.12 10.51 16.88 11.12 16.5 11.62C17.51 12.11 18.2 13.07 18.2 14.18C18.2 15.77 16.75 17.08 14.97 17.08Z"
-														/>
-														<path
-															d="M15.6193 9.82997C15.6193 9.16997 14.9993 8.40997 14.1993 8.40997H10.8393H9.5293V11.24H14.1993C14.9793 11.25 15.6193 10.61 15.6193 9.82997Z"
-														/>
-													</svg>
-
-													<span>300</span>
-												</label> -->
-
-												<!--	=========================================
-														Item button
-												-->
-												<button
-													class="btn c-btn-transparent c-btn-transparent--primary gameShop__slots-item-content-btn"
-												>
-													Options
-												</button>
-											</div>
-
-											<!--	=========================================
-													Item title
-											-->
-											<p class="gameShop__slots-item-title">Diamond Sword</p>
-										</div>
-										<!--	=========================================
-												Featured item
-										-->
-										<div class="gameShop__slots-item">
-											<!--	=========================================
-													Item content
-											-->
-											<div class="gameShop__slots-item-content">
-												<img
-													src="/assets/images/shop-item-temp.png"
-													alt="Sword"
-												/>
-
-												<!--	=========================================
-														Item price
-												-->
-												<label class="gameShop__slots-item-content-price">
-													<svg
-														width="24"
-														height="24"
-														viewBox="0 0 24 24"
-														fill="currentColor"
-														xmlns="http://www.w3.org/2000/svg"
-													>
-														<path
-															d="M14.9693 12.75H14.1993H9.5293V15.58H10.8393H14.9693C15.9193 15.58 16.6993 14.94 16.6993 14.16C16.6993 13.38 15.9193 12.75 14.9693 12.75Z"
-														/>
-														<path
-															d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.97 17.08H13.32V18.5C13.32 18.91 12.98 19.25 12.57 19.25C12.16 19.25 11.82 18.91 11.82 18.5V17.08H10.84H10.61V18.5C10.61 18.91 10.27 19.25 9.86 19.25C9.45 19.25 9.11 18.91 9.11 18.5V17.08H8.78H7.05C6.64 17.08 6.3 16.74 6.3 16.33C6.3 15.92 6.64 15.58 7.05 15.58H8.03V12V8.42H7.05C6.64 8.42 6.3 8.08 6.3 7.67C6.3 7.26 6.64 6.92 7.05 6.92H8.78H9.11V5.5C9.11 5.09 9.45 4.75 9.86 4.75C10.27 4.75 10.61 5.09 10.61 5.5V6.92H10.84H11.82V5.5C11.82 5.09 12.16 4.75 12.57 4.75C12.98 4.75 13.32 5.09 13.32 5.5V6.92H14.2C15.75 6.92 17.12 8.28 17.12 9.84C17.12 10.51 16.88 11.12 16.5 11.62C17.51 12.11 18.2 13.07 18.2 14.18C18.2 15.77 16.75 17.08 14.97 17.08Z"
-														/>
-														<path
-															d="M15.6193 9.82997C15.6193 9.16997 14.9993 8.40997 14.1993 8.40997H10.8393H9.5293V11.24H14.1993C14.9793 11.25 15.6193 10.61 15.6193 9.82997Z"
-														/>
-													</svg>
-
-													<span>300</span>
-												</label>
-
-												<!--	=========================================
-														Item button
-												-->
-												<!-- <button
-													class="btn c-btn-transparent c-btn-transparent--primary gameShop__slots-item-content-btn"
-												>
-													Options
-												</button> -->
-											</div>
-
-											<!--	=========================================
-													Item title
-											-->
-											<p class="gameShop__slots-item-title">Diamond Sword</p>
-										</div>
-										<!--	=========================================
-												Featured item
-										-->
-										<div class="gameShop__slots-item">
-											<!--	=========================================
-													Item content
-											-->
-											<div class="gameShop__slots-item-content">
-												<img
-													src="/assets/images/shop-item-temp.png"
-													alt="Sword"
-												/>
-
-												<!--	=========================================
-														Item price
-												-->
-												<!-- <label class="gameShop__slots-item-content-price">
-													<svg
-														width="24"
-														height="24"
-														viewBox="0 0 24 24"
-														fill="currentColor"
-														xmlns="http://www.w3.org/2000/svg"
-													>
-														<path
-															d="M14.9693 12.75H14.1993H9.5293V15.58H10.8393H14.9693C15.9193 15.58 16.6993 14.94 16.6993 14.16C16.6993 13.38 15.9193 12.75 14.9693 12.75Z"
-														/>
-														<path
-															d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.97 17.08H13.32V18.5C13.32 18.91 12.98 19.25 12.57 19.25C12.16 19.25 11.82 18.91 11.82 18.5V17.08H10.84H10.61V18.5C10.61 18.91 10.27 19.25 9.86 19.25C9.45 19.25 9.11 18.91 9.11 18.5V17.08H8.78H7.05C6.64 17.08 6.3 16.74 6.3 16.33C6.3 15.92 6.64 15.58 7.05 15.58H8.03V12V8.42H7.05C6.64 8.42 6.3 8.08 6.3 7.67C6.3 7.26 6.64 6.92 7.05 6.92H8.78H9.11V5.5C9.11 5.09 9.45 4.75 9.86 4.75C10.27 4.75 10.61 5.09 10.61 5.5V6.92H10.84H11.82V5.5C11.82 5.09 12.16 4.75 12.57 4.75C12.98 4.75 13.32 5.09 13.32 5.5V6.92H14.2C15.75 6.92 17.12 8.28 17.12 9.84C17.12 10.51 16.88 11.12 16.5 11.62C17.51 12.11 18.2 13.07 18.2 14.18C18.2 15.77 16.75 17.08 14.97 17.08Z"
-														/>
-														<path
-															d="M15.6193 9.82997C15.6193 9.16997 14.9993 8.40997 14.1993 8.40997H10.8393H9.5293V11.24H14.1993C14.9793 11.25 15.6193 10.61 15.6193 9.82997Z"
-														/>
-													</svg>
-
-													<span>300</span>
-												</label> -->
-
-												<!--	=========================================
-														Item button
-												-->
-												<button
-													class="btn c-btn-transparent c-btn-transparent--primary gameShop__slots-item-content-btn"
-												>
-													Options
-												</button>
-											</div>
-
-											<!--	=========================================
-													Item title
-											-->
-											<p class="gameShop__slots-item-title">Diamond Sword</p>
-										</div>
-										<!--	=========================================
-												Featured item
-										-->
-										<div class="gameShop__slots-item">
-											<!--	=========================================
-													Item content
-											-->
-											<div class="gameShop__slots-item-content">
-												<img
-													src="/assets/images/shop-item-temp.png"
-													alt="Sword"
-												/>
-
-												<!--	=========================================
-														Item price
-												-->
-												<label class="gameShop__slots-item-content-price">
-													<svg
-														width="24"
-														height="24"
-														viewBox="0 0 24 24"
-														fill="currentColor"
-														xmlns="http://www.w3.org/2000/svg"
-													>
-														<path
-															d="M14.9693 12.75H14.1993H9.5293V15.58H10.8393H14.9693C15.9193 15.58 16.6993 14.94 16.6993 14.16C16.6993 13.38 15.9193 12.75 14.9693 12.75Z"
-														/>
-														<path
-															d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.97 17.08H13.32V18.5C13.32 18.91 12.98 19.25 12.57 19.25C12.16 19.25 11.82 18.91 11.82 18.5V17.08H10.84H10.61V18.5C10.61 18.91 10.27 19.25 9.86 19.25C9.45 19.25 9.11 18.91 9.11 18.5V17.08H8.78H7.05C6.64 17.08 6.3 16.74 6.3 16.33C6.3 15.92 6.64 15.58 7.05 15.58H8.03V12V8.42H7.05C6.64 8.42 6.3 8.08 6.3 7.67C6.3 7.26 6.64 6.92 7.05 6.92H8.78H9.11V5.5C9.11 5.09 9.45 4.75 9.86 4.75C10.27 4.75 10.61 5.09 10.61 5.5V6.92H10.84H11.82V5.5C11.82 5.09 12.16 4.75 12.57 4.75C12.98 4.75 13.32 5.09 13.32 5.5V6.92H14.2C15.75 6.92 17.12 8.28 17.12 9.84C17.12 10.51 16.88 11.12 16.5 11.62C17.51 12.11 18.2 13.07 18.2 14.18C18.2 15.77 16.75 17.08 14.97 17.08Z"
-														/>
-														<path
-															d="M15.6193 9.82997C15.6193 9.16997 14.9993 8.40997 14.1993 8.40997H10.8393H9.5293V11.24H14.1993C14.9793 11.25 15.6193 10.61 15.6193 9.82997Z"
-														/>
-													</svg>
-
-													<span>300</span>
-												</label>
-
-												<!--	=========================================
-														Item button
-												-->
-												<!-- <button
-													class="btn c-btn-transparent c-btn-transparent--primary gameShop__slots-item-content-btn"
-												>
-													Options
-												</button> -->
-											</div>
-
-											<!--	=========================================
-													Item title
-											-->
-											<p class="gameShop__slots-item-title">Diamond Sword</p>
-										</div>
-										<!--	=========================================
-												Featured item
-										-->
-										<div class="gameShop__slots-item">
-											<!--	=========================================
-													Item content
-											-->
-											<div class="gameShop__slots-item-content">
-												<img
-													src="/assets/images/shop-item-temp.png"
-													alt="Sword"
-												/>
-
-												<!--	=========================================
-														Item price
-												-->
-												<!-- <label class="gameShop__slots-item-content-price">
-													<svg
-														width="24"
-														height="24"
-														viewBox="0 0 24 24"
-														fill="currentColor"
-														xmlns="http://www.w3.org/2000/svg"
-													>
-														<path
-															d="M14.9693 12.75H14.1993H9.5293V15.58H10.8393H14.9693C15.9193 15.58 16.6993 14.94 16.6993 14.16C16.6993 13.38 15.9193 12.75 14.9693 12.75Z"
-														/>
-														<path
-															d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.97 17.08H13.32V18.5C13.32 18.91 12.98 19.25 12.57 19.25C12.16 19.25 11.82 18.91 11.82 18.5V17.08H10.84H10.61V18.5C10.61 18.91 10.27 19.25 9.86 19.25C9.45 19.25 9.11 18.91 9.11 18.5V17.08H8.78H7.05C6.64 17.08 6.3 16.74 6.3 16.33C6.3 15.92 6.64 15.58 7.05 15.58H8.03V12V8.42H7.05C6.64 8.42 6.3 8.08 6.3 7.67C6.3 7.26 6.64 6.92 7.05 6.92H8.78H9.11V5.5C9.11 5.09 9.45 4.75 9.86 4.75C10.27 4.75 10.61 5.09 10.61 5.5V6.92H10.84H11.82V5.5C11.82 5.09 12.16 4.75 12.57 4.75C12.98 4.75 13.32 5.09 13.32 5.5V6.92H14.2C15.75 6.92 17.12 8.28 17.12 9.84C17.12 10.51 16.88 11.12 16.5 11.62C17.51 12.11 18.2 13.07 18.2 14.18C18.2 15.77 16.75 17.08 14.97 17.08Z"
-														/>
-														<path
-															d="M15.6193 9.82997C15.6193 9.16997 14.9993 8.40997 14.1993 8.40997H10.8393H9.5293V11.24H14.1993C14.9793 11.25 15.6193 10.61 15.6193 9.82997Z"
-														/>
-													</svg>
-
-													<span>300</span>
-												</label> -->
-
-												<!--	=========================================
-														Item button
-												-->
-												<button
-													class="btn c-btn-transparent c-btn-transparent--primary gameShop__slots-item-content-btn"
-												>
-													Options
-												</button>
-											</div>
-
-											<!--	=========================================
-													Item title
-											-->
-											<p class="gameShop__slots-item-title">Diamond Sword</p>
-										</div>
-										<!--	=========================================
-												Featured item
-										-->
-										<div class="gameShop__slots-item">
-											<!--	=========================================
-													Item content
-											-->
-											<div class="gameShop__slots-item-content">
-												<img
-													src="/assets/images/shop-item-temp.png"
-													alt="Sword"
-												/>
-
-												<!--	=========================================
-														Item price
-												-->
-												<label class="gameShop__slots-item-content-price">
-													<svg
-														width="24"
-														height="24"
-														viewBox="0 0 24 24"
-														fill="currentColor"
-														xmlns="http://www.w3.org/2000/svg"
-													>
-														<path
-															d="M14.9693 12.75H14.1993H9.5293V15.58H10.8393H14.9693C15.9193 15.58 16.6993 14.94 16.6993 14.16C16.6993 13.38 15.9193 12.75 14.9693 12.75Z"
-														/>
-														<path
-															d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.97 17.08H13.32V18.5C13.32 18.91 12.98 19.25 12.57 19.25C12.16 19.25 11.82 18.91 11.82 18.5V17.08H10.84H10.61V18.5C10.61 18.91 10.27 19.25 9.86 19.25C9.45 19.25 9.11 18.91 9.11 18.5V17.08H8.78H7.05C6.64 17.08 6.3 16.74 6.3 16.33C6.3 15.92 6.64 15.58 7.05 15.58H8.03V12V8.42H7.05C6.64 8.42 6.3 8.08 6.3 7.67C6.3 7.26 6.64 6.92 7.05 6.92H8.78H9.11V5.5C9.11 5.09 9.45 4.75 9.86 4.75C10.27 4.75 10.61 5.09 10.61 5.5V6.92H10.84H11.82V5.5C11.82 5.09 12.16 4.75 12.57 4.75C12.98 4.75 13.32 5.09 13.32 5.5V6.92H14.2C15.75 6.92 17.12 8.28 17.12 9.84C17.12 10.51 16.88 11.12 16.5 11.62C17.51 12.11 18.2 13.07 18.2 14.18C18.2 15.77 16.75 17.08 14.97 17.08Z"
-														/>
-														<path
-															d="M15.6193 9.82997C15.6193 9.16997 14.9993 8.40997 14.1993 8.40997H10.8393H9.5293V11.24H14.1993C14.9793 11.25 15.6193 10.61 15.6193 9.82997Z"
-														/>
-													</svg>
-
-													<span>300</span>
-												</label>
-
-												<!--	=========================================
-														Item button
-												-->
-												<!-- <button
-													class="btn c-btn-transparent c-btn-transparent--primary gameShop__slots-item-content-btn"
-												>
-													Options
-												</button> -->
-											</div>
-
-											<!--	=========================================
-													Item title
-											-->
-											<p class="gameShop__slots-item-title">Diamond Sword</p>
-										</div>
-										<!--	=========================================
-												Featured item
-										-->
-										<div class="gameShop__slots-item">
-											<!--	=========================================
-													Item content
-											-->
-											<div class="gameShop__slots-item-content">
-												<img
-													src="/assets/images/shop-item-temp.png"
-													alt="Sword"
-												/>
-
-												<!--	=========================================
-														Item price
-												-->
-												<!-- <label class="gameShop__slots-item-content-price">
-													<svg
-														width="24"
-														height="24"
-														viewBox="0 0 24 24"
-														fill="currentColor"
-														xmlns="http://www.w3.org/2000/svg"
-													>
-														<path
-															d="M14.9693 12.75H14.1993H9.5293V15.58H10.8393H14.9693C15.9193 15.58 16.6993 14.94 16.6993 14.16C16.6993 13.38 15.9193 12.75 14.9693 12.75Z"
-														/>
-														<path
-															d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.97 17.08H13.32V18.5C13.32 18.91 12.98 19.25 12.57 19.25C12.16 19.25 11.82 18.91 11.82 18.5V17.08H10.84H10.61V18.5C10.61 18.91 10.27 19.25 9.86 19.25C9.45 19.25 9.11 18.91 9.11 18.5V17.08H8.78H7.05C6.64 17.08 6.3 16.74 6.3 16.33C6.3 15.92 6.64 15.58 7.05 15.58H8.03V12V8.42H7.05C6.64 8.42 6.3 8.08 6.3 7.67C6.3 7.26 6.64 6.92 7.05 6.92H8.78H9.11V5.5C9.11 5.09 9.45 4.75 9.86 4.75C10.27 4.75 10.61 5.09 10.61 5.5V6.92H10.84H11.82V5.5C11.82 5.09 12.16 4.75 12.57 4.75C12.98 4.75 13.32 5.09 13.32 5.5V6.92H14.2C15.75 6.92 17.12 8.28 17.12 9.84C17.12 10.51 16.88 11.12 16.5 11.62C17.51 12.11 18.2 13.07 18.2 14.18C18.2 15.77 16.75 17.08 14.97 17.08Z"
-														/>
-														<path
-															d="M15.6193 9.82997C15.6193 9.16997 14.9993 8.40997 14.1993 8.40997H10.8393H9.5293V11.24H14.1993C14.9793 11.25 15.6193 10.61 15.6193 9.82997Z"
-														/>
-													</svg>
-
-													<span>300</span>
-												</label> -->
-
-												<!--	=========================================
-														Item button
-												-->
-												<button
-													class="btn c-btn-transparent c-btn-transparent--primary gameShop__slots-item-content-btn"
-												>
-													Options
-												</button>
-											</div>
-
-											<!--	=========================================
-													Item title
-											-->
-											<p class="gameShop__slots-item-title">Diamond Sword</p>
-										</div>
-										<!--	=========================================
-												Featured item
-										-->
-										<div class="gameShop__slots-item">
-											<!--	=========================================
-													Item content
-											-->
-											<div class="gameShop__slots-item-content">
-												<img
-													src="/assets/images/shop-item-temp.png"
-													alt="Sword"
-												/>
-
-												<!--	=========================================
-														Item price
-												-->
-												<label class="gameShop__slots-item-content-price">
-													<svg
-														width="24"
-														height="24"
-														viewBox="0 0 24 24"
-														fill="currentColor"
-														xmlns="http://www.w3.org/2000/svg"
-													>
-														<path
-															d="M14.9693 12.75H14.1993H9.5293V15.58H10.8393H14.9693C15.9193 15.58 16.6993 14.94 16.6993 14.16C16.6993 13.38 15.9193 12.75 14.9693 12.75Z"
-														/>
-														<path
-															d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.97 17.08H13.32V18.5C13.32 18.91 12.98 19.25 12.57 19.25C12.16 19.25 11.82 18.91 11.82 18.5V17.08H10.84H10.61V18.5C10.61 18.91 10.27 19.25 9.86 19.25C9.45 19.25 9.11 18.91 9.11 18.5V17.08H8.78H7.05C6.64 17.08 6.3 16.74 6.3 16.33C6.3 15.92 6.64 15.58 7.05 15.58H8.03V12V8.42H7.05C6.64 8.42 6.3 8.08 6.3 7.67C6.3 7.26 6.64 6.92 7.05 6.92H8.78H9.11V5.5C9.11 5.09 9.45 4.75 9.86 4.75C10.27 4.75 10.61 5.09 10.61 5.5V6.92H10.84H11.82V5.5C11.82 5.09 12.16 4.75 12.57 4.75C12.98 4.75 13.32 5.09 13.32 5.5V6.92H14.2C15.75 6.92 17.12 8.28 17.12 9.84C17.12 10.51 16.88 11.12 16.5 11.62C17.51 12.11 18.2 13.07 18.2 14.18C18.2 15.77 16.75 17.08 14.97 17.08Z"
-														/>
-														<path
-															d="M15.6193 9.82997C15.6193 9.16997 14.9993 8.40997 14.1993 8.40997H10.8393H9.5293V11.24H14.1993C14.9793 11.25 15.6193 10.61 15.6193 9.82997Z"
-														/>
-													</svg>
-
-													<span>300</span>
-												</label>
-
-												<!--	=========================================
-														Item button
-												-->
-												<!-- <button
-													class="btn c-btn-transparent c-btn-transparent--primary gameShop__slots-item-content-btn"
-												>
-													Options
-												</button> -->
-											</div>
-
-											<!--	=========================================
-													Item title
-											-->
-											<p class="gameShop__slots-item-title">Diamond Sword</p>
-										</div>
-										<!--	=========================================
-												Featured item
-										-->
-										<div class="gameShop__slots-item">
-											<!--	=========================================
-													Item content
-											-->
-											<div class="gameShop__slots-item-content">
-												<img
-													src="/assets/images/shop-item-temp.png"
-													alt="Sword"
-												/>
-
-												<!--	=========================================
-														Item price
-												-->
-												<!-- <label class="gameShop__slots-item-content-price">
-													<svg
-														width="24"
-														height="24"
-														viewBox="0 0 24 24"
-														fill="currentColor"
-														xmlns="http://www.w3.org/2000/svg"
-													>
-														<path
-															d="M14.9693 12.75H14.1993H9.5293V15.58H10.8393H14.9693C15.9193 15.58 16.6993 14.94 16.6993 14.16C16.6993 13.38 15.9193 12.75 14.9693 12.75Z"
-														/>
-														<path
-															d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.97 17.08H13.32V18.5C13.32 18.91 12.98 19.25 12.57 19.25C12.16 19.25 11.82 18.91 11.82 18.5V17.08H10.84H10.61V18.5C10.61 18.91 10.27 19.25 9.86 19.25C9.45 19.25 9.11 18.91 9.11 18.5V17.08H8.78H7.05C6.64 17.08 6.3 16.74 6.3 16.33C6.3 15.92 6.64 15.58 7.05 15.58H8.03V12V8.42H7.05C6.64 8.42 6.3 8.08 6.3 7.67C6.3 7.26 6.64 6.92 7.05 6.92H8.78H9.11V5.5C9.11 5.09 9.45 4.75 9.86 4.75C10.27 4.75 10.61 5.09 10.61 5.5V6.92H10.84H11.82V5.5C11.82 5.09 12.16 4.75 12.57 4.75C12.98 4.75 13.32 5.09 13.32 5.5V6.92H14.2C15.75 6.92 17.12 8.28 17.12 9.84C17.12 10.51 16.88 11.12 16.5 11.62C17.51 12.11 18.2 13.07 18.2 14.18C18.2 15.77 16.75 17.08 14.97 17.08Z"
-														/>
-														<path
-															d="M15.6193 9.82997C15.6193 9.16997 14.9993 8.40997 14.1993 8.40997H10.8393H9.5293V11.24H14.1993C14.9793 11.25 15.6193 10.61 15.6193 9.82997Z"
-														/>
-													</svg>
-
-													<span>300</span>
-												</label> -->
-
-												<!--	=========================================
-														Item button
-												-->
-												<button
-													class="btn c-btn-transparent c-btn-transparent--primary gameShop__slots-item-content-btn"
-												>
-													Options
-												</button>
-											</div>
-
-											<!--	=========================================
-													Item title
-											-->
-											<p class="gameShop__slots-item-title">Diamond Sword</p>
-										</div>
-										<!--	=========================================
-												Featured item
-										-->
-										<div class="gameShop__slots-item">
-											<!--	=========================================
-													Item content
-											-->
-											<div class="gameShop__slots-item-content">
-												<img
-													src="/assets/images/shop-item-temp.png"
-													alt="Sword"
-												/>
-
-												<!--	=========================================
-														Item price
-												-->
-												<label class="gameShop__slots-item-content-price">
-													<svg
-														width="24"
-														height="24"
-														viewBox="0 0 24 24"
-														fill="currentColor"
-														xmlns="http://www.w3.org/2000/svg"
-													>
-														<path
-															d="M14.9693 12.75H14.1993H9.5293V15.58H10.8393H14.9693C15.9193 15.58 16.6993 14.94 16.6993 14.16C16.6993 13.38 15.9193 12.75 14.9693 12.75Z"
-														/>
-														<path
-															d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.97 17.08H13.32V18.5C13.32 18.91 12.98 19.25 12.57 19.25C12.16 19.25 11.82 18.91 11.82 18.5V17.08H10.84H10.61V18.5C10.61 18.91 10.27 19.25 9.86 19.25C9.45 19.25 9.11 18.91 9.11 18.5V17.08H8.78H7.05C6.64 17.08 6.3 16.74 6.3 16.33C6.3 15.92 6.64 15.58 7.05 15.58H8.03V12V8.42H7.05C6.64 8.42 6.3 8.08 6.3 7.67C6.3 7.26 6.64 6.92 7.05 6.92H8.78H9.11V5.5C9.11 5.09 9.45 4.75 9.86 4.75C10.27 4.75 10.61 5.09 10.61 5.5V6.92H10.84H11.82V5.5C11.82 5.09 12.16 4.75 12.57 4.75C12.98 4.75 13.32 5.09 13.32 5.5V6.92H14.2C15.75 6.92 17.12 8.28 17.12 9.84C17.12 10.51 16.88 11.12 16.5 11.62C17.51 12.11 18.2 13.07 18.2 14.18C18.2 15.77 16.75 17.08 14.97 17.08Z"
-														/>
-														<path
-															d="M15.6193 9.82997C15.6193 9.16997 14.9993 8.40997 14.1993 8.40997H10.8393H9.5293V11.24H14.1993C14.9793 11.25 15.6193 10.61 15.6193 9.82997Z"
-														/>
-													</svg>
-
-													<span>300</span>
-												</label>
-
-												<!--	=========================================
-														Item button
-												-->
-												<!-- <button
-													class="btn c-btn-transparent c-btn-transparent--primary gameShop__slots-item-content-btn"
-												>
-													Options
-												</button> -->
-											</div>
-
-											<!--	=========================================
-													Item title
-											-->
-											<p class="gameShop__slots-item-title">Diamond Sword</p>
-										</div>
-										<!--	=========================================
-												Featured item
-										-->
-										<div class="gameShop__slots-item">
-											<!--	=========================================
-													Item content
-											-->
-											<div class="gameShop__slots-item-content">
-												<img
-													src="/assets/images/shop-item-temp.png"
-													alt="Sword"
-												/>
-
-												<!--	=========================================
-														Item price
-												-->
-												<!-- <label class="gameShop__slots-item-content-price">
-													<svg
-														width="24"
-														height="24"
-														viewBox="0 0 24 24"
-														fill="currentColor"
-														xmlns="http://www.w3.org/2000/svg"
-													>
-														<path
-															d="M14.9693 12.75H14.1993H9.5293V15.58H10.8393H14.9693C15.9193 15.58 16.6993 14.94 16.6993 14.16C16.6993 13.38 15.9193 12.75 14.9693 12.75Z"
-														/>
-														<path
-															d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.97 17.08H13.32V18.5C13.32 18.91 12.98 19.25 12.57 19.25C12.16 19.25 11.82 18.91 11.82 18.5V17.08H10.84H10.61V18.5C10.61 18.91 10.27 19.25 9.86 19.25C9.45 19.25 9.11 18.91 9.11 18.5V17.08H8.78H7.05C6.64 17.08 6.3 16.74 6.3 16.33C6.3 15.92 6.64 15.58 7.05 15.58H8.03V12V8.42H7.05C6.64 8.42 6.3 8.08 6.3 7.67C6.3 7.26 6.64 6.92 7.05 6.92H8.78H9.11V5.5C9.11 5.09 9.45 4.75 9.86 4.75C10.27 4.75 10.61 5.09 10.61 5.5V6.92H10.84H11.82V5.5C11.82 5.09 12.16 4.75 12.57 4.75C12.98 4.75 13.32 5.09 13.32 5.5V6.92H14.2C15.75 6.92 17.12 8.28 17.12 9.84C17.12 10.51 16.88 11.12 16.5 11.62C17.51 12.11 18.2 13.07 18.2 14.18C18.2 15.77 16.75 17.08 14.97 17.08Z"
-														/>
-														<path
-															d="M15.6193 9.82997C15.6193 9.16997 14.9993 8.40997 14.1993 8.40997H10.8393H9.5293V11.24H14.1993C14.9793 11.25 15.6193 10.61 15.6193 9.82997Z"
-														/>
-													</svg>
-
-													<span>300</span>
-												</label> -->
-
-												<!--	=========================================
-														Item button
-												-->
-												<button
-													class="btn c-btn-transparent c-btn-transparent--primary gameShop__slots-item-content-btn"
-												>
-													Options
-												</button>
-											</div>
-
-											<!--	=========================================
-													Item title
-											-->
-											<p class="gameShop__slots-item-title">Diamond Sword</p>
-										</div>
-										<!--	=========================================
-												Featured item
-										-->
-										<div class="gameShop__slots-item">
-											<!--	=========================================
-													Item content
-											-->
-											<div class="gameShop__slots-item-content">
-												<img
-													src="/assets/images/shop-item-temp.png"
-													alt="Sword"
-												/>
-
-												<!--	=========================================
-														Item price
-												-->
-												<!-- <label class="gameShop__slots-item-content-price">
-													<svg
-														width="24"
-														height="24"
-														viewBox="0 0 24 24"
-														fill="currentColor"
-														xmlns="http://www.w3.org/2000/svg"
-													>
-														<path
-															d="M14.9693 12.75H14.1993H9.5293V15.58H10.8393H14.9693C15.9193 15.58 16.6993 14.94 16.6993 14.16C16.6993 13.38 15.9193 12.75 14.9693 12.75Z"
-														/>
-														<path
-															d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.97 17.08H13.32V18.5C13.32 18.91 12.98 19.25 12.57 19.25C12.16 19.25 11.82 18.91 11.82 18.5V17.08H10.84H10.61V18.5C10.61 18.91 10.27 19.25 9.86 19.25C9.45 19.25 9.11 18.91 9.11 18.5V17.08H8.78H7.05C6.64 17.08 6.3 16.74 6.3 16.33C6.3 15.92 6.64 15.58 7.05 15.58H8.03V12V8.42H7.05C6.64 8.42 6.3 8.08 6.3 7.67C6.3 7.26 6.64 6.92 7.05 6.92H8.78H9.11V5.5C9.11 5.09 9.45 4.75 9.86 4.75C10.27 4.75 10.61 5.09 10.61 5.5V6.92H10.84H11.82V5.5C11.82 5.09 12.16 4.75 12.57 4.75C12.98 4.75 13.32 5.09 13.32 5.5V6.92H14.2C15.75 6.92 17.12 8.28 17.12 9.84C17.12 10.51 16.88 11.12 16.5 11.62C17.51 12.11 18.2 13.07 18.2 14.18C18.2 15.77 16.75 17.08 14.97 17.08Z"
-														/>
-														<path
-															d="M15.6193 9.82997C15.6193 9.16997 14.9993 8.40997 14.1993 8.40997H10.8393H9.5293V11.24H14.1993C14.9793 11.25 15.6193 10.61 15.6193 9.82997Z"
-														/>
-													</svg>
-
-													<span>300</span>
-												</label> -->
-
-												<!--	=========================================
-														Item button
-												-->
-												<button
-													class="btn c-btn-transparent c-btn-transparent--primary gameShop__slots-item-content-btn"
-												>
-													Options
-												</button>
-											</div>
-
-											<!--	=========================================
-													Item title
-											-->
-											<p class="gameShop__slots-item-title">Diamond Sword</p>
-										</div>
-										<!--	=========================================
-												Featured item
-										-->
-										<div class="gameShop__slots-item">
-											<!--	=========================================
-													Item content
-											-->
-											<div class="gameShop__slots-item-content">
-												<img
-													src="/assets/images/shop-item-temp.png"
-													alt="Sword"
-												/>
-
-												<!--	=========================================
-														Item price
-												-->
-												<!-- <label class="gameShop__slots-item-content-price">
-													<svg
-														width="24"
-														height="24"
-														viewBox="0 0 24 24"
-														fill="currentColor"
-														xmlns="http://www.w3.org/2000/svg"
-													>
-														<path
-															d="M14.9693 12.75H14.1993H9.5293V15.58H10.8393H14.9693C15.9193 15.58 16.6993 14.94 16.6993 14.16C16.6993 13.38 15.9193 12.75 14.9693 12.75Z"
-														/>
-														<path
-															d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.97 17.08H13.32V18.5C13.32 18.91 12.98 19.25 12.57 19.25C12.16 19.25 11.82 18.91 11.82 18.5V17.08H10.84H10.61V18.5C10.61 18.91 10.27 19.25 9.86 19.25C9.45 19.25 9.11 18.91 9.11 18.5V17.08H8.78H7.05C6.64 17.08 6.3 16.74 6.3 16.33C6.3 15.92 6.64 15.58 7.05 15.58H8.03V12V8.42H7.05C6.64 8.42 6.3 8.08 6.3 7.67C6.3 7.26 6.64 6.92 7.05 6.92H8.78H9.11V5.5C9.11 5.09 9.45 4.75 9.86 4.75C10.27 4.75 10.61 5.09 10.61 5.5V6.92H10.84H11.82V5.5C11.82 5.09 12.16 4.75 12.57 4.75C12.98 4.75 13.32 5.09 13.32 5.5V6.92H14.2C15.75 6.92 17.12 8.28 17.12 9.84C17.12 10.51 16.88 11.12 16.5 11.62C17.51 12.11 18.2 13.07 18.2 14.18C18.2 15.77 16.75 17.08 14.97 17.08Z"
-														/>
-														<path
-															d="M15.6193 9.82997C15.6193 9.16997 14.9993 8.40997 14.1993 8.40997H10.8393H9.5293V11.24H14.1993C14.9793 11.25 15.6193 10.61 15.6193 9.82997Z"
-														/>
-													</svg>
-
-													<span>300</span>
-												</label> -->
-
-												<!--	=========================================
-														Item button
-												-->
-												<button
-													class="btn c-btn-transparent c-btn-transparent--primary gameShop__slots-item-content-btn"
-												>
-													Options
-												</button>
-											</div>
-
-											<!--	=========================================
-													Item title
-											-->
-											<p class="gameShop__slots-item-title">Diamond Sword</p>
-										</div>
-										<!--	=========================================
-												Featured item
-										-->
-										<div class="gameShop__slots-item">
-											<!--	=========================================
-													Item content
-											-->
-											<div class="gameShop__slots-item-content">
-												<img
-													src="/assets/images/shop-item-temp.png"
-													alt="Sword"
-												/>
-
-												<!--	=========================================
-														Item price
-												-->
-												<!-- <label class="gameShop__slots-item-content-price">
-													<svg
-														width="24"
-														height="24"
-														viewBox="0 0 24 24"
-														fill="currentColor"
-														xmlns="http://www.w3.org/2000/svg"
-													>
-														<path
-															d="M14.9693 12.75H14.1993H9.5293V15.58H10.8393H14.9693C15.9193 15.58 16.6993 14.94 16.6993 14.16C16.6993 13.38 15.9193 12.75 14.9693 12.75Z"
-														/>
-														<path
-															d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.97 17.08H13.32V18.5C13.32 18.91 12.98 19.25 12.57 19.25C12.16 19.25 11.82 18.91 11.82 18.5V17.08H10.84H10.61V18.5C10.61 18.91 10.27 19.25 9.86 19.25C9.45 19.25 9.11 18.91 9.11 18.5V17.08H8.78H7.05C6.64 17.08 6.3 16.74 6.3 16.33C6.3 15.92 6.64 15.58 7.05 15.58H8.03V12V8.42H7.05C6.64 8.42 6.3 8.08 6.3 7.67C6.3 7.26 6.64 6.92 7.05 6.92H8.78H9.11V5.5C9.11 5.09 9.45 4.75 9.86 4.75C10.27 4.75 10.61 5.09 10.61 5.5V6.92H10.84H11.82V5.5C11.82 5.09 12.16 4.75 12.57 4.75C12.98 4.75 13.32 5.09 13.32 5.5V6.92H14.2C15.75 6.92 17.12 8.28 17.12 9.84C17.12 10.51 16.88 11.12 16.5 11.62C17.51 12.11 18.2 13.07 18.2 14.18C18.2 15.77 16.75 17.08 14.97 17.08Z"
-														/>
-														<path
-															d="M15.6193 9.82997C15.6193 9.16997 14.9993 8.40997 14.1993 8.40997H10.8393H9.5293V11.24H14.1993C14.9793 11.25 15.6193 10.61 15.6193 9.82997Z"
-														/>
-													</svg>
-
-													<span>300</span>
-												</label> -->
-
-												<!--	=========================================
-														Item button
-												-->
-												<button
-													class="btn c-btn-transparent c-btn-transparent--primary gameShop__slots-item-content-btn"
-												>
-													Options
-												</button>
-											</div>
-
-											<!--	=========================================
-													Item title
-											-->
-											<p class="gameShop__slots-item-title">Diamond Sword</p>
-										</div>
-										<!--	=========================================
-												Featured item
-										-->
-										<div class="gameShop__slots-item">
-											<!--	=========================================
-													Item content
-											-->
-											<div class="gameShop__slots-item-content">
-												<img
-													src="/assets/images/shop-item-temp.png"
-													alt="Sword"
-												/>
-
-												<!--	=========================================
-														Item price
-												-->
-												<!-- <label class="gameShop__slots-item-content-price">
-													<svg
-														width="24"
-														height="24"
-														viewBox="0 0 24 24"
-														fill="currentColor"
-														xmlns="http://www.w3.org/2000/svg"
-													>
-														<path
-															d="M14.9693 12.75H14.1993H9.5293V15.58H10.8393H14.9693C15.9193 15.58 16.6993 14.94 16.6993 14.16C16.6993 13.38 15.9193 12.75 14.9693 12.75Z"
-														/>
-														<path
-															d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.97 17.08H13.32V18.5C13.32 18.91 12.98 19.25 12.57 19.25C12.16 19.25 11.82 18.91 11.82 18.5V17.08H10.84H10.61V18.5C10.61 18.91 10.27 19.25 9.86 19.25C9.45 19.25 9.11 18.91 9.11 18.5V17.08H8.78H7.05C6.64 17.08 6.3 16.74 6.3 16.33C6.3 15.92 6.64 15.58 7.05 15.58H8.03V12V8.42H7.05C6.64 8.42 6.3 8.08 6.3 7.67C6.3 7.26 6.64 6.92 7.05 6.92H8.78H9.11V5.5C9.11 5.09 9.45 4.75 9.86 4.75C10.27 4.75 10.61 5.09 10.61 5.5V6.92H10.84H11.82V5.5C11.82 5.09 12.16 4.75 12.57 4.75C12.98 4.75 13.32 5.09 13.32 5.5V6.92H14.2C15.75 6.92 17.12 8.28 17.12 9.84C17.12 10.51 16.88 11.12 16.5 11.62C17.51 12.11 18.2 13.07 18.2 14.18C18.2 15.77 16.75 17.08 14.97 17.08Z"
-														/>
-														<path
-															d="M15.6193 9.82997C15.6193 9.16997 14.9993 8.40997 14.1993 8.40997H10.8393H9.5293V11.24H14.1993C14.9793 11.25 15.6193 10.61 15.6193 9.82997Z"
-														/>
-													</svg>
-
-													<span>300</span>
-												</label> -->
-
-												<!--	=========================================
-														Item button
-												-->
-												<button
-													class="btn c-btn-transparent c-btn-transparent--primary gameShop__slots-item-content-btn"
-												>
-													Options
-												</button>
-											</div>
-
-											<!--	=========================================
-													Item title
-											-->
-											<p class="gameShop__slots-item-title">Diamond Sword</p>
-										</div>
-										<!--	=========================================
-												Featured item
-										-->
-										<div class="gameShop__slots-item">
-											<!--	=========================================
-													Item content
-											-->
-											<div class="gameShop__slots-item-content">
-												<img
-													src="/assets/images/shop-item-temp.png"
-													alt="Sword"
-												/>
-
-												<!--	=========================================
-														Item price
-												-->
-												<!-- <label class="gameShop__slots-item-content-price">
-													<svg
-														width="24"
-														height="24"
-														viewBox="0 0 24 24"
-														fill="currentColor"
-														xmlns="http://www.w3.org/2000/svg"
-													>
-														<path
-															d="M14.9693 12.75H14.1993H9.5293V15.58H10.8393H14.9693C15.9193 15.58 16.6993 14.94 16.6993 14.16C16.6993 13.38 15.9193 12.75 14.9693 12.75Z"
-														/>
-														<path
-															d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.97 17.08H13.32V18.5C13.32 18.91 12.98 19.25 12.57 19.25C12.16 19.25 11.82 18.91 11.82 18.5V17.08H10.84H10.61V18.5C10.61 18.91 10.27 19.25 9.86 19.25C9.45 19.25 9.11 18.91 9.11 18.5V17.08H8.78H7.05C6.64 17.08 6.3 16.74 6.3 16.33C6.3 15.92 6.64 15.58 7.05 15.58H8.03V12V8.42H7.05C6.64 8.42 6.3 8.08 6.3 7.67C6.3 7.26 6.64 6.92 7.05 6.92H8.78H9.11V5.5C9.11 5.09 9.45 4.75 9.86 4.75C10.27 4.75 10.61 5.09 10.61 5.5V6.92H10.84H11.82V5.5C11.82 5.09 12.16 4.75 12.57 4.75C12.98 4.75 13.32 5.09 13.32 5.5V6.92H14.2C15.75 6.92 17.12 8.28 17.12 9.84C17.12 10.51 16.88 11.12 16.5 11.62C17.51 12.11 18.2 13.07 18.2 14.18C18.2 15.77 16.75 17.08 14.97 17.08Z"
-														/>
-														<path
-															d="M15.6193 9.82997C15.6193 9.16997 14.9993 8.40997 14.1993 8.40997H10.8393H9.5293V11.24H14.1993C14.9793 11.25 15.6193 10.61 15.6193 9.82997Z"
-														/>
-													</svg>
-
-													<span>300</span>
-												</label> -->
-
-												<!--	=========================================
-														Item button
-												-->
-												<button
-													class="btn c-btn-transparent c-btn-transparent--primary gameShop__slots-item-content-btn"
-												>
-													Options
-												</button>
-											</div>
-
-											<!--	=========================================
-													Item title
-											-->
-											<p class="gameShop__slots-item-title">Diamond Sword</p>
-										</div>
-										<!--	=========================================
-												Featured item
-										-->
-										<div class="gameShop__slots-item">
-											<!--	=========================================
-													Item content
-											-->
-											<div class="gameShop__slots-item-content">
-												<img
-													src="/assets/images/shop-item-temp.png"
-													alt="Sword"
-												/>
-
-												<!--	=========================================
-														Item price
-												-->
-												<!-- <label class="gameShop__slots-item-content-price">
-													<svg
-														width="24"
-														height="24"
-														viewBox="0 0 24 24"
-														fill="currentColor"
-														xmlns="http://www.w3.org/2000/svg"
-													>
-														<path
-															d="M14.9693 12.75H14.1993H9.5293V15.58H10.8393H14.9693C15.9193 15.58 16.6993 14.94 16.6993 14.16C16.6993 13.38 15.9193 12.75 14.9693 12.75Z"
-														/>
-														<path
-															d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.97 17.08H13.32V18.5C13.32 18.91 12.98 19.25 12.57 19.25C12.16 19.25 11.82 18.91 11.82 18.5V17.08H10.84H10.61V18.5C10.61 18.91 10.27 19.25 9.86 19.25C9.45 19.25 9.11 18.91 9.11 18.5V17.08H8.78H7.05C6.64 17.08 6.3 16.74 6.3 16.33C6.3 15.92 6.64 15.58 7.05 15.58H8.03V12V8.42H7.05C6.64 8.42 6.3 8.08 6.3 7.67C6.3 7.26 6.64 6.92 7.05 6.92H8.78H9.11V5.5C9.11 5.09 9.45 4.75 9.86 4.75C10.27 4.75 10.61 5.09 10.61 5.5V6.92H10.84H11.82V5.5C11.82 5.09 12.16 4.75 12.57 4.75C12.98 4.75 13.32 5.09 13.32 5.5V6.92H14.2C15.75 6.92 17.12 8.28 17.12 9.84C17.12 10.51 16.88 11.12 16.5 11.62C17.51 12.11 18.2 13.07 18.2 14.18C18.2 15.77 16.75 17.08 14.97 17.08Z"
-														/>
-														<path
-															d="M15.6193 9.82997C15.6193 9.16997 14.9993 8.40997 14.1993 8.40997H10.8393H9.5293V11.24H14.1993C14.9793 11.25 15.6193 10.61 15.6193 9.82997Z"
-														/>
-													</svg>
-
-													<span>300</span>
-												</label> -->
-
-												<!--	=========================================
-														Item button
-												-->
-												<button
-													class="btn c-btn-transparent c-btn-transparent--primary gameShop__slots-item-content-btn"
-												>
-													Options
-												</button>
-											</div>
-
-											<!--	=========================================
-													Item title
-											-->
-											<p class="gameShop__slots-item-title">Diamond Sword</p>
-										</div>
-
-
-
-
-
-
-
-
-
-
-
-										
-
 									</div>
-								</div>
-								<!--	=========================================
-										Head tab content
-								-->
-								<div
-									class="tab-pane fade"
-									id="head"
-									role="tabpanel"
-									aria-labelledby="head-tab"
-								>
-									Head
-								</div>
-								<!--	=========================================
-										Belt tab content
-								-->
-								<div
-									class="tab-pane fade"
-									id="belt"
-									role="tabpanel"
-									aria-labelledby="belt-tab"
-								>
-									Belt
-								</div>
-								<!--	=========================================
-										Costume tab content
-								-->
-								<div
-									class="tab-pane fade"
-									id="costume"
-									role="tabpanel"
-									aria-labelledby="costume-tab"
-								>
-									Costume
+									<!--	=========================================
+											Head tab content
+									-->
+									<div
+										class="tab-pane fade"
+										id="head"
+										role="tabpanel"
+										aria-labelledby="head-tab"
+									>
+										<div class="gameShop__slots-tab">
+											<!--	=========================================
+													Featured item
+											-->
+											<div class="gameShop__slots-item">
+												<!--	=========================================
+														Item content
+												-->
+												<div class="gameShop__slots-item-content">
+													<img
+														src="/assets/images/shop-item-temp.png"
+														alt="Sword"
+													/>
+
+													<!--	=========================================
+															Item price
+													-->
+													<label class="gameShop__slots-item-content-price">
+														<svg
+															width="24"
+															height="24"
+															viewBox="0 0 24 24"
+															fill="currentColor"
+															xmlns="http://www.w3.org/2000/svg"
+														>
+															<path
+																d="M14.9693 12.75H14.1993H9.5293V15.58H10.8393H14.9693C15.9193 15.58 16.6993 14.94 16.6993 14.16C16.6993 13.38 15.9193 12.75 14.9693 12.75Z"
+															/>
+															<path
+																d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.97 17.08H13.32V18.5C13.32 18.91 12.98 19.25 12.57 19.25C12.16 19.25 11.82 18.91 11.82 18.5V17.08H10.84H10.61V18.5C10.61 18.91 10.27 19.25 9.86 19.25C9.45 19.25 9.11 18.91 9.11 18.5V17.08H8.78H7.05C6.64 17.08 6.3 16.74 6.3 16.33C6.3 15.92 6.64 15.58 7.05 15.58H8.03V12V8.42H7.05C6.64 8.42 6.3 8.08 6.3 7.67C6.3 7.26 6.64 6.92 7.05 6.92H8.78H9.11V5.5C9.11 5.09 9.45 4.75 9.86 4.75C10.27 4.75 10.61 5.09 10.61 5.5V6.92H10.84H11.82V5.5C11.82 5.09 12.16 4.75 12.57 4.75C12.98 4.75 13.32 5.09 13.32 5.5V6.92H14.2C15.75 6.92 17.12 8.28 17.12 9.84C17.12 10.51 16.88 11.12 16.5 11.62C17.51 12.11 18.2 13.07 18.2 14.18C18.2 15.77 16.75 17.08 14.97 17.08Z"
+															/>
+															<path
+																d="M15.6193 9.82997C15.6193 9.16997 14.9993 8.40997 14.1993 8.40997H10.8393H9.5293V11.24H14.1993C14.9793 11.25 15.6193 10.61 15.6193 9.82997Z"
+															/>
+														</svg>
+
+														<span>300</span>
+													</label>
+
+													<!--	=========================================
+															Item button
+													-->
+													<!-- <button
+															class="btn c-btn-transparent c-btn-transparent--primary gameShop__slots-item-content-btn"
+														>
+															Options
+														</button> -->
+												</div>
+
+												<!--	=========================================
+														Item title
+												-->
+												<p class="gameShop__slots-item-title">Diamond Sword</p>
+											</div>
+
+											<!--	=========================================
+													Featured item
+											-->
+											<div class="gameShop__slots-item">
+												<!--	=========================================
+														Item content
+												-->
+												<div class="gameShop__slots-item-content">
+													<img
+														src="/assets/images/shop-item-temp.png"
+														alt="Sword"
+													/>
+
+													<!--	=========================================
+															Item price
+													-->
+													<!-- <label class="gameShop__slots-item-content-price">
+														<svg
+															width="24"
+															height="24"
+															viewBox="0 0 24 24"
+															fill="currentColor"
+															xmlns="http://www.w3.org/2000/svg"
+														>
+															<path
+																d="M14.9693 12.75H14.1993H9.5293V15.58H10.8393H14.9693C15.9193 15.58 16.6993 14.94 16.6993 14.16C16.6993 13.38 15.9193 12.75 14.9693 12.75Z"
+															/>
+															<path
+																d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.97 17.08H13.32V18.5C13.32 18.91 12.98 19.25 12.57 19.25C12.16 19.25 11.82 18.91 11.82 18.5V17.08H10.84H10.61V18.5C10.61 18.91 10.27 19.25 9.86 19.25C9.45 19.25 9.11 18.91 9.11 18.5V17.08H8.78H7.05C6.64 17.08 6.3 16.74 6.3 16.33C6.3 15.92 6.64 15.58 7.05 15.58H8.03V12V8.42H7.05C6.64 8.42 6.3 8.08 6.3 7.67C6.3 7.26 6.64 6.92 7.05 6.92H8.78H9.11V5.5C9.11 5.09 9.45 4.75 9.86 4.75C10.27 4.75 10.61 5.09 10.61 5.5V6.92H10.84H11.82V5.5C11.82 5.09 12.16 4.75 12.57 4.75C12.98 4.75 13.32 5.09 13.32 5.5V6.92H14.2C15.75 6.92 17.12 8.28 17.12 9.84C17.12 10.51 16.88 11.12 16.5 11.62C17.51 12.11 18.2 13.07 18.2 14.18C18.2 15.77 16.75 17.08 14.97 17.08Z"
+															/>
+															<path
+																d="M15.6193 9.82997C15.6193 9.16997 14.9993 8.40997 14.1993 8.40997H10.8393H9.5293V11.24H14.1993C14.9793 11.25 15.6193 10.61 15.6193 9.82997Z"
+															/>
+														</svg>
+
+														<span>300</span>
+													</label> -->
+
+													<!--	=========================================
+															Item button
+													-->
+													<button
+														class="btn c-btn-transparent c-btn-transparent--primary gameShop__slots-item-content-btn"
+													>
+														Options
+													</button>
+												</div>
+
+												<!--	=========================================
+														Item title
+												-->
+												<p class="gameShop__slots-item-title">Diamond Sword</p>
+											</div>
+										</div>
+									</div>
+									<!--	=========================================
+											Belt tab content
+									-->
+									<div
+										class="tab-pane fade"
+										id="belt"
+										role="tabpanel"
+										aria-labelledby="belt-tab"
+									>
+										<div class="gameShop__slots-tab">
+											<!--	=========================================
+													Featured item
+											-->
+											<div class="gameShop__slots-item">
+												<!--	=========================================
+														Item content
+												-->
+												<div class="gameShop__slots-item-content">
+													<img
+														src="/assets/images/shop-item-temp.png"
+														alt="Sword"
+													/>
+
+													<!--	=========================================
+															Item price
+													-->
+													<label class="gameShop__slots-item-content-price">
+														<svg
+															width="24"
+															height="24"
+															viewBox="0 0 24 24"
+															fill="currentColor"
+															xmlns="http://www.w3.org/2000/svg"
+														>
+															<path
+																d="M14.9693 12.75H14.1993H9.5293V15.58H10.8393H14.9693C15.9193 15.58 16.6993 14.94 16.6993 14.16C16.6993 13.38 15.9193 12.75 14.9693 12.75Z"
+															/>
+															<path
+																d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.97 17.08H13.32V18.5C13.32 18.91 12.98 19.25 12.57 19.25C12.16 19.25 11.82 18.91 11.82 18.5V17.08H10.84H10.61V18.5C10.61 18.91 10.27 19.25 9.86 19.25C9.45 19.25 9.11 18.91 9.11 18.5V17.08H8.78H7.05C6.64 17.08 6.3 16.74 6.3 16.33C6.3 15.92 6.64 15.58 7.05 15.58H8.03V12V8.42H7.05C6.64 8.42 6.3 8.08 6.3 7.67C6.3 7.26 6.64 6.92 7.05 6.92H8.78H9.11V5.5C9.11 5.09 9.45 4.75 9.86 4.75C10.27 4.75 10.61 5.09 10.61 5.5V6.92H10.84H11.82V5.5C11.82 5.09 12.16 4.75 12.57 4.75C12.98 4.75 13.32 5.09 13.32 5.5V6.92H14.2C15.75 6.92 17.12 8.28 17.12 9.84C17.12 10.51 16.88 11.12 16.5 11.62C17.51 12.11 18.2 13.07 18.2 14.18C18.2 15.77 16.75 17.08 14.97 17.08Z"
+															/>
+															<path
+																d="M15.6193 9.82997C15.6193 9.16997 14.9993 8.40997 14.1993 8.40997H10.8393H9.5293V11.24H14.1993C14.9793 11.25 15.6193 10.61 15.6193 9.82997Z"
+															/>
+														</svg>
+
+														<span>300</span>
+													</label>
+
+													<!--	=========================================
+															Item button
+													-->
+													<!-- <button
+															class="btn c-btn-transparent c-btn-transparent--primary gameShop__slots-item-content-btn"
+														>
+															Options
+														</button> -->
+												</div>
+
+												<!--	=========================================
+														Item title
+												-->
+												<p class="gameShop__slots-item-title">Diamond Sword</p>
+											</div>
+
+											<!--	=========================================
+													Featured item
+											-->
+											<div class="gameShop__slots-item">
+												<!--	=========================================
+														Item content
+												-->
+												<div class="gameShop__slots-item-content">
+													<img
+														src="/assets/images/shop-item-temp.png"
+														alt="Sword"
+													/>
+
+													<!--	=========================================
+															Item price
+													-->
+													<!-- <label class="gameShop__slots-item-content-price">
+														<svg
+															width="24"
+															height="24"
+															viewBox="0 0 24 24"
+															fill="currentColor"
+															xmlns="http://www.w3.org/2000/svg"
+														>
+															<path
+																d="M14.9693 12.75H14.1993H9.5293V15.58H10.8393H14.9693C15.9193 15.58 16.6993 14.94 16.6993 14.16C16.6993 13.38 15.9193 12.75 14.9693 12.75Z"
+															/>
+															<path
+																d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.97 17.08H13.32V18.5C13.32 18.91 12.98 19.25 12.57 19.25C12.16 19.25 11.82 18.91 11.82 18.5V17.08H10.84H10.61V18.5C10.61 18.91 10.27 19.25 9.86 19.25C9.45 19.25 9.11 18.91 9.11 18.5V17.08H8.78H7.05C6.64 17.08 6.3 16.74 6.3 16.33C6.3 15.92 6.64 15.58 7.05 15.58H8.03V12V8.42H7.05C6.64 8.42 6.3 8.08 6.3 7.67C6.3 7.26 6.64 6.92 7.05 6.92H8.78H9.11V5.5C9.11 5.09 9.45 4.75 9.86 4.75C10.27 4.75 10.61 5.09 10.61 5.5V6.92H10.84H11.82V5.5C11.82 5.09 12.16 4.75 12.57 4.75C12.98 4.75 13.32 5.09 13.32 5.5V6.92H14.2C15.75 6.92 17.12 8.28 17.12 9.84C17.12 10.51 16.88 11.12 16.5 11.62C17.51 12.11 18.2 13.07 18.2 14.18C18.2 15.77 16.75 17.08 14.97 17.08Z"
+															/>
+															<path
+																d="M15.6193 9.82997C15.6193 9.16997 14.9993 8.40997 14.1993 8.40997H10.8393H9.5293V11.24H14.1993C14.9793 11.25 15.6193 10.61 15.6193 9.82997Z"
+															/>
+														</svg>
+
+														<span>300</span>
+													</label> -->
+
+													<!--	=========================================
+															Item button
+													-->
+													<button
+														class="btn c-btn-transparent c-btn-transparent--primary gameShop__slots-item-content-btn"
+													>
+														Options
+													</button>
+												</div>
+
+												<!--	=========================================
+														Item title
+												-->
+												<p class="gameShop__slots-item-title">Diamond Sword</p>
+											</div>
+										</div>
+									</div>
+									<!--	=========================================
+											Costume tab content
+									-->
+									<div
+										class="tab-pane fade"
+										id="costume"
+										role="tabpanel"
+										aria-labelledby="costume-tab"
+									>
+										<div class="gameShop__slots-tab">
+											<!--	=========================================
+													Featured item
+											-->
+											<div class="gameShop__slots-item">
+												<!--	=========================================
+														Item content
+												-->
+												<div class="gameShop__slots-item-content">
+													<img
+														src="/assets/images/shop-item-temp.png"
+														alt="Sword"
+													/>
+
+													<!--	=========================================
+															Item price
+													-->
+													<label class="gameShop__slots-item-content-price">
+														<svg
+															width="24"
+															height="24"
+															viewBox="0 0 24 24"
+															fill="currentColor"
+															xmlns="http://www.w3.org/2000/svg"
+														>
+															<path
+																d="M14.9693 12.75H14.1993H9.5293V15.58H10.8393H14.9693C15.9193 15.58 16.6993 14.94 16.6993 14.16C16.6993 13.38 15.9193 12.75 14.9693 12.75Z"
+															/>
+															<path
+																d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.97 17.08H13.32V18.5C13.32 18.91 12.98 19.25 12.57 19.25C12.16 19.25 11.82 18.91 11.82 18.5V17.08H10.84H10.61V18.5C10.61 18.91 10.27 19.25 9.86 19.25C9.45 19.25 9.11 18.91 9.11 18.5V17.08H8.78H7.05C6.64 17.08 6.3 16.74 6.3 16.33C6.3 15.92 6.64 15.58 7.05 15.58H8.03V12V8.42H7.05C6.64 8.42 6.3 8.08 6.3 7.67C6.3 7.26 6.64 6.92 7.05 6.92H8.78H9.11V5.5C9.11 5.09 9.45 4.75 9.86 4.75C10.27 4.75 10.61 5.09 10.61 5.5V6.92H10.84H11.82V5.5C11.82 5.09 12.16 4.75 12.57 4.75C12.98 4.75 13.32 5.09 13.32 5.5V6.92H14.2C15.75 6.92 17.12 8.28 17.12 9.84C17.12 10.51 16.88 11.12 16.5 11.62C17.51 12.11 18.2 13.07 18.2 14.18C18.2 15.77 16.75 17.08 14.97 17.08Z"
+															/>
+															<path
+																d="M15.6193 9.82997C15.6193 9.16997 14.9993 8.40997 14.1993 8.40997H10.8393H9.5293V11.24H14.1993C14.9793 11.25 15.6193 10.61 15.6193 9.82997Z"
+															/>
+														</svg>
+
+														<span>300</span>
+													</label>
+
+													<!--	=========================================
+															Item button
+													-->
+													<!-- <button
+															class="btn c-btn-transparent c-btn-transparent--primary gameShop__slots-item-content-btn"
+														>
+															Options
+														</button> -->
+												</div>
+
+												<!--	=========================================
+														Item title
+												-->
+												<p class="gameShop__slots-item-title">Diamond Sword</p>
+											</div>
+
+											<!--	=========================================
+													Featured item
+											-->
+											<div class="gameShop__slots-item">
+												<!--	=========================================
+														Item content
+												-->
+												<div class="gameShop__slots-item-content">
+													<img
+														src="/assets/images/shop-item-temp.png"
+														alt="Sword"
+													/>
+
+													<!--	=========================================
+															Item price
+													-->
+													<!-- <label class="gameShop__slots-item-content-price">
+														<svg
+															width="24"
+															height="24"
+															viewBox="0 0 24 24"
+															fill="currentColor"
+															xmlns="http://www.w3.org/2000/svg"
+														>
+															<path
+																d="M14.9693 12.75H14.1993H9.5293V15.58H10.8393H14.9693C15.9193 15.58 16.6993 14.94 16.6993 14.16C16.6993 13.38 15.9193 12.75 14.9693 12.75Z"
+															/>
+															<path
+																d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.97 17.08H13.32V18.5C13.32 18.91 12.98 19.25 12.57 19.25C12.16 19.25 11.82 18.91 11.82 18.5V17.08H10.84H10.61V18.5C10.61 18.91 10.27 19.25 9.86 19.25C9.45 19.25 9.11 18.91 9.11 18.5V17.08H8.78H7.05C6.64 17.08 6.3 16.74 6.3 16.33C6.3 15.92 6.64 15.58 7.05 15.58H8.03V12V8.42H7.05C6.64 8.42 6.3 8.08 6.3 7.67C6.3 7.26 6.64 6.92 7.05 6.92H8.78H9.11V5.5C9.11 5.09 9.45 4.75 9.86 4.75C10.27 4.75 10.61 5.09 10.61 5.5V6.92H10.84H11.82V5.5C11.82 5.09 12.16 4.75 12.57 4.75C12.98 4.75 13.32 5.09 13.32 5.5V6.92H14.2C15.75 6.92 17.12 8.28 17.12 9.84C17.12 10.51 16.88 11.12 16.5 11.62C17.51 12.11 18.2 13.07 18.2 14.18C18.2 15.77 16.75 17.08 14.97 17.08Z"
+															/>
+															<path
+																d="M15.6193 9.82997C15.6193 9.16997 14.9993 8.40997 14.1993 8.40997H10.8393H9.5293V11.24H14.1993C14.9793 11.25 15.6193 10.61 15.6193 9.82997Z"
+															/>
+														</svg>
+
+														<span>300</span>
+													</label> -->
+
+													<!--	=========================================
+															Item button
+													-->
+													<button
+														class="btn c-btn-transparent c-btn-transparent--primary gameShop__slots-item-content-btn"
+													>
+														Options
+													</button>
+												</div>
+
+												<!--	=========================================
+														Item title
+												-->
+												<p class="gameShop__slots-item-title">Diamond Sword</p>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>

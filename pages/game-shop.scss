@@ -1,0 +1,329 @@
+@use '../assets/styles/1-settings/global' as GLOBAL;
+@use '../assets/styles/1-settings/typography' as TYPOGRAPHY;
+@use '../assets/styles/1-settings/placeholders';
+
+.gameShop__wrapper {
+	flex-grow: 1;
+
+	display: flex;
+	justify-content: center;
+}
+
+.gameShop {
+	display: flex;
+	flex-direction: column;
+
+	width: 100%;
+	max-width: GLOBAL.$bp-x-large;
+	padding: 2rem GLOBAL.$spacing-medium-large;
+}
+
+.gameShop__content {
+	//* This position allows "preview-wrapper" to be sticky.
+	position: relative;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: GLOBAL.$spacing-extra-large;
+
+	margin-top: 1rem;
+}
+
+/*
+ *	Avatar and item preview
+ *	====================================================================== */
+
+.gameShop__preview-wrapper {
+	flex-grow: 1;
+
+	position: sticky;
+	top: 134px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0.5rem;
+
+	button {
+		height: 56px;
+		width: 56px;
+
+		color: var(--theme-fill-main);
+	}
+}
+
+.gameShop__preview {
+	height: 334px;
+	width: 282px;
+
+	img {
+		@extend %img-full-cover;
+	}
+}
+
+/*
+ *	Items
+ *	====================================================================== */
+
+.gameShop__items {
+	width: 55%;
+	flex-shrink: 0;
+	flex-grow: 0;
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.gameShop__inUse {
+	align-self: stretch;
+
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	padding-bottom: 0.5rem;
+
+	border-bottom: 1px solid var(--theme-bg-main-light);
+
+	p {
+		flex-shrink: 0;
+
+		color: var(--theme-text-main-light);
+	}
+}
+
+.gameShop__inUse-list {
+	@extend %scrollbar-horizontal-dark;
+
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: 38px;
+	grid-template-rows: 1fr;
+	column-gap: GLOBAL.$spacing-medium;
+
+	padding-bottom: 0.375rem;
+	overflow-x: auto;
+
+	button {
+		aspect-ratio: 1;
+		width: 100%;
+		overflow: hidden;
+		padding: 0;
+
+		border-radius: GLOBAL.$radius-small;
+		border: 1px solid var(--theme-border-black-light);
+
+		img {
+			@extend %img-full-cover;
+		}
+	}
+}
+
+.gameShop__fullSets {
+	align-self: stretch;
+
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+
+	margin-bottom: 0.125rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+
+	p {
+		flex-shrink: 0;
+
+		color: var(--theme-text-main-light);
+	}
+}
+
+.gameShop__fullSets-list {
+	@extend %scrollbar-horizontal-dark;
+
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: 64px;
+	grid-template-rows: 1fr;
+	column-gap: GLOBAL.$spacing-small;
+
+	padding: 1rem;
+	overflow-x: scroll;
+
+	button {
+		aspect-ratio: 1;
+		width: 100%;
+		overflow: hidden;
+		padding: 0;
+
+		border-radius: GLOBAL.$radius-small;
+		border: 1px solid var(--theme-border-black-light);
+
+		&.gameShop__fullSets-list-btn--active {
+			filter: drop-shadow(0px 0px 8px rgba(101, 76, 230, 0.72));
+			border: 1px solid var(--theme-border-white-light);
+		}
+
+		img {
+			@extend %img-full-cover;
+		}
+	}
+}
+
+/*
+ *	Slots
+ *	====================================================================== */
+
+.gameShop__slots-menu {
+	align-self: stretch;
+
+	display: flex;
+	justify-content: space-between;
+	gap: 0.5rem;
+
+	margin-bottom: 1.25rem;
+	padding: 0 2.625rem;
+
+	border-radius: 100rem;
+	background-color: var(--theme-bg-main-light);
+}
+
+.gameShop__slot-menu-item {
+	height: 100%;
+}
+
+.gameShop__slot-menu-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+
+	height: 100%;
+	padding: 1rem 0.75rem;
+	font-weight: TYPOGRAPHY.$weight-medium;
+
+	border: none;
+	background-color: transparent;
+	color: var(--theme-text-main-soft);
+
+	&:hover {
+		color: var(--theme-text-main);
+	}
+
+	&[aria-selected='true'] {
+		position: relative;
+
+		font-weight: TYPOGRAPHY.$weight-bold;
+
+		color: var(--theme-text-primary);
+
+		&::after {
+			content: '';
+
+			position: absolute;
+			bottom: 0;
+
+			width: 100%;
+			height: 4px;
+
+			border-radius: 4px;
+			background-color: var(--theme-bg-primary);
+		}
+	}
+}
+
+.gameShop__slots-content {
+	align-self: stretch;
+}
+
+.gameShop__slots-tab {
+	display: grid;
+	grid-auto-flow: row;
+	grid-template-columns: repeat(4, 1fr);
+	gap: GLOBAL.$spacing-medium GLOBAL.$spacing-small;
+}
+
+.gameShop__slots-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
+
+	min-height: 152px;
+	width: 100%;
+}
+
+.gameShop__slots-item-content {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	height: 152px;
+	width: 100%;
+	padding: 0.25rem;
+
+	font-size: TYPOGRAPHY.$size-normal;
+	overflow: hidden;
+
+	box-shadow: var(--theme-shadow-lvl-1);
+	border-radius: GLOBAL.$radius-small;
+	border: 1px solid var(--theme-border-black-light);
+	background-color: var(--theme-bg-main-light);
+
+	img {
+		@extend %img-full-cover;
+	}
+}
+
+.gameShop__slots-item-content-price {
+	position: absolute;
+	bottom: 0.25rem;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+
+	width: calc(100% - 0.5rem);
+	padding: 0.25rem 0.5rem;
+	font-size: TYPOGRAPHY.$size-normal;
+	font-weight: TYPOGRAPHY.$weight-bold;
+
+	border-radius: GLOBAL.$radius-small;
+	border: 1px solid var(--theme-border-black-light);
+	background-color: var(--theme-bg-main-light);
+	color: var(--theme-text-main);
+
+	svg {
+		align-self: center;
+
+		height: 24px;
+		width: 24px;
+
+		color: var(--theme-bg-yellow-light);
+	}
+
+	span {
+		place-self: center;
+	}
+}
+
+.gameShop__slots-item-content-btn {
+	position: absolute;
+	bottom: 0.25rem;
+
+	width: calc(100% - 0.5rem);
+}
+
+.gameShop__slots-item-title {
+	@extend %overflow-ellipsis;
+
+	max-width: 100%;
+	padding: 0 0.375rem;
+	font-size: TYPOGRAPHY.$size-normal;
+	font-weight: TYPOGRAPHY.$weight-bold;
+	text-align: center;
+}

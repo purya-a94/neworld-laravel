@@ -1,0 +1,329 @@
+/*----------------------------------------*\
+	#GLOBAL
+\*----------------------------------------*/
+/*
+ *	NOTE:
+ *  1.	
+ */
+/*	#BREAKPOINTS
+	====================================================================== */
+/*	#SPACING
+	====================================================================== */
+/* 8px / 16px */
+/* 16px */
+/* 24px / 16px */
+/* 32px / 16px */
+/* 40px / 16px */
+/* 72px / 16px */
+/*	#RADIUS
+	====================================================================== */
+/*----------------------------------------*\
+	#TYPOGRAPHY
+\*----------------------------------------*/
+/*	#BASE
+	====================================================================== */
+/*	#SIZE
+	====================================================================== */
+/* 10px */
+/* 12px */
+/* 14px */
+/* 16px */
+/* 18px */
+/* 20px */
+/* 22px */
+/* 24px */
+/* 26px */
+/* 28px */
+/* 32px */
+/* 48px */
+/* 56px */
+/* 64px */
+/*	#SIZE_HEADING
+	====================================================================== */
+/* 40px */
+/* 32px */
+/* 28px */
+/* 24px */
+/* 20px */
+/* 16px */
+/*	#WEIGHT
+	====================================================================== */
+/*	#PLACEHOLDERS
+	====================================================================== */
+.gameShop__slots-item-title {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/*------------------------------------*\
+	#PLACEHOLDERS
+\*------------------------------------*/
+/*	#SCROLLBAR
+	====================================================================== */
+.gameShop__inUse-list::-webkit-scrollbar, .gameShop__fullSets-list::-webkit-scrollbar {
+  height: 6px;
+}
+.gameShop__inUse-list::-webkit-scrollbar-track, .gameShop__fullSets-list::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.gameShop__inUse-list::-webkit-scrollbar-thumb, .gameShop__fullSets-list::-webkit-scrollbar-thumb {
+  border-radius: 100rem;
+  background-color: var(--theme-invertible-main-soft);
+}
+
+/*	#IMAGE
+	====================================================================== */
+.gameShop__preview img, .gameShop__inUse-list button img, .gameShop__fullSets-list button img, .gameShop__slots-item-content img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.gameShop__wrapper {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.gameShop {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1400px;
+  padding: 2rem 2rem;
+}
+
+.gameShop__content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4.5rem;
+  margin-top: 1rem;
+}
+
+/*
+ *	Avatar and item preview
+ *	====================================================================== */
+.gameShop__preview-wrapper {
+  flex-grow: 1;
+  position: sticky;
+  top: 134px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+.gameShop__preview-wrapper button {
+  height: 56px;
+  width: 56px;
+  color: var(--theme-fill-main);
+}
+
+.gameShop__preview {
+  height: 334px;
+  width: 282px;
+}
+/*
+ *	Items
+ *	====================================================================== */
+.gameShop__items {
+  width: 55%;
+  flex-shrink: 0;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.gameShop__inUse {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--theme-bg-main-light);
+}
+.gameShop__inUse p {
+  flex-shrink: 0;
+  color: var(--theme-text-main-light);
+}
+
+.gameShop__inUse-list {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 38px;
+  grid-template-rows: 1fr;
+  column-gap: 1.5rem;
+  padding-bottom: 0.375rem;
+  overflow-x: auto;
+}
+.gameShop__inUse-list button {
+  aspect-ratio: 1;
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  border-radius: 8px;
+  border: 1px solid var(--theme-border-black-light);
+}
+.gameShop__fullSets {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.125rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.gameShop__fullSets p {
+  flex-shrink: 0;
+  color: var(--theme-text-main-light);
+}
+
+.gameShop__fullSets-list {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 64px;
+  grid-template-rows: 1fr;
+  column-gap: 1rem;
+  padding: 1rem;
+  overflow-x: scroll;
+}
+.gameShop__fullSets-list button {
+  aspect-ratio: 1;
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  border-radius: 8px;
+  border: 1px solid var(--theme-border-black-light);
+}
+.gameShop__fullSets-list button.gameShop__fullSets-list-btn--active {
+  filter: drop-shadow(0px 0px 8px rgba(101, 76, 230, 0.72));
+  border: 1px solid var(--theme-border-white-light);
+}
+/*
+ *	Slots
+ *	====================================================================== */
+.gameShop__slots-menu {
+  align-self: stretch;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  padding: 0 2.625rem;
+  border-radius: 100rem;
+  background-color: var(--theme-bg-main-light);
+}
+
+.gameShop__slot-menu-item {
+  height: 100%;
+}
+
+.gameShop__slot-menu-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  height: 100%;
+  padding: 1rem 0.75rem;
+  font-weight: 500;
+  border: none;
+  background-color: transparent;
+  color: var(--theme-text-main-soft);
+}
+.gameShop__slot-menu-btn:hover {
+  color: var(--theme-text-main);
+}
+.gameShop__slot-menu-btn[aria-selected=true] {
+  position: relative;
+  font-weight: 700;
+  color: var(--theme-text-primary);
+}
+.gameShop__slot-menu-btn[aria-selected=true]::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--theme-bg-primary);
+}
+
+.gameShop__slots-content {
+  align-self: stretch;
+}
+
+.gameShop__slots-tab {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem 1rem;
+}
+
+.gameShop__slots-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 152px;
+  width: 100%;
+}
+
+.gameShop__slots-item-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 152px;
+  width: 100%;
+  padding: 0.25rem;
+  font-size: 1rem;
+  overflow: hidden;
+  box-shadow: var(--theme-shadow-lvl-1);
+  border-radius: 8px;
+  border: 1px solid var(--theme-border-black-light);
+  background-color: var(--theme-bg-main-light);
+}
+.gameShop__slots-item-content-price {
+  position: absolute;
+  bottom: 0.25rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: calc(100% - 0.5rem);
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  border: 1px solid var(--theme-border-black-light);
+  background-color: var(--theme-bg-main-light);
+  color: var(--theme-text-main);
+}
+.gameShop__slots-item-content-price svg {
+  align-self: center;
+  height: 24px;
+  width: 24px;
+  color: var(--theme-bg-yellow-light);
+}
+.gameShop__slots-item-content-price span {
+  place-self: center;
+}
+
+.gameShop__slots-item-content-btn {
+  position: absolute;
+  bottom: 0.25rem;
+  width: calc(100% - 0.5rem);
+}
+
+.gameShop__slots-item-title {
+  max-width: 100%;
+  padding: 0 0.375rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/*# sourceMappingURL=game-shop.css.map */

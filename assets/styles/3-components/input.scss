@@ -6,16 +6,18 @@
 @use '../1-settings/typography' as TYPOGRAPHY;
 
 .c-input {
-	padding: 0.5rem;
-	border-radius: 10px;
-	border: 1px solid var(--theme-border-white);
+	padding: 0.5rem 0.75rem;
+	border-radius: GLOBAL.$radius-small;
+	border: 1px solid var(--theme-border-black-light);
 
 	background: var(--theme-bg-main-light);
+	color: var(--theme-text-main);
 }
 
 .c-input--withError {
-	border: 1px solid var(--theme-text-red);
-}
-.c-input--withError:focus-visible {
-	outline: 1px solid var(--theme-text-red);
+	border: 1px solid var(--theme-border-red);
+
+	&:focus-visible {
+		outline: 1px solid var(--theme-border-red);
+	}
 }

@@ -304,6 +304,10 @@
 	background-color: var(--theme-bg-main-light);
 	color: var(--theme-text-main);
 
+	&:focus {
+		box-shadow: none;
+	}
+
 	svg {
 		align-self: center;
 

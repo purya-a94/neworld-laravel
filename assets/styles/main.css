@@ -252,6 +252,7 @@
   --theme-fill-primary: #654ce6;
   --theme-fill-primary-light: #8672ec;
   --theme-fill-primary-dark: #5828e1;
+  --theme-fill-yellow: #fdb800;
 }
 
 /* *
@@ -465,6 +466,21 @@ p {
 \*----------------------------------------*/
 /*	#BASE
 	====================================================================== */
+.c-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  border-radius: 16px;
+  border-color: transparent;
+  box-shadow: var(--theme-shadow-lvl-2);
+}
+.c-btn:hover, .c-btn:focus {
+  box-shadow: var(--theme-shadow-lvl-1);
+}
+
 /* *
  * Base - Primary
  */
@@ -687,18 +703,18 @@ p {
 	#INPUT
 \*----------------------------------------*/
 .c-input {
-  padding: 0.5rem;
-  border-radius: 10px;
-  border: 1px solid var(--theme-border-white);
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--theme-border-black-light);
   background: var(--theme-bg-main-light);
+  color: var(--theme-text-main);
 }
 
 .c-input--withError {
-  border: 1px solid var(--theme-text-red);
+  border: 1px solid var(--theme-border-red);
 }
-
 .c-input--withError:focus-visible {
-  outline: 1px solid var(--theme-text-red);
+  outline: 1px solid var(--theme-border-red);
 }
 
 /*----------------------------------------*\
@@ -784,6 +800,14 @@ p {
 
 .u-textColor-main--dark {
   color: var(--theme-text-main-dark);
+}
+
+.u-textColor-main--soft {
+  color: var(--theme-text-main-soft);
+}
+
+.u-textColor-main--softer {
+  color: var(--theme-text-main-softer);
 }
 
 .u-textColor-primary {

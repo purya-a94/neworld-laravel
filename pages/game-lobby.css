@@ -85,7 +85,7 @@
 
 /*	#IMAGE
 	====================================================================== */
-.lobby__shop-packs-list button img, .lobby__shop-featured-item-content img {
+.lobby__shop-packs-list button img, .lobby__shop-featured-item-content img, .buyItemModal__item-img img, .sellItemModal__item-img img {
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -490,6 +490,9 @@
   background-color: var(--theme-bg-main-light);
   color: var(--theme-text-main);
 }
+.lobby__shop-featured-item-content-price:focus {
+  box-shadow: none;
+}
 .lobby__shop-featured-item-content-price svg {
   align-self: center;
   height: 24px;
@@ -511,6 +514,215 @@
   padding: 0 0.375rem;
   font-size: 1rem;
   font-weight: 700;
+  text-align: center;
+}
+
+/*
+ *	Matchmaking modal
+ *	====================================================================== */
+.matchmakingModal__content {
+  border-radius: 16px;
+  background-color: var(--theme-bg-main-light);
+}
+
+.matchmakingModal__header {
+  padding: 1.5rem;
+  padding-bottom: 1rem;
+  border-radius: 0;
+  border-bottom-color: var(--theme-border-white);
+}
+.matchmakingModal__header h5 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: var(--theme-text-main-light);
+}
+
+.matchmakingModal__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  padding-top: 1.25rem;
+}
+
+.matchmakingModal__game-img {
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 16px;
+}
+
+.matchmakingModal__game-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2rem;
+  text-align: center;
+  color: var(--theme-text-main-dark);
+}
+
+.matchmakingModal__description {
+  margin-bottom: 0.75rem;
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: var(--theme-text-main-light);
+}
+
+/*
+ *	Buy item modal
+ *	====================================================================== */
+.buyItemModal__content {
+  border-radius: 16px;
+  background-color: var(--theme-bg-main-light);
+}
+
+.buyItemModal__header {
+  padding: 1rem 1.5rem 0.5rem;
+  border-radius: 0;
+  border-bottom-color: var(--theme-border-white);
+}
+.buyItemModal__header h5 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: var(--theme-text-main-light);
+}
+.buyItemModal__header button {
+  width: 11rem;
+}
+
+.buyItemModal__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.buyItemModal__item-img {
+  align-self: center;
+  height: 192px;
+  width: 182px;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem;
+  overflow: hidden;
+  box-shadow: var(--theme-shadow-lvl-4);
+  border-radius: 16px;
+  border: 1px solid var(--theme-border-white);
+  background-color: var(--theme-bg-main-light);
+}
+.buyItemModal__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2rem;
+  text-align: center;
+  color: var(--theme-text-main-dark);
+}
+
+.buyItemModal__description {
+  margin-bottom: 0.75rem;
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: var(--theme-text-main-light);
+}
+
+.buyItemModal__price {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+.buyItemModal__price span {
+  padding: 0.25rem;
+  border-radius: 8px;
+  background-color: rgba(228, 228, 235, 0.4);
+  color: var(--theme-fill-yellow);
+}
+.buyItemModal__price p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+
+/*
+ *	Sell item modal
+ *	====================================================================== */
+.sellItemModal__content {
+  border-radius: 16px;
+  background-color: var(--theme-bg-main-light);
+}
+
+.sellItemModal__header {
+  padding: 1rem 1.5rem;
+  border-radius: 0;
+  border-bottom-color: var(--theme-border-white);
+}
+.sellItemModal__header h5 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: var(--theme-text-main-light);
+}
+.sellItemModal__header button {
+  width: 11rem;
+}
+
+.sellItemModal__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.sellItemModal__item-img {
+  align-self: center;
+  height: 192px;
+  width: 182px;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem;
+  overflow: hidden;
+  box-shadow: var(--theme-shadow-lvl-4);
+  border-radius: 16px;
+  border: 1px solid var(--theme-border-white);
+  background-color: var(--theme-bg-main-light);
+}
+.sellItemModal__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2rem;
+  text-align: center;
+  color: var(--theme-text-main-dark);
+}
+
+.sellItemModal__description {
+  margin-bottom: 0.75rem;
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: var(--theme-text-main-light);
+}
+
+.sellItemModal__price {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+.sellItemModal__price span {
+  padding: 0.25rem;
+  border-radius: 8px;
+  background-color: rgba(228, 228, 235, 0.4);
+  color: var(--theme-fill-yellow);
+}
+.sellItemModal__price input {
+  width: 10rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.5rem;
   text-align: center;
 }
 

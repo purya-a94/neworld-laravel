@@ -1099,7 +1099,9 @@
 												<!--	=========================================
 														Item price
 												-->
-												<label class="lobby__shop-featured-item-content-price">
+												<button
+													class="btn lobby__shop-featured-item-content-price"
+												>
 													<svg
 														width="24"
 														height="24"
@@ -1119,7 +1121,7 @@
 													</svg>
 
 													<span>300</span>
-												</label>
+												</button>
 
 												<!--	=========================================
 														Item button
@@ -1304,6 +1306,300 @@
 										</div>
 									</div>
 								</div>
+							</div>
+
+							<button
+								data-bs-toggle="modal"
+								data-bs-target="#modal_matchmaking"
+								class="btn c-btn-outline--primary mt-3"
+							>
+								Matchmaking and Rank Modal
+							</button>
+
+							<button
+								data-bs-toggle="modal"
+								data-bs-target="#modal_buy-item"
+								class="btn c-btn-outline--primary mt-3"
+							>
+								Buy Item
+							</button>
+
+							<button
+								data-bs-toggle="modal"
+								data-bs-target="#modal_sell-item"
+								class="btn c-btn-outline--primary mt-3"
+							>
+								Sell Item
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<!--	=========================================
+						Modals
+				-->
+				<!--	=========================================
+						Matchmaking and Rank Modal
+				-->
+				<div
+					id="modal_matchmaking"
+					tabindex="-1"
+					aria-labelledby="modal_matchmaking"
+					aria-hidden="true"
+					class="modal fade"
+				>
+					<div class="modal-dialog modal-dialog-centered">
+						<div class="modal-content matchmakingModal__content">
+							<!--	=========================================
+									Modal header
+							-->
+							<div class="modal-header matchmakingModal__header">
+								<h5 class="modal-title">Matchmaking</h5>
+
+								<!-- <button
+									type="button"
+									class="btn-close u-boxShadow-focus-none"
+									data-bs-dismiss="modal"
+									aria-label="Close"
+								></button> -->
+							</div>
+							<!--	=========================================
+									Modal body
+							-->
+							<div class="modal-body matchmakingModal__body">
+								<!--	=========================================
+										Game image
+								-->
+								<img
+									src="/assets/images/news-card-temp.png"
+									alt="game title"
+									class="matchmakingModal__game-img"
+								/>
+
+								<!--	=========================================
+										Game title
+								-->
+								<p class="matchmakingModal__game-title">
+									HSilver mist suffused the deck of the ship.
+								</p>
+
+								<!--	=========================================
+										Description
+								-->
+								<p class="matchmakingModal__description">
+									Lorem ipsum dolor sit amet, sea id recteque aliquando
+									democritum. Feugait postulant incorrupte nam at, eos no possim
+									mediocritatem. Mei et soluta omittantur interpretaris, ut stet
+								</p>
+
+								<!--	=========================================
+										Join button
+								-->
+								<button class="btn c-btn--primary">Join</button>
+
+								<!--	=========================================
+										Cancel/close button
+								-->
+								<button
+									data-bs-dismiss="modal"
+									class="btn c-btn u-textColor-main--soft"
+								>
+									Cancel
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!--	=========================================
+						Buy item modal
+				-->
+				<div
+					id="modal_buy-item"
+					tabindex="-1"
+					aria-labelledby="modal_buy-item"
+					aria-hidden="true"
+					class="modal fade"
+				>
+					<div class="modal-dialog modal-dialog-centered">
+						<div class="modal-content buyItemModal__content">
+							<!--	=========================================
+									Modal header
+							-->
+							<div class="modal-header buyItemModal__header">
+								<h5 class="modal-title">
+									Your coins:
+									<strong>1718</strong>
+								</h5>
+
+								<button type="button" class="btn c-btn-outline--primary">
+									Buy more
+								</button>
+							</div>
+							<!--	=========================================
+									Modal body
+							-->
+							<div class="modal-body buyItemModal__body">
+								<!--	=========================================
+										Item image (Has to be a slider in the future)
+								-->
+								<div class="buyItemModal__item-img">
+									<img
+										src="/assets/images/shop-item-temp.png"
+										alt="game title"
+									/>
+								</div>
+
+								<!--	=========================================
+										Item title
+								-->
+								<p class="buyItemModal__title">HSilver mist suffused the</p>
+
+								<!--	=========================================
+										Description
+								-->
+								<p class="buyItemModal__description">
+									Lorem ipsum dolor sit amet, sea id recteque aliquando
+								</p>
+
+								<!--	=========================================
+										Item price
+								-->
+								<div class="buyItemModal__price">
+									<span>
+										<svg
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="currentColor"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M14.9693 12.75H14.1993H9.5293V15.58H10.8393H14.9693C15.9193 15.58 16.6993 14.94 16.6993 14.16C16.6993 13.38 15.9193 12.75 14.9693 12.75Z"
+											/>
+											<path
+												d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.97 17.08H13.32V18.5C13.32 18.91 12.98 19.25 12.57 19.25C12.16 19.25 11.82 18.91 11.82 18.5V17.08H10.84H10.61V18.5C10.61 18.91 10.27 19.25 9.86 19.25C9.45 19.25 9.11 18.91 9.11 18.5V17.08H8.78H7.05C6.64 17.08 6.3 16.74 6.3 16.33C6.3 15.92 6.64 15.58 7.05 15.58H8.03V12V8.42H7.05C6.64 8.42 6.3 8.08 6.3 7.67C6.3 7.26 6.64 6.92 7.05 6.92H8.78H9.11V5.5C9.11 5.09 9.45 4.75 9.86 4.75C10.27 4.75 10.61 5.09 10.61 5.5V6.92H10.84H11.82V5.5C11.82 5.09 12.16 4.75 12.57 4.75C12.98 4.75 13.32 5.09 13.32 5.5V6.92H14.2C15.75 6.92 17.12 8.28 17.12 9.84C17.12 10.51 16.88 11.12 16.5 11.62C17.51 12.11 18.2 13.07 18.2 14.18C18.2 15.77 16.75 17.08 14.97 17.08Z"
+											/>
+											<path
+												d="M15.6193 9.82997C15.6193 9.16997 14.9993 8.40997 14.1993 8.40997H10.8393H9.5293V11.24H14.1993C14.9793 11.25 15.6193 10.61 15.6193 9.82997Z"
+											/>
+										</svg>
+									</span>
+
+									<p>12,00</p>
+								</div>
+
+								<!--	=========================================
+										Buy button
+								-->
+								<button class="btn c-btn--primary">Buy</button>
+
+								<!--	=========================================
+										Cancel/close button
+								-->
+								<button
+									data-bs-dismiss="modal"
+									class="btn c-btn u-textColor-main--soft"
+								>
+									Cancel
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!--	=========================================
+						Sell item modal
+				-->
+				<div
+					id="modal_sell-item"
+					tabindex="-1"
+					aria-labelledby="modal_sell-item"
+					aria-hidden="true"
+					class="modal fade"
+				>
+					<div class="modal-dialog modal-dialog-centered">
+						<div class="modal-content sellItemModal__content">
+							<!--	=========================================
+									Modal header
+							-->
+							<div class="modal-header sellItemModal__header">
+								<h5 class="modal-title">Selling item</h5>
+
+								<!-- <button
+									type="button"
+									class="btn-close u-boxShadow-focus-none"
+									data-bs-dismiss="modal"
+									aria-label="Close"
+								></button> -->
+							</div>
+							<!--	=========================================
+									Modal body
+							-->
+							<div class="modal-body sellItemModal__body">
+								<!--	=========================================
+										Item image (Has to be a slider in the future)
+								-->
+								<div class="sellItemModal__item-img">
+									<img
+										src="/assets/images/shop-item-temp.png"
+										alt="game title"
+									/>
+								</div>
+
+								<!--	=========================================
+										Item title
+								-->
+								<p class="sellItemModal__title">HSilver mist suffused the</p>
+
+								<!--	=========================================
+										Description
+								-->
+								<p class="sellItemModal__description">
+									Lorem ipsum dolor sit amet, sea id recteque aliquando
+								</p>
+
+								<!--	=========================================
+										Item price
+								-->
+								<div class="sellItemModal__price">
+									<span>
+										<svg
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="currentColor"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M14.9693 12.75H14.1993H9.5293V15.58H10.8393H14.9693C15.9193 15.58 16.6993 14.94 16.6993 14.16C16.6993 13.38 15.9193 12.75 14.9693 12.75Z"
+											/>
+											<path
+												d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.97 17.08H13.32V18.5C13.32 18.91 12.98 19.25 12.57 19.25C12.16 19.25 11.82 18.91 11.82 18.5V17.08H10.84H10.61V18.5C10.61 18.91 10.27 19.25 9.86 19.25C9.45 19.25 9.11 18.91 9.11 18.5V17.08H8.78H7.05C6.64 17.08 6.3 16.74 6.3 16.33C6.3 15.92 6.64 15.58 7.05 15.58H8.03V12V8.42H7.05C6.64 8.42 6.3 8.08 6.3 7.67C6.3 7.26 6.64 6.92 7.05 6.92H8.78H9.11V5.5C9.11 5.09 9.45 4.75 9.86 4.75C10.27 4.75 10.61 5.09 10.61 5.5V6.92H10.84H11.82V5.5C11.82 5.09 12.16 4.75 12.57 4.75C12.98 4.75 13.32 5.09 13.32 5.5V6.92H14.2C15.75 6.92 17.12 8.28 17.12 9.84C17.12 10.51 16.88 11.12 16.5 11.62C17.51 12.11 18.2 13.07 18.2 14.18C18.2 15.77 16.75 17.08 14.97 17.08Z"
+											/>
+											<path
+												d="M15.6193 9.82997C15.6193 9.16997 14.9993 8.40997 14.1993 8.40997H10.8393H9.5293V11.24H14.1993C14.9793 11.25 15.6193 10.61 15.6193 9.82997Z"
+											/>
+										</svg>
+									</span>
+
+									<input type="text" inputmode="numeric" class="c-input" />
+								</div>
+
+								<!--	=========================================
+										Sell button
+								-->
+								<button class="btn c-btn--primary">Sell</button>
+
+								<!--	=========================================
+										Cancel/close button
+								-->
+								<button
+									data-bs-dismiss="modal"
+									class="btn c-btn u-textColor-main--soft"
+								>
+									Cancel
+								</button>
 							</div>
 						</div>
 					</div>

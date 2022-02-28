@@ -491,6 +491,10 @@
 	background-color: var(--theme-bg-main-light);
 	color: var(--theme-text-main);
 
+	&:focus {
+		box-shadow: none;
+	}
+
 	svg {
 		align-self: center;
 
@@ -520,4 +524,265 @@
 	font-size: TYPOGRAPHY.$size-normal;
 	font-weight: TYPOGRAPHY.$weight-bold;
 	text-align: center;
+}
+
+/*
+ *	Matchmaking modal
+ *	====================================================================== */
+
+.matchmakingModal__content {
+	border-radius: GLOBAL.$radius-medium;
+	background-color: var(--theme-bg-main-light);
+}
+
+.matchmakingModal__header {
+	padding: 1.5rem;
+	padding-bottom: 1rem;
+
+	border-radius: 0;
+	border-bottom-color: var(--theme-border-white);
+
+	h5 {
+		font-size: TYPOGRAPHY.$size-lvl-2;
+		font-weight: TYPOGRAPHY.$weight-medium;
+		line-height: 1.5rem;
+
+		color: var(--theme-text-main-light);
+	}
+}
+
+.matchmakingModal__body {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+
+	padding: 1.5rem;
+	padding-top: 1.25rem;
+}
+
+.matchmakingModal__game-img {
+	height: 150px;
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
+
+	border-radius: GLOBAL.$radius-medium;
+}
+
+.matchmakingModal__game-title {
+	font-size: TYPOGRAPHY.$size-lvl-4;
+	font-weight: TYPOGRAPHY.$weight-bold;
+	line-height: 2rem;
+	text-align: center;
+
+	color: var(--theme-text-main-dark);
+}
+
+.matchmakingModal__description {
+	margin-bottom: 0.75rem;
+	font-size: TYPOGRAPHY.$size-extra-small;
+	line-height: 1.5rem;
+	text-align: center;
+
+	color: var(--theme-text-main-light);
+}
+
+/*
+ *	Buy item modal
+ *	====================================================================== */
+
+.buyItemModal__content {
+	border-radius: GLOBAL.$radius-medium;
+	background-color: var(--theme-bg-main-light);
+}
+
+.buyItemModal__header {
+	padding: 1rem 1.5rem 0.5rem;
+
+	border-radius: 0;
+	border-bottom-color: var(--theme-border-white);
+
+	h5 {
+		font-size: TYPOGRAPHY.$size-lvl-2;
+		font-weight: TYPOGRAPHY.$weight-medium;
+		line-height: 1.5rem;
+
+		color: var(--theme-text-main-light);
+	}
+
+	button {
+		width: 11rem;
+	}
+}
+
+.buyItemModal__body {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+
+	padding: 1.5rem;
+}
+
+.buyItemModal__item-img {
+	align-self: center;
+
+	height: 192px;
+	width: 182px;
+	margin-bottom: 0.5rem;
+	padding: 0.25rem;
+	overflow: hidden;
+
+	box-shadow: var(--theme-shadow-lvl-4);
+	border-radius: GLOBAL.$radius-medium;
+	border: 1px solid var(--theme-border-white);
+	background-color: var(--theme-bg-main-light);
+
+	img {
+		@extend %img-full-cover;
+	}
+}
+
+.buyItemModal__title {
+	font-size: TYPOGRAPHY.$size-lvl-4;
+	font-weight: TYPOGRAPHY.$weight-bold;
+	line-height: 2rem;
+	text-align: center;
+
+	color: var(--theme-text-main-dark);
+}
+
+.buyItemModal__description {
+	margin-bottom: 0.75rem;
+	font-size: TYPOGRAPHY.$size-extra-small;
+	line-height: 1.5rem;
+	text-align: center;
+
+	color: var(--theme-text-main-light);
+}
+
+.buyItemModal__price {
+	align-self: center;
+
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+
+	margin-bottom: 0.25rem;
+
+	span {
+		padding: 0.25rem;
+
+		border-radius: GLOBAL.$radius-small;
+		// TODO: FIX THIS - SASS does not use the CSS variable value!
+		// background-color: rgba(var(--theme-bg-white-softer), 0.4);
+		background-color: rgba(#e4e4eb, 0.4);
+		color: var(--theme-fill-yellow);
+	}
+
+	p {
+		font-size: TYPOGRAPHY.$size-lvl-4;
+		font-weight: TYPOGRAPHY.$weight-bold;
+		line-height: 1.5rem;
+	}
+}
+
+/*
+ *	Sell item modal
+ *	====================================================================== */
+
+.sellItemModal__content {
+	border-radius: GLOBAL.$radius-medium;
+	background-color: var(--theme-bg-main-light);
+}
+
+.sellItemModal__header {
+	padding: 1rem 1.5rem;
+
+	border-radius: 0;
+	border-bottom-color: var(--theme-border-white);
+
+	h5 {
+		font-size: TYPOGRAPHY.$size-lvl-2;
+		font-weight: TYPOGRAPHY.$weight-medium;
+		line-height: 1.5rem;
+
+		color: var(--theme-text-main-light);
+	}
+
+	button {
+		width: 11rem;
+	}
+}
+
+.sellItemModal__body {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+
+	padding: 1.5rem;
+}
+
+.sellItemModal__item-img {
+	align-self: center;
+
+	height: 192px;
+	width: 182px;
+	margin-bottom: 0.5rem;
+	padding: 0.25rem;
+	overflow: hidden;
+
+	box-shadow: var(--theme-shadow-lvl-4);
+	border-radius: GLOBAL.$radius-medium;
+	border: 1px solid var(--theme-border-white);
+	background-color: var(--theme-bg-main-light);
+
+	img {
+		@extend %img-full-cover;
+	}
+}
+
+.sellItemModal__title {
+	font-size: TYPOGRAPHY.$size-lvl-4;
+	font-weight: TYPOGRAPHY.$weight-bold;
+	line-height: 2rem;
+	text-align: center;
+
+	color: var(--theme-text-main-dark);
+}
+
+.sellItemModal__description {
+	margin-bottom: 0.75rem;
+	font-size: TYPOGRAPHY.$size-extra-small;
+	line-height: 1.5rem;
+	text-align: center;
+
+	color: var(--theme-text-main-light);
+}
+
+.sellItemModal__price {
+	align-self: center;
+
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+
+	margin-bottom: 0.25rem;
+
+	span {
+		padding: 0.25rem;
+
+		border-radius: GLOBAL.$radius-small;
+		// TODO: FIX THIS - SASS does not use the CSS variable value!
+		// background-color: rgba(var(--theme-bg-white-softer), 0.4);
+		background-color: rgba(#e4e4eb, 0.4);
+		color: var(--theme-fill-yellow);
+	}
+
+	input {
+		width: 10rem;
+		font-size: TYPOGRAPHY.$size-lvl-4;
+		font-weight: TYPOGRAPHY.$weight-bold;
+		line-height: 1.5rem;
+		text-align: center;
+	}
 }

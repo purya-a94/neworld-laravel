@@ -1,0 +1,500 @@
+@use '../assets/styles/1-settings/global' as GLOBAL;
+@use '../assets/styles/1-settings/typography' as TYPOGRAPHY;
+@use '../assets/styles/1-settings/placeholders';
+
+.dashboard__wrapper {
+	flex-grow: 1;
+
+	display: flex;
+	justify-content: center;
+}
+
+.dashboard {
+	display: flex;
+	flex-direction: column;
+
+	width: 100%;
+	max-width: GLOBAL.$bp-x-large;
+	padding: 2rem GLOBAL.$spacing-medium-large;
+}
+
+.dashboard__main {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	gap: GLOBAL.$spacing-small;
+
+	padding: 0 (GLOBAL.$spacing-extra-large * 2);
+}
+
+.dashboard__banner {
+	height: 130px;
+	overflow: hidden;
+
+	border-radius: GLOBAL.$radius-large;
+	border: 1px solid var(--theme-border-black-light);
+
+	img {
+		@extend %img-full-cover;
+	}
+}
+
+.dashboard__profile {
+	position: absolute;
+	top: 72px;
+	//* Adding the parent's left padding on top of actual value.
+	left: calc((GLOBAL.$spacing-extra-large * 2) + 32px);
+	z-index: 10;
+
+	height: 120px;
+	width: 120px;
+	overflow: hidden;
+
+	box-shadow: var(--theme-shadow-lvl-3);
+	border-radius: 50%;
+
+	img {
+		@extend %img-full-cover;
+	}
+}
+
+.dashboard__columns-wrapper {
+	display: flex;
+	gap: GLOBAL.$spacing-small;
+}
+
+/*
+ *	Sidebar
+ *	====================================================================== */
+
+.dashboard__sidebar {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+
+	width: 364px;
+	padding: 1.125rem 1.5rem 2.25rem 2rem;
+
+	box-shadow: var(--theme-shadow-lvl-1);
+	border-radius: GLOBAL.$radius-medium;
+	background-color: var(--theme-bg-main-light);
+}
+
+.dashboard__sidebar-edit-btn {
+	align-self: flex-end;
+
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+
+	margin-bottom: 0.25rem;
+	padding: 0.25rem;
+	font-size: TYPOGRAPHY.$size-small;
+	font-weight: TYPOGRAPHY.$weight-medium;
+
+	color: var(--theme-text-primary);
+
+	&:hover,
+	&:focus {
+		box-shadow: none;
+		color: var(--theme-text-primary);
+	}
+}
+
+.dashboard__sidebar-row {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+
+	margin-bottom: 0.5rem;
+
+	&:not(:last-of-type) {
+		padding-bottom: 1rem;
+
+		border-bottom: 1px solid var(--theme-border-white);
+	}
+}
+
+.dashboard__username {
+	@extend %overflow-ellipsis;
+
+	font-size: TYPOGRAPHY.$size-lvl-4;
+	font-weight: TYPOGRAPHY.$weight-bold;
+	line-height: 1.75rem;
+	letter-spacing: 2px;
+}
+
+.dashboard__email {
+	@extend %overflow-ellipsis;
+
+	font-size: TYPOGRAPHY.$size-small;
+	font-weight: TYPOGRAPHY.$weight-medium;
+	line-height: 1rem;
+
+	color: var(--theme-text-main-soft);
+}
+
+.dashboard__user-links {
+	display: flex;
+	align-items: center;
+	gap: 0.625rem;
+
+	a {
+		font-size: TYPOGRAPHY.$size-small;
+		font-weight: TYPOGRAPHY.$weight-medium;
+		line-height: 1rem;
+		text-decoration: none;
+
+		color: var(--theme-text-main-soft);
+	}
+}
+
+.dashboard__coins {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.dashboard__coins-label {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+
+	span {
+		padding: 0.25rem;
+
+		border-radius: GLOBAL.$radius-small;
+		// TODO: FIX THIS - SASS does not use the CSS variable value!
+		// background-color: rgba(var(--theme-bg-white-softer), 0.4);
+		background-color: rgba(#e4e4eb, 0.4);
+		color: var(--theme-fill-yellow);
+	}
+
+	p {
+		color: var(--theme-text-main-light);
+	}
+}
+
+.dashboard__coins-amount {
+	font-size: TYPOGRAPHY.$size-lvl-4;
+	font-weight: TYPOGRAPHY.$weight-bold;
+	line-height: 1.5rem;
+}
+
+.dashboard__coins-controls {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+
+	button {
+		width: 50%;
+	}
+}
+
+.dashboard__sidebar-stats-row {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+
+	&:not(:last-of-type) {
+		margin-bottom: 0.5rem;
+	}
+
+	span {
+		padding: 0.25rem;
+
+		border-radius: GLOBAL.$radius-small;
+		// TODO: FIX THIS - SASS does not use the CSS variable value!
+		// background-color: rgba(var(--theme-bg-white-softer), 0.4);
+		background-color: rgba(#e4e4eb, 0.4);
+	}
+
+	label {
+		color: var(--theme-text-main-light);
+	}
+
+	p {
+		margin-left: auto;
+		font-size: TYPOGRAPHY.$size-lvl-2;
+		font-weight: TYPOGRAPHY.$weight-bold;
+		line-height: 1.5rem;
+	}
+}
+
+.dashboard__join-date {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0.5rem;
+
+	label {
+		color: var(--theme-text-main-light);
+	}
+
+	p {
+		font-weight: TYPOGRAPHY.$weight-semiBold;
+		line-height: 1.5rem;
+
+		color: var(--theme-text-main-dark);
+	}
+}
+
+.dashboard__sidebar-signOut {
+	align-self: flex-start;
+
+	padding: 0.25rem 0;
+	font-size: TYPOGRAPHY.$size-lvl-1;
+	font-weight: TYPOGRAPHY.$weight-medium;
+	letter-spacing: 2px;
+}
+
+/*
+ *	Body
+ *	====================================================================== */
+
+.dashboard__body {
+	flex-grow: 1;
+
+	display: flex;
+	flex-direction: column;
+	gap: GLOBAL.$spacing-small;
+
+	max-width: 668px;
+}
+
+/*
+ *	My items
+ *	====================================================================== */
+
+.dashboard__myItems-header-link {
+	font-size: TYPOGRAPHY.$size-small;
+	font-weight: TYPOGRAPHY.$weight-medium;
+}
+
+.dashboard__myItems-body {
+	position: relative;
+
+	display: flex;
+	gap: 0.5rem;
+
+	padding: 1rem;
+	overflow: hidden;
+}
+
+.dashboard__myItems-overlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 5;
+
+	height: 100%;
+	width: 146px;
+	pointer-events: none;
+
+	background: linear-gradient(
+		90deg,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 0.5046393557422969) 65%,
+		rgba(255, 255, 255, 1) 100%
+	);
+}
+
+.dashboard__myItems-grid {
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: 150px;
+	gap: GLOBAL.$spacing-medium GLOBAL.$spacing-small;
+
+	overflow-x: visible;
+}
+
+.dashboard__myItems-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
+
+	min-height: 152px;
+	width: 100%;
+}
+
+.dashboard__myItems-item-content {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	height: 152px;
+	width: 100%;
+	padding: 0.25rem;
+
+	font-size: TYPOGRAPHY.$size-normal;
+	overflow: hidden;
+
+	box-shadow: var(--theme-shadow-lvl-1);
+	border-radius: GLOBAL.$radius-small;
+	border: 1px solid var(--theme-border-black-light);
+	background-color: var(--theme-bg-main-light);
+
+	img {
+		@extend %img-full-cover;
+	}
+}
+
+.dashboard__myItems-item-btn {
+	position: absolute;
+	bottom: 0.25rem;
+
+	width: calc(100% - 0.5rem);
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
+}
+
+.dashboard__myItems-item-title {
+	@extend %overflow-ellipsis;
+
+	max-width: 100%;
+	padding: 0 0.375rem;
+	font-size: TYPOGRAPHY.$size-normal;
+	font-weight: TYPOGRAPHY.$weight-bold;
+	text-align: center;
+}
+
+/*
+ *	Activities
+ *	====================================================================== */
+
+.dashboard__activities-header-link {
+	font-size: TYPOGRAPHY.$size-small;
+	font-weight: TYPOGRAPHY.$weight-medium;
+}
+
+.dashboard__activities-body {
+	position: relative;
+
+	//* To prevent the list "tag" going out of bounds.
+	min-height: 258px;
+	padding: 1rem 0;
+	padding-right: 1rem;
+}
+
+.dashboard__activities-tag {
+	display: block;
+	position: absolute;
+	top: 111px;
+	left: -103px;
+
+	width: 208px;
+	padding: 0 0.875rem;
+	font-size: TYPOGRAPHY.$size-extra-small;
+	text-align: center;
+
+	transform: rotate(-90deg);
+	border-radius: 0 0 16px 16px;
+	background-color: var(--theme-bg-black-soft);
+	color: var(--theme-text-white);
+}
+
+.dashboard__activities-items-wrapper {
+	flex-grow: 1;
+
+	padding-left: 2.5rem;
+}
+
+.dashboard__activities-item {
+	&:last-of-type {
+		border-bottom: 0;
+	}
+}
+
+/*
+ *	Matchmaking Card
+ *	====================================================================== */
+
+.matchmakingCard {
+	display: flex;
+	gap: 1rem;
+
+	padding-bottom: 1rem;
+
+	border-bottom: 1px solid var(--theme-border-white);
+
+	&:not(:last-of-type) {
+		margin-bottom: 1rem;
+	}
+
+	> img {
+		width: 88px;
+		max-height: 92px;
+		object-fit: cover;
+		object-position: center;
+
+		border-radius: GLOBAL.$radius-small;
+	}
+}
+
+.matchmakingCard__body {
+	flex-grow: 1;
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+
+.matchmakingCard__title {
+	display: flex;
+	flex-direction: column;
+
+	p:nth-of-type(1) {
+		font-weight: TYPOGRAPHY.$weight-medium;
+	}
+
+	p:nth-of-type(2) {
+		color: var(--theme-text-main-light);
+	}
+}
+
+.matchmakingCard__players {
+	margin-left: auto;
+	align-self: flex-start;
+
+	display: flex;
+	align-items: center;
+
+	img {
+		width: 32px;
+		height: 32px;
+		object-fit: contain;
+		object-position: center;
+
+		border-radius: 50%;
+	}
+
+	svg {
+		color: var(--theme-invertible-main-softer);
+	}
+
+	// This element is swappable with the above img and svg.
+	span {
+		color: var(--theme-text-main-soft);
+	}
+}
+
+.matchmakingCard__controls {
+	flex-basis: 100%;
+
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+
+	span {
+		margin-left: auto;
+
+		color: var(--theme-text-main-soft);
+	}
+}

@@ -252,7 +252,11 @@
   --theme-fill-primary: #654ce6;
   --theme-fill-primary-light: #8672ec;
   --theme-fill-primary-dark: #5828e1;
+  --theme-fill-red: #ff3b3b;
+  --theme-fill-green: #06c270;
   --theme-fill-yellow: #fdb800;
+  --theme-fill-orange: #fd8f43;
+  --theme-fill-teal: #00cfde;
 }
 
 /* *
@@ -820,6 +824,32 @@ p {
 
 .u-textColor-red {
   color: var(--theme-text-red);
+}
+
+/**	Fill
+	====================================================================== */
+.u-fill-primary {
+  color: var(--theme-fill-primary);
+}
+
+.u-fill-red {
+  color: var(--theme-fill-red);
+}
+
+.u-fill-green {
+  color: var(--theme-fill-green);
+}
+
+.u-fill-yellow {
+  color: var(--theme-fill-yellow);
+}
+
+.u-fill-orange {
+  color: var(--theme-fill-orange);
+}
+
+.u-fill-teal {
+  color: var(--theme-fill-teal);
 }
 
 /**	Divider

@@ -1,0 +1,464 @@
+/*----------------------------------------*\
+	#GLOBAL
+\*----------------------------------------*/
+/*
+ *	NOTE:
+ *  1.	
+ */
+/*	#BREAKPOINTS
+	====================================================================== */
+/*	#SPACING
+	====================================================================== */
+/* 8px / 16px */
+/* 16px */
+/* 24px / 16px */
+/* 32px / 16px */
+/* 40px / 16px */
+/* 72px / 16px */
+/*	#RADIUS
+	====================================================================== */
+/*----------------------------------------*\
+	#TYPOGRAPHY
+\*----------------------------------------*/
+/*	#BASE
+	====================================================================== */
+/*	#SIZE
+	====================================================================== */
+/* 10px */
+/* 12px */
+/* 14px */
+/* 16px */
+/* 18px */
+/* 20px */
+/* 22px */
+/* 24px */
+/* 26px */
+/* 28px */
+/* 32px */
+/* 48px */
+/* 56px */
+/* 64px */
+/*	#SIZE_HEADING
+	====================================================================== */
+/* 40px */
+/* 32px */
+/* 28px */
+/* 24px */
+/* 20px */
+/* 16px */
+/*	#WEIGHT
+	====================================================================== */
+/*	#PLACEHOLDERS
+	====================================================================== */
+.dashboard__username, .dashboard__email, .dashboard__myItems-item-title {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/*------------------------------------*\
+	#PLACEHOLDERS
+\*------------------------------------*/
+/*	#SCROLLBAR
+	====================================================================== */
+/*	#IMAGE
+	====================================================================== */
+.dashboard__banner img, .dashboard__profile img, .dashboard__myItems-item-content img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.dashboard__wrapper {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1400px;
+  padding: 2rem 2rem;
+}
+
+.dashboard__main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 9rem;
+}
+
+.dashboard__banner {
+  height: 130px;
+  overflow: hidden;
+  border-radius: 24px;
+  border: 1px solid var(--theme-border-black-light);
+}
+.dashboard__profile {
+  position: absolute;
+  top: 72px;
+  left: calc(9rem + 32px);
+  z-index: 10;
+  height: 120px;
+  width: 120px;
+  overflow: hidden;
+  box-shadow: var(--theme-shadow-lvl-3);
+  border-radius: 50%;
+}
+.dashboard__columns-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+/*
+ *	Sidebar
+ *	====================================================================== */
+.dashboard__sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 364px;
+  padding: 1.125rem 1.5rem 2.25rem 2rem;
+  box-shadow: var(--theme-shadow-lvl-1);
+  border-radius: 16px;
+  background-color: var(--theme-bg-main-light);
+}
+
+.dashboard__sidebar-edit-btn {
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+  padding: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--theme-text-primary);
+}
+.dashboard__sidebar-edit-btn:hover, .dashboard__sidebar-edit-btn:focus {
+  box-shadow: none;
+  color: var(--theme-text-primary);
+}
+
+.dashboard__sidebar-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+.dashboard__sidebar-row:not(:last-of-type) {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--theme-border-white);
+}
+
+.dashboard__username {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+  letter-spacing: 2px;
+}
+
+.dashboard__email {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1rem;
+  color: var(--theme-text-main-soft);
+}
+
+.dashboard__user-links {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.dashboard__user-links a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1rem;
+  text-decoration: none;
+  color: var(--theme-text-main-soft);
+}
+
+.dashboard__coins {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dashboard__coins-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.dashboard__coins-label span {
+  padding: 0.25rem;
+  border-radius: 8px;
+  background-color: rgba(228, 228, 235, 0.4);
+  color: var(--theme-fill-yellow);
+}
+.dashboard__coins-label p {
+  color: var(--theme-text-main-light);
+}
+
+.dashboard__coins-amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+
+.dashboard__coins-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.dashboard__coins-controls button {
+  width: 50%;
+}
+
+.dashboard__sidebar-stats-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.dashboard__sidebar-stats-row:not(:last-of-type) {
+  margin-bottom: 0.5rem;
+}
+.dashboard__sidebar-stats-row span {
+  padding: 0.25rem;
+  border-radius: 8px;
+  background-color: rgba(228, 228, 235, 0.4);
+}
+.dashboard__sidebar-stats-row label {
+  color: var(--theme-text-main-light);
+}
+.dashboard__sidebar-stats-row p {
+  margin-left: auto;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+
+.dashboard__join-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+.dashboard__join-date label {
+  color: var(--theme-text-main-light);
+}
+.dashboard__join-date p {
+  font-weight: 600;
+  line-height: 1.5rem;
+  color: var(--theme-text-main-dark);
+}
+
+.dashboard__sidebar-signOut {
+  align-self: flex-start;
+  padding: 0.25rem 0;
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+/*
+ *	Body
+ *	====================================================================== */
+.dashboard__body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 668px;
+}
+
+/*
+ *	My items
+ *	====================================================================== */
+.dashboard__myItems-header-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.dashboard__myItems-body {
+  position: relative;
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.dashboard__myItems-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  height: 100%;
+  width: 146px;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5046393557) 65%, white 100%);
+}
+
+.dashboard__myItems-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 150px;
+  gap: 1.5rem 1rem;
+  overflow-x: visible;
+}
+
+.dashboard__myItems-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 152px;
+  width: 100%;
+}
+
+.dashboard__myItems-item-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 152px;
+  width: 100%;
+  padding: 0.25rem;
+  font-size: 1rem;
+  overflow: hidden;
+  box-shadow: var(--theme-shadow-lvl-1);
+  border-radius: 8px;
+  border: 1px solid var(--theme-border-black-light);
+  background-color: var(--theme-bg-main-light);
+}
+.dashboard__myItems-item-btn {
+  position: absolute;
+  bottom: 0.25rem;
+  width: calc(100% - 0.5rem);
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.dashboard__myItems-item-title {
+  max-width: 100%;
+  padding: 0 0.375rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/*
+ *	Activities
+ *	====================================================================== */
+.dashboard__activities-header-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.dashboard__activities-body {
+  position: relative;
+  min-height: 258px;
+  padding: 1rem 0;
+  padding-right: 1rem;
+}
+
+.dashboard__activities-tag {
+  display: block;
+  position: absolute;
+  top: 111px;
+  left: -103px;
+  width: 208px;
+  padding: 0 0.875rem;
+  font-size: 0.75rem;
+  text-align: center;
+  transform: rotate(-90deg);
+  border-radius: 0 0 16px 16px;
+  background-color: var(--theme-bg-black-soft);
+  color: var(--theme-text-white);
+}
+
+.dashboard__activities-items-wrapper {
+  flex-grow: 1;
+  padding-left: 2.5rem;
+}
+
+.dashboard__activities-item:last-of-type {
+  border-bottom: 0;
+}
+
+/*
+ *	Matchmaking Card
+ *	====================================================================== */
+.matchmakingCard {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--theme-border-white);
+}
+.matchmakingCard:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+.matchmakingCard > img {
+  width: 88px;
+  max-height: 92px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+}
+
+.matchmakingCard__body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.matchmakingCard__title {
+  display: flex;
+  flex-direction: column;
+}
+.matchmakingCard__title p:nth-of-type(1) {
+  font-weight: 500;
+}
+.matchmakingCard__title p:nth-of-type(2) {
+  color: var(--theme-text-main-light);
+}
+
+.matchmakingCard__players {
+  margin-left: auto;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+}
+.matchmakingCard__players img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 50%;
+}
+.matchmakingCard__players svg {
+  color: var(--theme-invertible-main-softer);
+}
+.matchmakingCard__players span {
+  color: var(--theme-text-main-soft);
+}
+
+.matchmakingCard__controls {
+  flex-basis: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.matchmakingCard__controls span {
+  margin-left: auto;
+  color: var(--theme-text-main-soft);
+}
+
+/*# sourceMappingURL=dashboard.css.map */

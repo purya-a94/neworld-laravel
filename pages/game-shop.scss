@@ -97,7 +97,7 @@
 }
 
 .gameShop__inUse-list {
-	@extend %scrollbar-horizontal-dark;
+	@extend %scrollbar-horizontal;
 
 	display: grid;
 	grid-auto-flow: column;
@@ -142,7 +142,7 @@
 }
 
 .gameShop__fullSets-list {
-	@extend %scrollbar-horizontal-dark;
+	@extend %scrollbar-horizontal;
 
 	display: grid;
 	grid-auto-flow: column;

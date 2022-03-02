@@ -5,9 +5,9 @@
 /*	#SCROLLBAR
 	====================================================================== */
 
-%scrollbar-vertical-dark {
+%scrollbar-vertical {
 	&::-webkit-scrollbar {
-		width: 6px;
+		width: 1rem;
 	}
 
 	&::-webkit-scrollbar-track {
@@ -16,13 +16,19 @@
 
 	&::-webkit-scrollbar-thumb {
 		border-radius: 100rem;
-		background-color: var(--theme-invertible-main-soft);
+		border: 4px solid rgba(0, 0, 0, 0);
+		background-clip: padding-box;
+		background-color: var(--theme-invertible-main-softer);
+
+		&:hover {
+			background-color: var(--theme-invertible-main-soft);
+		}
 	}
 }
 
-%scrollbar-horizontal-dark {
+%scrollbar-horizontal {
 	&::-webkit-scrollbar {
-		height: 6px;
+		height: 1rem;
 	}
 
 	&::-webkit-scrollbar-track {
@@ -31,7 +37,13 @@
 
 	&::-webkit-scrollbar-thumb {
 		border-radius: 100rem;
-		background-color: var(--theme-invertible-main-soft);
+		border: 4px solid rgba(0, 0, 0, 0);
+		background-clip: padding-box;
+		background-color: var(--theme-invertible-main-softer);
+
+		&:hover {
+			background-color: var(--theme-invertible-main-soft);
+		}
 	}
 }
 

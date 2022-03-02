@@ -62,13 +62,18 @@
 /*	#SCROLLBAR
 	====================================================================== */
 .gameShop__inUse-list::-webkit-scrollbar, .gameShop__fullSets-list::-webkit-scrollbar {
-  height: 6px;
+  height: 1rem;
 }
 .gameShop__inUse-list::-webkit-scrollbar-track, .gameShop__fullSets-list::-webkit-scrollbar-track {
   background-color: transparent;
 }
 .gameShop__inUse-list::-webkit-scrollbar-thumb, .gameShop__fullSets-list::-webkit-scrollbar-thumb {
   border-radius: 100rem;
+  border: 4px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  background-color: var(--theme-invertible-main-softer);
+}
+.gameShop__inUse-list::-webkit-scrollbar-thumb:hover, .gameShop__fullSets-list::-webkit-scrollbar-thumb:hover {
   background-color: var(--theme-invertible-main-soft);
 }
 

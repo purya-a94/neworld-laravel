@@ -226,7 +226,7 @@
 }
 
 .lobby__matchmaking-games {
-	@extend %scrollbar-vertical-dark;
+	@extend %scrollbar-vertical;
 
 	display: flex;
 	flex-direction: column;
@@ -303,7 +303,7 @@
 }
 
 .lobby__rank-games {
-	@extend %scrollbar-vertical-dark;
+	@extend %scrollbar-vertical;
 
 	display: flex;
 	flex-direction: column;
@@ -367,6 +367,129 @@
 }
 
 /*
+ *	Leaderboard
+ *	====================================================================== */
+
+.lobby__leaderboard-dropdown-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.25rem;
+
+	padding: 0.375rem;
+	font-size: TYPOGRAPHY.$size-lvl-2;
+	font-weight: TYPOGRAPHY.$weight-medium;
+	line-height: 1.5rem;
+
+	color: var(--theme-text-primary);
+
+	&:focus {
+		box-shadow: none;
+	}
+
+	svg {
+		transform: rotate(90deg);
+	}
+}
+
+.lobby__leaderboard-dropdown-menu {
+	min-width: 0;
+	padding: 0.5rem 0.75rem;
+
+	box-shadow: var(--theme-shadow-lvl-4);
+	border-radius: GLOBAL.$radius-medium;
+	border: 1px solid var(--theme-border-white);
+	background-color: var(--theme-bg-main-light);
+}
+
+.lobby__leaderboard-dropdown-menu-item {
+	display: block;
+
+	min-width: 7rem;
+	padding: 0.5rem 0.75rem;
+	text-align: left;
+
+	&:focus {
+		box-shadow: none;
+	}
+
+	&.lobby__leaderboard-dropdown-menu-item--active {
+		color: var(--theme-text-primary);
+	}
+}
+
+.lobby__leaderboard {
+	padding: 1rem 1rem;
+}
+
+.lobby__leaderboard-row {
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	align-items: center;
+	column-gap: 0.75rem;
+
+	padding-top: 0.25rem;
+	padding-bottom: 0.75rem;
+
+	&:not(:last-of-type) {
+		margin-bottom: 1rem;
+
+		border-bottom: 1px solid var(--theme-border-white);
+	}
+
+	&.lobby__leaderboard-row--personal {
+		margin-bottom: 0;
+
+		.lobby__leaderboard-row-pic {
+			height: 48px;
+			width: 48px;
+		}
+
+		.lobby__leaderboard-row-username {
+			font-size: TYPOGRAPHY.$size-lvl-2;
+
+			span {
+				display: block;
+				margin-top: 0.25rem;
+
+				color: var(--theme-text-main-soft);
+			}
+		}
+	}
+}
+
+.lobby__leaderboard-row-pic {
+	height: 32px;
+	width: 32px;
+	object-fit: cover;
+	object-position: center;
+
+	border-radius: 50%;
+}
+
+.lobby__leaderboard-row-username {
+	font-size: TYPOGRAPHY.$size-lvl-1;
+	line-height: 1.5rem;
+}
+
+.lobby__leaderboard-row-rank {
+	min-width: 90px;
+}
+
+.lobby__leaderboard-players {
+	@extend %scrollbar-vertical;
+	scrollbar-gutter: stable;
+
+	//* Negates parent's right padding and provides space for scrollbar.
+	margin-right: -1rem;
+
+	max-height: 240px;
+	padding-top: 1rem;
+	padding-left: 1rem;
+	overflow: auto;
+}
+
+/*
  *	Shop
  *	====================================================================== */
 
@@ -413,7 +536,7 @@
 }
 
 .lobby__shop-packs-list {
-	@extend %scrollbar-horizontal-dark;
+	@extend %scrollbar-horizontal;
 
 	display: grid;
 	grid-template-columns: repeat(4, 38px);

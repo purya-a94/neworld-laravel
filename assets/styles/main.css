@@ -789,6 +789,11 @@ p {
   color: var(--theme-text-white);
 }
 
+.c-pill--primary-alt {
+  background-color: var(--theme-bg-primary-softer);
+  color: var(--theme-text-primary);
+}
+
 /*------------------------------------*\
 	#UTILITIES
 \*------------------------------------*/

@@ -926,10 +926,9 @@
 							</div>
 
 							<!--	=========================================
-									--- HIDDEN TEMPORARILY
 									Leaderboard
 							-->
-							<div class="c-card px-0 d-none">
+							<div class="c-card">
 								<!--	=========================================
 										Card header
 								-->
@@ -939,7 +938,49 @@
 									<!--	=========================================
 											Card header controls
 									-->
-									<div class="c-card__header-controls"></div>
+									<div class="c-card__header-controls">
+										<!--	=========================================
+												Filter dropdown
+										-->
+										<button
+											class="btn lobby__leaderboard-dropdown-btn"
+											type="button"
+											id="lobbyLeaderboardHeaderDropdown"
+											data-bs-toggle="dropdown"
+											aria-expanded="false"
+										>
+											<span>Global</span>
+
+											<svg
+												width="24"
+												height="24"
+												viewBox="0 0 24 24"
+												fill="currentColor"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M8.90961 20.67C8.71961 20.67 8.52961 20.6 8.37961 20.45C8.08961 20.16 8.08961 19.68 8.37961 19.39L14.8996 12.87C15.3796 12.39 15.3796 11.61 14.8996 11.13L8.37961 4.60999C8.08961 4.31999 8.08961 3.83999 8.37961 3.54999C8.66961 3.25999 9.14961 3.25999 9.43961 3.54999L15.9596 10.07C16.4696 10.58 16.7596 11.27 16.7596 12C16.7596 12.73 16.4796 13.42 15.9596 13.93L9.43961 20.45C9.28961 20.59 9.09961 20.67 8.90961 20.67Z"
+												/>
+											</svg>
+										</button>
+										<!--	=========================================
+												Filter dropdown menu
+										-->
+										<div
+											class="dropdown-menu dropdown-menu-end lobby__leaderboard-dropdown-menu"
+											aria-labelledby="lobbyLeaderboardHeaderDropdown"
+										>
+											<button
+												class="btn lobby__leaderboard-dropdown-menu-item lobby__leaderboard-dropdown-menu-item--active"
+											>
+												Global
+											</button>
+
+											<button class="btn lobby__leaderboard-dropdown-menu-item">
+												Friends
+											</button>
+										</div>
+									</div>
 
 									<!--	=========================================
 											Card header divider
@@ -947,7 +988,80 @@
 									<div class="c-card__header-divider"></div>
 								</div>
 
-								<!-- ADD THE CARD BODY AND SCROLLING -->
+								<!--	=========================================
+										Leaderboard wrapper
+								-->
+								<div class="c-card__body lobby__leaderboard">
+									<!--	=========================================
+											Personal rank
+									-->
+									<div
+										class="lobby__leaderboard-row lobby__leaderboard-row--personal"
+									>
+										<!--	=========================================
+												User profile picture
+										-->
+										<img
+											src="/assets/images/matchmaking-user-temp.png"
+											alt="user profile"
+											class="lobby__leaderboard-row-pic"
+										/>
+
+										<!--	=========================================
+												User nickname
+										-->
+										<div class="lobby__leaderboard-row-username">
+											<p>Cool Nickname</p>
+
+											<span>Unranked</span>
+										</div>
+
+										<!--	=========================================
+												User rank
+										-->
+										<span
+											class="c-pill c-pill--primary lobby__leaderboard-row-rank"
+										>
+											1718
+										</span>
+										<!-- <span class="c-pill c-pill--primary-alt">1</span> -->
+									</div>
+
+									<!--	=========================================
+											Other's rank list
+									-->
+									<div class="lobby__leaderboard-players">
+										<!--	=========================================
+												Leaderboard row
+										-->
+										<div class="lobby__leaderboard-row">
+											<!--	=========================================
+													Player profile picture
+											-->
+											<img
+												src="/assets/images/matchmaking-user-temp.png"
+												alt="user profile"
+												class="lobby__leaderboard-row-pic"
+											/>
+
+											<!--	=========================================
+													Player nickname
+											-->
+											<div class="lobby__leaderboard-row-username">
+												<p>Cool Nickname</p>
+											</div>
+
+											<!--	=========================================
+													Player rank
+											-->
+											<span
+												class="c-pill c-pill--primary-alt lobby__leaderboard-row-rank"
+											>
+												1
+											</span>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 

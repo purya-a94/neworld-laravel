@@ -432,7 +432,11 @@
 								<!--	=========================================
 										Sidebar edit button
 								-->
-								<button class="btn dashboard__sidebar-edit-btn">
+								<button
+									data-bs-toggle="modal"
+									data-bs-target="#modal_editProfile"
+									class="btn dashboard__sidebar-edit-btn"
+								>
 									<span>Edit</span>
 									<svg
 										width="24"
@@ -1129,6 +1133,203 @@
 										</div>
 									</div>
 								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!--	=========================================
+						Modals
+				-->
+				<!--	=========================================
+						Edit profile modal
+				-->
+				<div
+					id="modal_editProfile"
+					tabindex="-1"
+					aria-labelledby="modal_editProfile"
+					aria-hidden="true"
+					class="modal fade"
+				>
+					<div class="modal-dialog modal-dialog-centered">
+						<div class="modal-content editProfileModal__content">
+							<!--	=========================================
+									Modal header
+							-->
+							<div class="modal-header editProfileModal__header">
+								<h5 class="modal-title">Matchmaking</h5>
+
+								<button
+									type="button"
+									class="btn-close u-boxShadow-focus-none"
+									data-bs-dismiss="modal"
+									aria-label="Close"
+								></button>
+							</div>
+							<!--	=========================================
+									Modal body
+							-->
+							<div class="modal-body editProfileModal__body">
+								<form class="row gx-3 gy-3 mb-0">
+									<!--	=========================================
+											Firstname
+									-->
+									<div class="col-6">
+										<label
+											for="firstname"
+											class="editProfileModal__field-label"
+										>
+											Firstname
+											<span class="u-textColor-red">*</span>
+										</label>
+
+										<input
+											type="text"
+											id="firstname"
+											class="c-input editProfileModal__field-input"
+										/>
+									</div>
+									<!--	=========================================
+											Lastname
+									-->
+									<div class="col-6">
+										<label for="lastname" class="editProfileModal__field-label">
+											Lastname
+											<span class="u-textColor-red">*</span>
+										</label>
+
+										<input
+											type="text"
+											id="lastname"
+											class="c-input editProfileModal__field-input"
+										/>
+									</div>
+
+									<!--	=========================================
+											Username
+									-->
+									<div class="col-12">
+										<label for="username" class="editProfileModal__field-label">
+											Username
+											<span class="u-textColor-red">*</span>
+										</label>
+
+										<input
+											type="text"
+											id="username"
+											class="c-input editProfileModal__field-input"
+										/>
+									</div>
+
+									<!--	=========================================
+											Email
+									-->
+									<div class="col-9">
+										<label for="email" class="editProfileModal__field-label">
+											Email
+											<span class="u-textColor-red">*</span>
+										</label>
+
+										<input
+											type="email"
+											id="email"
+											class="c-input editProfileModal__field-input"
+										/>
+									</div>
+									<!--	=========================================
+											Email public status
+									-->
+									<div class="col-3">
+										<label
+											for="emailIsPublic"
+											class="editProfileModal__field-label"
+										>
+											Show in profile:
+										</label>
+
+										<div class="c-input-switch c-input-switch--teal mt-1">
+											<input type="checkbox" id="emailIsPublic" role="switch" />
+											<label for="emailIsPublic"></label>
+										</div>
+									</div>
+
+									<!--	=========================================
+											Website
+									-->
+									<div class="col-9">
+										<label for="website" class="editProfileModal__field-label">
+											Website
+										</label>
+
+										<input
+											type="text"
+											id="website"
+											class="c-input editProfileModal__field-input"
+										/>
+									</div>
+									<!--	=========================================
+											Website public status
+									-->
+									<div class="col-3">
+										<label
+											for="websiteIsPublic"
+											class="editProfileModal__field-label"
+										>
+											Show in profile:
+										</label>
+
+										<div class="c-input-switch c-input-switch--teal mt-1">
+											<input
+												type="checkbox"
+												id="websiteIsPublic"
+												role="switch"
+											/>
+											<label for="websiteIsPublic"></label>
+										</div>
+									</div>
+
+									<!--	=========================================
+											Youtube
+									-->
+									<div class="col-9">
+										<label for="youtube" class="editProfileModal__field-label">
+											Youtube
+										</label>
+
+										<input
+											type="text"
+											id="youtube"
+											class="c-input editProfileModal__field-input"
+										/>
+									</div>
+									<!--	=========================================
+											Youtube public status
+									-->
+									<div class="col-3">
+										<label
+											for="youtubeIsPublic"
+											class="editProfileModal__field-label"
+										>
+											Show in profile:
+										</label>
+
+										<div class="c-input-switch c-input-switch--teal mt-1">
+											<input
+												type="checkbox"
+												id="youtubeIsPublic"
+												role="switch"
+											/>
+											<label for="youtubeIsPublic"></label>
+										</div>
+									</div>
+
+									<!--	=========================================
+											Save button
+									-->
+									<div class="col-12">
+										<button class="btn c-btn--primary w-100 mt-3">Save</button>
+									</div>
+								</form>
 							</div>
 						</div>
 					</div>

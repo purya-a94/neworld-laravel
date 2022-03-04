@@ -706,11 +706,13 @@ p {
 /*----------------------------------------*\
 	#INPUT
 \*----------------------------------------*/
+/*	#BASE
+	====================================================================== */
 .c-input {
   padding: 0.5rem 0.75rem;
   border-radius: 8px;
   border: 1px solid var(--theme-border-black-light);
-  background: var(--theme-bg-main-light);
+  background-color: var(--theme-bg-main-light);
   color: var(--theme-text-main);
 }
 
@@ -719,6 +721,51 @@ p {
 }
 .c-input--withError:focus-visible {
   outline: 1px solid var(--theme-border-red);
+}
+
+/*	#SWITCH
+	====================================================================== */
+.c-input-switch {
+  height: 32px;
+  width: 48px;
+}
+.c-input-switch input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+.c-input-switch label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 100rem;
+  border: 1px solid var(--theme-border-black);
+  background-color: var(--theme-bg-main-light);
+}
+.c-input-switch label:after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  aspect-ratio: 1/1;
+  height: 66%;
+  transition: all 0.2s ease-in-out;
+  border-radius: 100rem;
+  background-color: var(--theme-invertible-main-soft);
+}
+.c-input-switch input:checked + label:after {
+  left: calc(100% - 6px);
+  transform: translateX(-100%);
+  background-color: var(--theme-bg-primary);
+}
+
+/* *
+ * Switch - Teal
+ */
+.c-input-switch--teal input:checked + label:after {
+  background-color: var(--theme-bg-teal);
 }
 
 /*----------------------------------------*\

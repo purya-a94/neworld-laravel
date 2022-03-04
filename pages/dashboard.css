@@ -461,4 +461,47 @@
   color: var(--theme-text-main-soft);
 }
 
+/*
+ *	Edit profile modal
+ *	====================================================================== */
+.editProfileModal__content {
+  border-radius: 16px;
+  background-color: var(--theme-bg-main-light);
+}
+
+.editProfileModal__header {
+  padding: 1.5rem;
+  padding-bottom: 1rem;
+  border-radius: 0;
+  border-bottom-color: var(--theme-border-white);
+}
+.editProfileModal__header h5 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: var(--theme-text-main-light);
+}
+
+.editProfileModal__body {
+  padding: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.editProfileModal__field-label {
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  letter-spacing: 0.02em;
+  color: var(--theme-text-main-dark);
+}
+
+.editProfileModal__field-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  border-radius: 100rem;
+  color: var(--theme-text-main-light);
+}
+
 /*# sourceMappingURL=dashboard.css.map */
